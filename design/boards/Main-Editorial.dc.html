@@ -1,0 +1,351 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Dealer90.com — Homepage (Editorial Marketplace Redesign)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<style>
+:root{
+  --navy:#10213A; --navy-2:#16294A; --ink:#1C2430; --ink-soft:#5B6472;
+  --paper:#F6F3EB; --paper-2:#FFFFFF; --gold:#A97D2F; --gold-light:#E7C77E;
+  --moss:#3F5B47; --moss-bg:#E6EEE6; --clay:#9C5B3C; --clay-bg:#F1E4DA;
+  --line:#E3DDCC; --line-dark:rgba(255,255,255,.12);
+}
+*{box-sizing:border-box;}
+body{margin:0;background:var(--paper);font-family:'Work Sans',sans-serif;color:var(--ink);}
+h1,h2,h3{font-family:'Fraunces',serif;margin:0;text-wrap:balance;}
+a{color:inherit;text-decoration:none;}
+.eyebrow{font-size:11.5px;font-weight:600;letter-spacing:.09em;text-transform:uppercase;color:var(--gold);}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:13px 24px;border-radius:7px;font-weight:600;font-size:14.5px;border:1px solid transparent;cursor:pointer;font-family:'Work Sans',sans-serif;}
+.btn-gold{background:var(--gold);color:#fff;}
+.btn-navy{background:var(--navy);color:#fff;}
+.btn-outline{background:transparent;border:1px solid var(--line);color:var(--ink);}
+.btn-outline-light{background:transparent;border:1px solid rgba(255,255,255,.28);color:#fff;}
+.tag{display:inline-flex;align-items:center;gap:5px;padding:5px 11px;border-radius:5px;font-size:11.5px;font-weight:600;}
+.card{background:var(--paper-2);border:1px solid var(--line);border-radius:4px;}
+.num{font-variant-numeric:tabular-nums;}
+
+body{margin:0;background:var(--paper);font-family:'Work Sans',sans-serif;color:var(--ink)}
+</style>
+</helmet>
+<div style="width:1440px;background:var(--paper);position:relative;font-family:'Work Sans',sans-serif;">
+
+  <!-- UTILITY BAR -->
+  <div style="background:var(--navy);color:rgba(255,255,255,.68);font-size:11.5px;padding:8px 64px;display:flex;justify-content:space-between;align-items:center;">
+    <div>Regulated &amp; verified against&nbsp; <span style="color:#fff;font-weight:600;">PCATP · PEC · LDA · CDA · DHA</span></div>
+    <div style="display:flex;gap:18px;">
+      <span>PKR ▾</span>
+      <span>English ▾</span>
+      <span>Dealer Login</span>
+    </div>
+  </div>
+
+  <!-- NAV -->
+  <div style="display:flex;align-items:center;justify-content:space-between;padding:20px 64px;border-bottom:1px solid var(--line);background:var(--paper-2);">
+    <div style="display:flex;align-items:center;gap:12px;">
+      <div style="width:38px;height:38px;border-radius:7px;background:var(--navy);color:var(--gold-light);display:flex;align-items:center;justify-content:center;font-family:'Fraunces',serif;font-weight:700;font-size:15px;">D90</div>
+      <div style="font-family:'Work Sans',sans-serif;font-weight:700;font-size:17px;letter-spacing:-.01em;">Dealer90.com</div>
+    </div>
+    <div style="display:flex;gap:34px;font-size:14px;font-weight:500;color:var(--ink-soft);"><a href="#">Properties&nbsp; &nbsp; &nbsp; &nbsp; Invest by ROI</a>
+      <a href="#">Build a Home</a>
+      <a href="#" style="display: inline">For Dealers</a>
+      <a href="#">For Builders</a>
+    </div>
+    <div style="display:flex;gap:10px;align-items:center;">
+      <a href="#" class="btn btn-outline" style="padding:10px 18px;font-size:13.5px;">Log In</a>
+      <a href="#" class="btn btn-gold" style="padding:10px 20px;font-size:13.5px;">List a Property</a>
+    </div>
+  </div>
+
+  <!-- HERO -->
+  <div style="display:flex;gap:56px;padding:76px 64px 56px;background:var(--paper-2);border-bottom:1px solid var(--line);">
+    <div style="flex:1.05;padding-top:6px;">
+      <div class="eyebrow" style="margin-bottom:18px;">DEALER-BACKED PROPERTY &amp; BUILD TOOLS</div>
+      <h1 style="font-size:52px;font-weight:600;line-height:1.08;color:var(--navy);letter-spacing:-.01em;">Decide with numbers, not a hunch.</h1>
+      <p style="font-size:17px;line-height:1.6;color:var(--ink-soft);margin:22px 0 0;max-width:480px;">Dealer90.com isn't a listings board — it's the tooling that gets you to a decision: get matched to an investment by target ROI, get a real construction cost estimate before you build, or get a structured installment plan you can actually track.</p>
+
+      <!-- TOOL SWITCHER -->
+      <div style="display:flex;gap:10px;margin-top:34px;max-width:520px;">
+        <div style="flex:1;padding:14px 16px;background:var(--navy);border-radius:8px;">
+          <div style="font-size:11px;color:var(--gold-light);font-weight:600;">Property Advisor</div>
+          <div style="font-size:12.5px;color:rgba(255,255,255,.72);margin-top:3px;">Match by target ROI</div>
+        </div>
+        <div style="flex:1;padding:14px 16px;background:#fff;border:1px solid var(--line);border-radius:8px;">
+          <div style="font-size:11px;color:var(--clay);font-weight:600;">Cost Estimator</div>
+          <div style="font-size:12.5px;color:var(--ink-soft);margin-top:3px;">Estimate a build</div>
+        </div>
+        <div style="flex:1;padding:14px 16px;background:#fff;border:1px solid var(--line);border-radius:8px;">
+          <div style="font-size:11px;color:var(--moss);font-weight:600;">Installment Plan</div>
+          <div style="font-size:12.5px;color:var(--ink-soft);margin-top:3px;">Structure a payment plan</div>
+        </div>
+      </div>
+
+      <!-- STAT ROW -->
+      <div style="display:flex;gap:36px;margin-top:32px;padding-top:26px;border-top:1px solid var(--line);max-width:520px;">
+        <div>
+          <div class="num" style="font-family:'Fraunces',serif;font-size:25px;font-weight:600;color:var(--navy);">1,860</div>
+          <div style="font-size:12px;color:var(--ink-soft);margin-top:2px;">ROI matches made this year</div>
+        </div>
+        <div>
+          <div class="num" style="font-family:'Fraunces',serif;font-size:25px;font-weight:600;color:var(--navy);">3,200+</div>
+          <div style="font-size:12px;color:var(--ink-soft);margin-top:2px;">Build cost estimates generated</div>
+        </div>
+        <div>
+          <div class="num" style="font-family:'Fraunces',serif;font-size:25px;font-weight:600;color:var(--navy);">2,410</div>
+          <div style="font-size:12px;color:var(--ink-soft);margin-top:2px;">Installment plans structured</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- HERO ADVISOR PREVIEW -->
+    <div style="flex:0.95;position:relative;padding-top:6px;">
+      <div class="card" style="overflow:hidden;box-shadow:0 24px 48px -20px rgba(16,33,58,.22);">
+        <div style="padding:20px 22px 16px;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;align-items:center;">
+          <div style="font-size:13.5px;font-weight:600;">Property Advisor</div>
+          <span class="tag" style="background:var(--moss-bg);color:var(--moss);">Step 2 of 3</span>
+        </div>
+        <div style="padding:22px;">
+          <div style="font-size:11.5px;color:var(--ink-soft);font-weight:600;margin-bottom:10px;">TARGET ROI</div>
+          <div style="display:flex;gap:8px;margin-bottom:20px;">
+            <span class="tag" style="background:var(--paper);color:var(--ink-soft);border:1px solid var(--line);">8–10%</span>
+            <span class="tag" style="background:var(--gold);color:#fff;">10–15%</span>
+            <span class="tag" style="background:var(--paper);color:var(--ink-soft);border:1px solid var(--line);">15%+</span>
+          </div>
+          <div style="font-size:11.5px;color:var(--ink-soft);font-weight:600;margin-bottom:10px;">HORIZON</div>
+          <div style="height:6px;background:var(--line);border-radius:99px;position:relative;margin-bottom:8px;">
+            <div style="position:absolute;left:0;top:0;height:100%;width:55%;background:var(--gold);border-radius:99px;"></div>
+            <div style="position:absolute;left:55%;top:50%;transform:translate(-50%,-50%);width:16px;height:16px;border-radius:50%;background:var(--navy);border:2px solid #fff;box-shadow:0 1px 4px rgba(0,0,0,.2);"></div>
+          </div>
+          <div style="display:flex;justify-content:space-between;font-size:11px;color:var(--ink-soft);">
+            <span>1 year</span><span>3 years</span><span>5+ years</span>
+          </div>
+          <button class="btn btn-navy" style="width:100%;margin-top:22px;">See Matches →</button>
+        </div>
+      </div>
+
+      <div class="card" style="position:absolute;bottom:-34px;right:-28px;width:238px;padding:16px 18px;box-shadow:0 20px 40px -16px rgba(16,33,58,.28);background:var(--navy);border:none;">
+        <div style="font-size:11px;color:rgba(255,255,255,.6);font-weight:600;text-transform:uppercase;letter-spacing:.04em;">Installment Snapshot</div>
+        <div style="display:flex;justify-content:space-between;margin-top:10px;">
+          <div>
+            <div class="num" style="color:#fff;font-size:18px;font-weight:700;font-family:'Fraunces',serif;">PKR 5.7L</div>
+            <div style="font-size:10.5px;color:rgba(255,255,255,.55);">per month</div>
+          </div>
+          <div style="text-align:right;">
+            <div class="num" style="color:var(--gold-light);font-size:18px;font-weight:700;font-family:'Fraunces',serif;">36</div>
+            <div style="font-size:10.5px;color:rgba(255,255,255,.55);">installments</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PROOF STRIP -->
+  <div style="display:flex;padding:26px 64px;background:var(--navy);color:#fff;">
+    <div style="flex:1;text-align:center;border-right:1px solid var(--line-dark);">
+      <div class="num" style="font-family:'Fraunces',serif;font-size:22px;font-weight:600;">8.6 / 10</div>
+      <div style="font-size:11.5px;color:rgba(255,255,255,.6);margin-top:3px;">Avg. dealer credibility score</div>
+    </div>
+    <div style="flex:1;text-align:center;border-right:1px solid var(--line-dark);">
+      <div class="num" style="font-family:'Fraunces',serif;font-size:22px;font-weight:600;">96%</div>
+      <div style="font-size:11.5px;color:rgba(255,255,255,.6);margin-top:3px;">Installment plans paid on schedule</div>
+    </div>
+    <div style="flex:1;text-align:center;border-right:1px solid var(--line-dark);">
+      <div class="num" style="font-family:'Fraunces',serif;font-size:22px;font-weight:600;">6 yrs</div>
+      <div style="font-size:11.5px;color:rgba(255,255,255,.6);margin-top:3px;">Operating across Pakistan</div>
+    </div>
+    <div style="flex:1;text-align:center;">
+      <div class="num" style="font-family:'Fraunces',serif;font-size:22px;font-weight:600;">18</div>
+      <div style="font-size:11.5px;color:rgba(255,255,255,.6);margin-top:3px;">Cities covered</div>
+    </div>
+  </div>
+
+  <!-- THREE PILLARS -->
+  <div style="padding:72px 64px;background:var(--paper);">
+    <div style="max-width:560px;margin-bottom:44px;">
+      <div class="eyebrow" style="margin-bottom:12px;">THREE WAYS IN</div>
+      <h2 style="font-size:30px;font-weight:600;color:var(--navy);">Whatever brought you here, there's a structured path forward.</h2>
+    </div>
+    <div style="display:flex;gap:28px;">
+      <div style="flex:1;padding:28px 26px;background:var(--paper-2);border:1px solid var(--line);border-radius:4px;">
+        <div style="width:38px;height:38px;border-radius:8px;background:var(--gold-light);display:flex;align-items:center;justify-content:center;font-size:17px;">🏠</div>
+        <div style="font-family:'Fraunces',serif;font-size:19px;font-weight:600;margin-top:16px;">Buy on Installments</div>
+        <p style="font-size:13.5px;color:var(--ink-soft);line-height:1.6;margin:10px 0 0;">Buy directly from a vetted dealer on a payment schedule built around your budget — structured and tracked, no bank required.</p>
+        <a href="#" style="font-size:13px;font-weight:600;color:var(--navy);margin-top:16px;display:inline-block;">See How It Works →</a>
+      </div>
+      <div style="flex:1;padding:28px 26px;background:var(--paper-2);border:1px solid var(--line);border-radius:4px;">
+        <div style="width:38px;height:38px;border-radius:8px;background:var(--clay-bg);display:flex;align-items:center;justify-content:center;font-size:17px;">📈</div>
+        <div style="font-family:'Fraunces',serif;font-size:19px;font-weight:600;margin-top:16px;">Invest by Target ROI</div>
+        <p style="font-size:13.5px;color:var(--ink-soft);line-height:1.6;margin:10px 0 0;">Tell us your horizon and risk appetite — the Property Advisor matches you to listings against a target return band, not a hunch.</p>
+        <a href="#" style="font-size:13px;font-weight:600;color:var(--navy);margin-top:16px;display:inline-block;">Get Matched →</a>
+      </div>
+      <div style="flex:1;padding:28px 26px;background:var(--paper-2);border:1px solid var(--line);border-radius:4px;">
+        <div style="width:38px;height:38px;border-radius:8px;background:var(--moss-bg);display:flex;align-items:center;justify-content:center;font-size:17px;">📐</div>
+        <div style="font-family:'Fraunces',serif;font-size:19px;font-weight:600;margin-top:16px;">Build Your Own Home</div>
+        <p style="font-size:13.5px;color:var(--ink-soft);line-height:1.6;margin:10px 0 0;">Get a real construction cost estimate by plot size and design in minutes, then request quotes from verified architects and contractors.</p>
+        <a href="#" style="font-size:13px;font-weight:600;color:var(--navy);margin-top:16px;display:inline-block;">Start an Estimate →</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- TOOL DEEP-DIVES -->
+  <div style="padding:16px 64px 72px;background:var(--paper);">
+    <div style="max-width:560px;margin-bottom:48px;">
+      <div class="eyebrow" style="margin-bottom:12px;">THE TOOLS, NOT JUST THE LISTINGS</div>
+      <h2 style="font-size:28px;font-weight:600;color:var(--navy);">This is where the actual decision gets made.</h2>
+    </div>
+
+    <!-- ROW 1: COST ESTIMATOR -->
+    <div style="display:flex;gap:52px;align-items:center;padding:40px 0;border-top:1px solid var(--line);">
+      <div style="flex:1;">
+        <span class="tag" style="background:var(--clay-bg);color:var(--clay);margin-bottom:14px;">Build Cost Estimator</span>
+        <h3 style="font-size:22px;font-weight:600;color:var(--navy);margin-top:2px;">Know what a build actually costs before you commit to it.</h3>
+        <p style="font-size:14px;color:var(--ink-soft);line-height:1.65;margin-top:12px;max-width:400px;">Pick a plot size and a design style, and get a real ballpark range in under a minute — built from actual submissions by verified architects, not a generic per-square-foot guess.</p>
+        <a href="#" style="font-size:13px;font-weight:600;color:var(--navy);margin-top:18px;display:inline-block;">Start an Estimate →</a>
+      </div>
+      <div class="card" style="flex:1;padding:22px;">
+        <div style="font-size:11.5px;color:var(--ink-soft);font-weight:600;margin-bottom:10px;">PLOT SIZE</div>
+        <div style="display:flex;gap:8px;margin-bottom:20px;">
+          <span class="tag" style="background:var(--paper);color:var(--ink-soft);border:1px solid var(--line);">3 Marla</span>
+          <span class="tag" style="background:var(--navy);color:#fff;">5 Marla</span>
+          <span class="tag" style="background:var(--paper);color:var(--ink-soft);border:1px solid var(--line);">10 Marla</span>
+          <span class="tag" style="background:var(--paper);color:var(--ink-soft);border:1px solid var(--line);">1 Kanal</span>
+        </div>
+        <div style="display:flex;justify-content:space-between;align-items:center;padding-top:18px;border-top:1px solid var(--line);">
+          <div style="font-size:12px;color:var(--ink-soft);">Estimated range</div>
+          <div class="num" style="font-family:'Fraunces',serif;font-size:22px;font-weight:600;color:var(--navy);">PKR 42–58 Lac</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ROW 2: INSTALLMENT PLAN -->
+    <div style="display:flex;gap:52px;align-items:center;padding:40px 0;border-top:1px solid var(--line);">
+      <div class="card" style="flex:1;padding:22px;order:1;">
+        <div style="display:flex;justify-content:space-between;margin-bottom:16px;">
+          <div style="font-size:11.5px;color:var(--ink-soft);font-weight:600;">INSTALLMENT SCHEDULE</div>
+          <span class="tag" style="background:var(--moss-bg);color:var(--moss);">3 of 12 paid</span>
+        </div>
+        <div style="height:8px;background:var(--line);border-radius:99px;overflow:hidden;margin-bottom:16px;">
+          <div style="width:25%;height:100%;background:var(--moss);"></div>
+        </div>
+        <div style="display:flex;justify-content:space-between;font-size:12.5px;padding:9px 0;border-top:1px solid var(--line);">
+          <span style="color:var(--ink-soft);">Sep 5, 2026</span><span style="font-weight:600;">PKR 1,958,333</span><span class="tag" style="background:var(--amber-bg,#F6EADA);color:#B9772E;padding:2px 9px;">Pending</span>
+        </div>
+        <div style="display:flex;justify-content:space-between;font-size:12.5px;padding:9px 0;border-top:1px solid var(--line);">
+          <span style="color:var(--ink-soft);">Oct 5, 2026</span><span style="font-weight:600;">PKR 1,958,333</span><span class="tag" style="background:#F3F1E9;color:var(--ink-soft);padding:2px 9px;">Upcoming</span>
+        </div>
+      </div>
+      <div style="flex:1;order:2;">
+        <span class="tag" style="background:var(--moss-bg);color:var(--moss);margin-bottom:14px;">Installment Plans</span>
+        <h3 style="font-size:22px;font-weight:600;color:var(--navy);margin-top:2px;">A payment plan that's tracked, not just promised.</h3>
+        <p style="font-size:14px;color:var(--ink-soft);line-height:1.65;margin-top:12px;max-width:400px;">Every plan is broken into a real due-date schedule you can see the status of at any time — paid, pending, or overdue — with a statement you can download whenever you need one.</p>
+        <a href="#" style="font-size:13px;font-weight:600;color:var(--navy);margin-top:18px;display:inline-block;">See How Plans Work →</a>
+      </div>
+    </div>
+
+    <!-- ROW 3: DEALER OFFERS -->
+    <div style="display:flex;gap:52px;align-items:center;padding:40px 0 8px;border-top:1px solid var(--line);">
+      <div style="flex:1;">
+        <span class="tag" style="background:var(--gold-light);color:var(--clay);margin-bottom:14px;">Dealer Offers</span>
+        <h3 style="font-size:22px;font-weight:600;color:var(--navy);margin-top:2px;">One request, real offers from vetted dealers — not cold listings.</h3>
+        <p style="font-size:14px;color:var(--ink-soft);line-height:1.65;margin-top:12px;max-width:400px;">Once you're matched or estimate a build, the request routes to dealers and providers with a credibility score you can actually check — you compare structured offers, not sales pitches.</p>
+        <a href="#" style="font-size:13px;font-weight:600;color:var(--navy);margin-top:18px;display:inline-block;">See My Offers →</a>
+      </div>
+      <div class="card" style="flex:1;padding:22px;">
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:16px;">
+          <div style="font-size:13.5px;font-weight:600;">Offer from Al-Noor Builders</div>
+          <span class="tag" style="background:var(--moss-bg);color:var(--moss);">✓ 8.7/10</span>
+        </div>
+        <div style="display:flex;justify-content:space-between;font-size:12.5px;padding:9px 0;border-top:1px solid var(--line);">
+          <span style="color:var(--ink-soft);">5 Marla Corner Villa, DHA 6</span><span class="num" style="font-weight:600;">PKR 2.85 Cr</span>
+        </div>
+        <div style="display:flex;justify-content:space-between;font-size:12.5px;padding:9px 0;border-top:1px solid var(--line);">
+          <span style="color:var(--ink-soft);">Down payment</span><span class="num" style="font-weight:600;">20%</span>
+        </div>
+        <div style="display:flex;justify-content:space-between;font-size:12.5px;padding:9px 0;border-top:1px solid var(--line);">
+          <span style="color:var(--ink-soft);">Plan length</span><span class="num" style="font-weight:600;">36 months</span>
+        </div>
+        <button class="btn btn-gold" style="width:100%;margin-top:18px;">Compare &amp; Accept →</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- HOW IT WORKS -->
+  <div style="padding:64px;background:var(--navy-2);color:#fff;">
+    <div class="eyebrow" style="margin-bottom:12px;color:var(--gold-light);">HOW FINANCING WORKS</div>
+    <h2 style="font-size:27px;font-weight:600;margin-bottom:36px;color:#fff;max-width:520px;">Three steps from browsing to moving in</h2>
+    <div style="display:flex;gap:48px;">
+      <div style="flex:1;border-top:2px solid var(--gold);padding-top:18px;">
+        <div class="num" style="font-family:'Fraunces',serif;font-size:15px;color:var(--gold-light);">01</div>
+        <div style="font-size:16px;font-weight:600;margin-top:10px;">Get matched or run an estimate</div>
+        <p style="font-size:13px;color:rgba(255,255,255,.62);line-height:1.6;margin-top:8px;">Tell the Property Advisor your target ROI, or run a Build Cost Estimate — either way, you start from numbers, not a listing search.</p>
+      </div>
+      <div style="flex:1;border-top:2px solid var(--gold);padding-top:18px;">
+        <div class="num" style="font-family:'Fraunces',serif;font-size:15px;color:var(--gold-light);">02</div>
+        <div style="font-size:16px;font-weight:600;margin-top:10px;">Get a structured dealer offer</div>
+        <p style="font-size:13px;color:rgba(255,255,255,.62);line-height:1.6;margin-top:8px;">The dealer sends a real offer — price, down payment, and a proposed installment schedule — for you to compare and accept.</p>
+      </div>
+      <div style="flex:1;border-top:2px solid var(--gold);padding-top:18px;">
+        <div class="num" style="font-family:'Fraunces',serif;font-size:15px;color:var(--gold-light);">03</div>
+        <div style="font-size:16px;font-weight:600;margin-top:10px;">Pay on schedule, track it live</div>
+        <p style="font-size:13px;color:rgba(255,255,255,.62);line-height:1.6;margin-top:8px;">Your portal tracks every installment, due date, and pending balance — with a downloadable statement whenever you need one.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOR DEALERS / BUILDERS BAND -->
+  <div style="display:flex;">
+    <div style="flex:1;padding:52px 64px;background:var(--gold-light);">
+      <div class="eyebrow" style="color:var(--clay);margin-bottom:10px;">FOR DEALERS</div>
+      <div style="font-family:'Fraunces',serif;font-size:22px;font-weight:600;color:var(--navy);max-width:360px;">Stop chasing leads. Start receiving qualified ones.</div>
+      <a href="#" class="btn btn-navy" style="margin-top:20px;padding:11px 20px;font-size:13.5px;">Register as a Dealer →</a>
+    </div>
+    <div style="flex:1;padding:52px 64px;background:var(--moss-bg);">
+      <div class="eyebrow" style="color:var(--moss);margin-bottom:10px;">FOR BUILDERS</div>
+      <div style="font-family:'Fraunces',serif;font-size:22px;font-weight:600;color:var(--navy);max-width:360px;">Get build requests with a plot size and budget already attached.</div>
+      <a href="#" class="btn btn-navy" style="margin-top:20px;padding:11px 20px;font-size:13.5px;">Register Your Practice →</a>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <div style="padding:44px 64px;background:var(--navy);color:rgba(255,255,255,.6);">
+    <div style="display:flex;justify-content:space-between;align-items:flex-start;padding-bottom:28px;border-bottom:1px solid var(--line-dark);">
+      <div>
+        <div style="display:flex;align-items:center;gap:10px;">
+          <div style="width:30px;height:30px;border-radius:6px;background:rgba(255,255,255,.08);color:var(--gold-light);display:flex;align-items:center;justify-content:center;font-family:'Fraunces',serif;font-weight:700;font-size:12px;">D90</div>
+          <div style="color:#fff;font-weight:700;font-size:15px;">Dealer90.com</div>
+        </div>
+        <p style="font-size:12.5px;max-width:320px;line-height:1.6;margin-top:12px;">Pakistan's installment property and build-services marketplace. Every figure shown is dealer- or provider-supplied — never guaranteed by Dealer90.com.</p>
+      </div>
+      <div style="display:flex;gap:56px;font-size:13px;">
+        <div>
+          <div style="color:#fff;font-weight:600;margin-bottom:10px;">Tools</div>
+          <div style="display:flex;flex-direction:column;gap:8px;">
+            <a href="#">Invest by ROI</a><a href="#">Build a Home</a><a href="#">Installment Plans</a>
+          </div>
+        </div>
+        <div>
+          <div style="color:#fff;font-weight:600;margin-bottom:10px;">Partners</div>
+          <div style="display:flex;flex-direction:column;gap:8px;">
+            <a href="#">For Dealers</a><a href="#">For Builders</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div style="display:flex;justify-content:space-between;align-items:center;padding-top:20px;font-size:11.5px;">
+      <div>© 2026 Dealer90.com</div>
+      <div>Regulated &amp; verified against PCATP · PEC · LDA · CDA · DHA</div>
+    </div>
+  </div>
+
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":3250}}'>class Component extends DCLogic{renderVals(){return {};}}</script>
+</body>
+</html>

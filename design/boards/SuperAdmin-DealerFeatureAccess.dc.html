@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Dealer90.com — Super Admin — Dealer Feature &amp; Tab Access</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<style>
+:root{
+  --navy:#10213A; --navy-2:#16294A; --ink:#1C2430; --ink-soft:#5B6472;
+  --paper:#F6F4EF; --paper-2:#FFFFFF; --gold:#B98B33; --gold-light:#E7C77E;
+  --green:#2F6F4E; --green-bg:#E7F1EA; --amber:#B9772E; --amber-bg:#F6EADA;
+  --red:#B4453A; --red-bg:#F7E7E4; --line:#E4DFD3; --violet:#6C4E9C; --violet-bg:#EFE9F6;
+}
+body{margin:0;background:var(--paper);font-family:'Work Sans',sans-serif;color:var(--ink)}
+h1,h2,h3{font-family:'Fraunces',serif;margin:0}
+a{color:inherit;text-decoration:none}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:11px 20px;border-radius:8px;font-weight:600;font-size:14px;border:1px solid transparent;cursor:pointer}
+.btn-gold{background:var(--gold);color:#fff}
+.btn-outline{background:#fff;border:1px solid var(--line);color:var(--ink);}
+.tag{display:inline-flex;padding:5px 12px;border-radius:999px;font-size:12px;font-weight:600;}
+.card{background:var(--paper-2);border:1px solid var(--line);border-radius:14px;}
+.navitem{display:flex;align-items:center;gap:12px;padding:11px 18px;border-radius:9px;font-size:14px;font-weight:500;color:#C7CEDB;position:relative;}
+.navitem.active{background:var(--navy-2);color:#fff;}
+.navitem.locked{color:#5C6C85;cursor:not-allowed;}
+.navitem.locked .lock-ic{margin-left:auto;font-size:11.5px;}
+.navitem.locked .tooltip{position:absolute;left:calc(100% + 10px);top:50%;transform:translateY(-50%);background:var(--ink);color:#fff;font-size:11.5px;font-weight:500;line-height:1.4;padding:9px 13px;border-radius:8px;width:200px;white-space:normal;opacity:0;pointer-events:none;transition:opacity .15s ease;box-shadow:0 8px 20px rgba(0,0,0,.25);z-index:80;}
+.navitem.locked .tooltip::before{content:"";position:absolute;right:100%;top:50%;transform:translateY(-50%);border:6px solid transparent;border-right-color:var(--ink);}
+.navitem.locked:hover .tooltip{opacity:1;}
+.modrow{display:flex;align-items:center;gap:14px;padding:15px 20px;border-bottom:1px solid var(--line);}
+.modrow:last-child{border-bottom:none;}
+.toggle{width:42px;height:24px;border-radius:999px;background:var(--line);position:relative;flex-shrink:0;cursor:pointer;transition:background .15s ease;}
+.toggle::after{content:"";position:absolute;width:18px;height:18px;border-radius:50%;background:#fff;top:3px;left:3px;box-shadow:0 1px 3px rgba(0,0,0,.25);transition:left .15s ease;}
+.toggle.on{background:var(--green);}
+.toggle.on::after{left:21px;}
+.dealer-pill{padding:8px 14px;border-radius:10px;border:1.5px solid var(--line);background:#fff;font-size:12.5px;font-weight:600;cursor:pointer;display:flex;align-items:center;gap:8px;}
+.dealer-pill.active{border-color:var(--navy);background:#F4F1EA;}
+</style>
+</helmet>
+<div style="width:1440px;height:960px;box-sizing:border-box;background:var(--paper);display:flex;">
+
+  <!-- SIDEBAR -->
+  <div style="width:250px;flex-shrink:0;background:var(--navy);padding:28px 16px;display:flex;flex-direction:column;gap:4px;">
+    <div style="display:flex;align-items:center;gap:10px;padding:0 10px 24px;">
+      <div style="width:58px;height:34px;border-radius:8px;background:var(--gold);display:flex;align-items:center;justify-content:center;font-family:'Fraunces',serif;font-weight:700;color:var(--navy);font-size:14px;letter-spacing:-.02em;">D90</div>
+      <div style="color:#fff;font-family:'Work Sans',sans-serif;font-size:18px;font-weight:700;letter-spacing:-.01em;">Dealer90.com Admin</div>
+    </div>
+    <div class="navitem">Dashboard</div>
+    <div class="navitem active">Dealer Approvals</div>
+    <div class="navitem">All Dealers</div>
+    <div class="navitem">Dealer Credibility</div>
+    <div class="navitem">All Properties</div>
+    <div class="navitem">Customers</div>
+    <div class="navitem">🤖 AI Scraper &amp; Onboarding</div>
+    <div class="navitem">⚙️ AI Provider Settings</div>
+    <div class="navitem">Reports</div>
+    <div class="navitem">Settings</div>
+    <div style="margin-top:auto;padding:14px 10px 0;border-top:1px solid #26385A;display:flex;align-items:center;gap:10px;">
+      <div style="width:32px;height:32px;border-radius:50%;background:var(--gold-light);"></div>
+      <div style="color:#fff;font-size:13px;">Super Admin</div>
+    </div>
+  </div>
+
+  <!-- MAIN -->
+  <div style="flex:1;display:flex;flex-direction:column;overflow:hidden;">
+
+    <div style="height:80px;flex-shrink:0;display:flex;align-items:center;justify-content:space-between;padding:0 36px;border-bottom:1px solid var(--line);">
+      <div>
+        <div style="font-size:12px;color:var(--ink-soft);">Dealer Approvals / Al-Noor Builders</div>
+        <h1 style="font-size:22px;color:var(--navy);">Feature &amp; Tab Access</h1>
+      </div>
+      <div style="display:flex;gap:10px;">
+        <button class="btn btn-outline">Cancel</button>
+        <button class="btn btn-gold">Save &amp; Approve Dealer →</button>
+      </div>
+    </div>
+
+    <div style="padding:28px 36px;display:flex;flex-direction:column;gap:22px;overflow:auto;">
+
+      <div class="card" style="padding:16px 20px;background:var(--violet-bg);border:none;display:flex;gap:12px;align-items:flex-start;">
+        <span style="font-size:16px;line-height:1;">ⓘ</span>
+        <div style="font-size:12.5px;color:#4A3A6B;line-height:1.6;">Choose which tabs this dealer can use. Set here at approval time, or changed anytime from <strong>All Dealers</strong>. A tab you turn off stays visible in the dealer's sidebar but appears <strong>locked</strong> — hovering it shows "Please contact Admin to enable this feature." Two dealers can have entirely different access: e.g. Dealer A gets Buyer Requests + Marketing, Dealer B gets Buyer Requests only.</div>
+      </div>
+
+      <div style="display:grid;grid-template-columns:1fr 1fr 1.1fr;gap:22px;align-items:start;">
+
+        <!-- MODULE TOGGLES -->
+        <div class="card" style="grid-column:span 2;">
+          <div style="padding:18px 20px;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;align-items:center;">
+            <div>
+              <div style="font-weight:600;font-size:15px;">Module &amp; Tab Access</div>
+              <div style="font-size:11.5px;color:var(--ink-soft);margin-top:2px;">Dashboard is always available to every dealer and can't be turned off.</div>
+            </div>
+            <div style="display:flex;gap:8px;">
+              <button class="btn btn-outline" style="padding:7px 12px;font-size:12px;">Enable All</button>
+              <button class="btn btn-outline" style="padding:7px 12px;font-size:12px;">Standard Preset</button>
+            </div>
+          </div>
+
+          <div class="modrow">
+            <div class="toggle on"></div>
+            <div style="flex:1;">
+              <div style="font-weight:600;font-size:13.5px;">Buyer Requests</div>
+              <div style="font-size:11.5px;color:var(--ink-soft);">Inbox of Property Advisor leads routed to this dealer</div>
+            </div>
+            <span class="tag" style="background:var(--green-bg);color:var(--green);">Enabled</span>
+          </div>
+          <div class="modrow">
+            <div class="toggle on"></div>
+            <div style="flex:1;">
+              <div style="font-weight:600;font-size:13.5px;">Transfer Requests</div>
+              <div style="font-size:11.5px;color:var(--ink-soft);">Resale / ownership-transfer approvals from customers</div>
+            </div>
+            <span class="tag" style="background:var(--green-bg);color:var(--green);">Enabled</span>
+          </div>
+          <div class="modrow">
+            <div class="toggle on"></div>
+            <div style="flex:1;">
+              <div style="font-weight:600;font-size:13.5px;">Properties</div>
+              <div style="font-size:11.5px;color:var(--ink-soft);">Add, edit and publish property listings</div>
+            </div>
+            <span class="tag" style="background:var(--green-bg);color:var(--green);">Enabled</span>
+          </div>
+          <div class="modrow">
+            <div class="toggle on"></div>
+            <div style="flex:1;">
+              <div style="font-weight:600;font-size:13.5px;">Customers &amp; Installment Plans</div>
+              <div style="font-size:11.5px;color:var(--ink-soft);">Create &amp; manage customer records and installment plans</div>
+            </div>
+            <span class="tag" style="background:var(--green-bg);color:var(--green);">Enabled</span>
+          </div>
+          <div class="modrow">
+            <div class="toggle on"></div>
+            <div style="flex:1;">
+              <div style="font-weight:600;font-size:13.5px;">Payments &amp; Reminders</div>
+              <div style="font-size:11.5px;color:var(--ink-soft);">Record payments, send overdue reminders</div>
+            </div>
+            <span class="tag" style="background:var(--green-bg);color:var(--green);">Enabled</span>
+          </div>
+          <div class="modrow" style="background:var(--red-bg);">
+            <div class="toggle"></div>
+            <div style="flex:1;">
+              <div style="font-weight:600;font-size:13.5px;">Marketing (Email &amp; SMS)</div>
+              <div style="font-size:11.5px;color:var(--ink-soft);">Bulk email/SMS campaigns, template editor, contact import</div>
+            </div>
+            <span class="tag" style="background:var(--red-bg);color:var(--red);border:1px solid #E8B9B1;">🔒 Locked for this dealer</span>
+          </div>
+          <div class="modrow">
+            <div class="toggle on"></div>
+            <div style="flex:1;">
+              <div style="font-weight:600;font-size:13.5px;">Branding</div>
+              <div style="font-size:11.5px;color:var(--ink-soft);">Custom logo &amp; colors on the dealer's public listings</div>
+            </div>
+            <span class="tag" style="background:var(--green-bg);color:var(--green);">Enabled</span>
+          </div>
+        </div>
+
+        <!-- SIDEBAR PREVIEW -->
+        <div style="display:flex;flex-direction:column;gap:14px;">
+          <div style="font-size:12px;font-weight:600;color:var(--ink-soft);text-transform:uppercase;letter-spacing:.03em;">Live Preview — Dealer's Sidebar</div>
+          <div style="background:var(--navy);border-radius:14px;padding:22px 14px;display:flex;flex-direction:column;gap:4px;">
+            <div style="display:flex;align-items:center;gap:10px;padding:0 8px 18px;">
+              <div style="width:28px;height:28px;border-radius:7px;background:var(--gold-light);"></div>
+              <div style="color:#fff;font-size:14px;font-weight:600;">Al-Noor Builders</div>
+            </div>
+            <div class="navitem active">Dashboard</div>
+            <div class="navitem">Buyer Requests</div>
+            <div class="navitem">Transfer Requests</div>
+            <div class="navitem">Properties</div>
+            <div class="navitem">Customers</div>
+            <div class="navitem">Payments</div>
+            <div class="navitem locked">Marketing <span class="lock-ic">🔒</span>
+              <div class="tooltip">This feature isn't enabled for your account. Please contact Admin to enable this feature.</div>
+            </div>
+            <div class="navitem">Branding</div>
+          </div>
+          <div style="font-size:11px;color:var(--ink-soft);">↑ Hover the locked tab to see exactly what the dealer sees.</div>
+        </div>
+      </div>
+
+      <!-- COMPARE OTHER DEALERS -->
+      <div class="card" style="padding:20px 22px;display:flex;flex-direction:column;gap:12px;">
+        <div style="font-weight:600;font-size:14px;color:var(--navy);">Access Is Set Per Dealer</div>
+        <div style="font-size:12px;color:var(--ink-soft);">Every dealer gets its own configuration — enabling Marketing here has no effect on any other dealer's account.</div>
+        <div style="display:flex;gap:10px;flex-wrap:wrap;">
+          <div class="dealer-pill active">Al-Noor Builders <span class="tag" style="background:var(--red-bg);color:var(--red);">Marketing locked</span></div>
+          <div class="dealer-pill">Green Valley Realty <span class="tag" style="background:var(--green-bg);color:var(--green);">All tabs enabled</span></div>
+          <div class="dealer-pill">Riverside Estates <span class="tag" style="background:var(--red-bg);color:var(--red);">Marketing, Branding locked</span></div>
+          <div class="dealer-pill">Skyline Properties <span class="tag" style="background:var(--green-bg);color:var(--green);">All tabs enabled</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":960}}'>
+class Component extends DCLogic {
+  renderVals(){ return {}; }
+}
+</script>
+</body>
+</html>

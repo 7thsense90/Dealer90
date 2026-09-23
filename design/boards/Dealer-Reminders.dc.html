@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Dealer — Payment Reminders</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<style>
+:root{
+  --navy:#10213A; --navy-2:#1A3155; --gold:#B98B33; --gold-light:#EFE1C2; --ivory:#F6F4EF; --white:#FFFFFF;
+  --line:#E4E0D6; --ink:#20242C; --muted:#6B7178; --green:#3F6B4F; --green-bg:#E6EEE7; --amber-bg:#F6EADA; --amber:#B9772E; --red:#B3432E; --red-bg:#F8E4DF;
+}
+body{margin:0;background:var(--ivory);font-family:'Work Sans',sans-serif;color:var(--ink)}
+h1,h2,h3{font-family:'Fraunces',serif;margin:0}
+a{color:inherit;text-decoration:none}
+.tag{display:inline-flex;padding:5px 12px;border-radius:999px;font-size:11px;font-weight:700;}
+.card{background:var(--white);border:1px solid var(--line);border-radius:16px;}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:12px 20px;border-radius:10px;font-weight:700;font-size:13px;border:1px solid transparent;cursor:pointer}
+.btn-gold{background:var(--gold);color:#fff}
+.btn-line{background:#fff;border-color:var(--line);color:var(--ink)}
+.navitem{display:flex;align-items:center;gap:12px;padding:12px 18px;border-radius:10px;font-size:14px;font-weight:600;color:#B7C0D1;}
+.navitem.active{background:var(--navy-2);color:#fff;}
+.badge{background:var(--gold);color:#10213A;font-size:10px;font-weight:800;padding:2px 7px;border-radius:999px;margin-left:auto;}
+.badge-red{background:var(--red);color:#fff;font-size:10px;font-weight:800;padding:2px 7px;border-radius:999px;margin-left:auto;}
+.filter-tab{padding:9px 18px;border-radius:999px;font-size:13px;font-weight:600;color:var(--muted);border:1px solid var(--line);background:#fff;}
+.filter-tab.active{background:var(--navy);color:#fff;border-color:var(--navy);}
+.row{display:flex;align-items:center;gap:14px;padding:14px 16px;border-radius:12px;border:1px solid var(--line);background:#fff;}
+.chip{padding:5px 10px;border-radius:6px;background:var(--ivory);border:1px solid var(--line);font-size:11px;font-weight:600;color:var(--navy);}
+</style>
+</helmet>
+<div style="width:1440px;height:1320px;box-sizing:border-box;background:var(--ivory);display:flex;">
+
+  <!-- SIDEBAR -->
+  <div style="width:250px;flex-shrink:0;background:var(--navy);display:flex;flex-direction:column;padding:26px 16px;">
+    <div style="display:flex;align-items:center;gap:10px;padding:0 8px 28px;">
+      <div style="width:54px;height:32px;border-radius:9px;background:var(--gold);display:flex;align-items:center;justify-content:center;font-family:'Fraunces',serif;font-weight:600;color:#10213A;font-size:13px;letter-spacing:-.02em;">D90</div>
+      <div style="color:#fff;font-family:'Work Sans',sans-serif;font-size:18px;font-weight:700;letter-spacing:-.01em;">Dealer90.com</div>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:4px;">
+      <div class="navitem">📊 Dashboard</div>
+      <div class="navitem">🏠 My Properties</div>
+      <div class="navitem">👥 Customers</div>
+      <div class="navitem active">🔔 Reminders<span class="badge-red">8</span></div>
+      <div class="navitem">📣 Customer Offers</div>
+      <div class="navitem">📥 Buyer Requests<span class="badge">4</span></div>
+      <div class="navitem">🔁 Transfer Requests<span class="badge">1</span></div>
+      <div class="navitem">📧 Marketing</div>
+    </div>
+    <div style="margin-top:auto;display:flex;align-items:center;gap:10px;padding:14px 8px;border-top:1px solid #2A3E5C;">
+      <div style="width:34px;height:34px;border-radius:50%;background:var(--gold-light);"></div>
+      <div>
+        <div style="color:#fff;font-size:13px;font-weight:600;">Al-Noor Builders</div>
+        <div style="color:#8A97AD;font-size:11px;">Credibility 8.7/10</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MAIN -->
+  <div style="flex:1;display:flex;flex-direction:column;">
+    <div style="height:80px;background:#fff;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;padding:0 40px;flex-shrink:0;">
+      <div>
+        <h1 style="font-size:21px;">Payment Reminders</h1>
+        <div style="font-size:12.5px;color:var(--muted);">Nudge customers with installments coming due — before they're overdue</div>
+      </div>
+      <div style="display:flex;gap:16px;align-items:center;">
+        <label style="display:flex;align-items:center;gap:8px;font-size:12.5px;font-weight:600;cursor:pointer;">
+          <span style="width:34px;height:18px;border-radius:999px;background:var(--green);position:relative;display:inline-block;"><span style="width:14px;height:14px;border-radius:50%;background:#fff;position:absolute;top:2px;right:2px;"></span></span>
+          Auto-send 3 days before due
+        </label>
+      </div>
+    </div>
+
+    <div style="padding:24px 40px 0;flex:1;overflow:hidden;display:flex;flex-direction:column;">
+
+      <!-- STATS -->
+      <div style="display:flex;gap:16px;margin-bottom:22px;">
+        <div class="card" style="flex:1;padding:16px 20px;border-top:3px solid var(--red);"><div style="font-size:11px;color:var(--muted);font-weight:600;">Overdue</div><div style="font-size:22px;font-weight:700;font-family:'Fraunces',serif;color:var(--red);">3</div></div>
+        <div class="card" style="flex:1;padding:16px 20px;border-top:3px solid var(--amber);"><div style="font-size:11px;color:var(--muted);font-weight:600;">Due in 3 Days</div><div style="font-size:22px;font-weight:700;font-family:'Fraunces',serif;color:var(--amber);">5</div></div>
+        <div class="card" style="flex:1;padding:16px 20px;border-top:3px solid var(--green);"><div style="font-size:11px;color:var(--muted);font-weight:600;">Reminders Sent Today</div><div style="font-size:22px;font-weight:700;font-family:'Fraunces',serif;color:var(--green);">2</div></div>
+        <div class="card" style="flex:1;padding:16px 20px;"><div style="font-size:11px;color:var(--muted);font-weight:600;">Avg. Days to Pay After Reminder</div><div style="font-size:22px;font-weight:700;font-family:'Fraunces',serif;">1.8</div></div>
+      </div>
+
+      <!-- FILTERS + BULK -->
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;">
+        <div style="display:flex;gap:10px;">
+          <div class="filter-tab active">All Pending (8)</div>
+          <div class="filter-tab">Overdue (3)</div>
+          <div class="filter-tab">Due Soon (5)</div>
+        </div>
+        <button class="btn btn-gold">Send Reminder to 3 Selected →</button>
+      </div>
+
+      <!-- LIST -->
+      <div style="display:flex;flex-direction:column;gap:10px;overflow-y:auto;">
+        <div class="row" style="border-color:var(--red);">
+          <span style="width:16px;height:16px;border-radius:4px;background:var(--navy);flex-shrink:0;"></span>
+          <div style="width:38px;height:38px;border-radius:50%;background:var(--gold-light);flex-shrink:0;"></div>
+          <div style="flex:1;">
+            <div style="font-weight:700;font-size:13.5px;">Ayesha Malik</div>
+            <div style="font-size:11.5px;color:var(--muted);">5 Marla Corner Villa, DHA Phase 6 · Installment #9</div>
+          </div>
+          <span class="chip">PKR 95,000</span>
+          <span class="tag" style="background:var(--red-bg);color:var(--red);">2 Days Overdue</span>
+          <span style="font-size:11px;color:var(--muted);width:130px;">Last reminder: never</span>
+          <button class="btn btn-gold" style="padding:9px 16px;font-size:12px;">Send Reminder</button>
+        </div>
+        <div class="row" style="border-color:var(--red);">
+          <span style="width:16px;height:16px;border-radius:4px;background:var(--navy);flex-shrink:0;"></span>
+          <div style="width:38px;height:38px;border-radius:50%;background:var(--gold-light);flex-shrink:0;"></div>
+          <div style="flex:1;">
+            <div style="font-weight:700;font-size:13.5px;">Bilal Ahmed</div>
+            <div style="font-size:11.5px;color:var(--muted);">Shop 12, Al-Noor Arcade · Installment #21</div>
+          </div>
+          <span class="chip">PKR 48,000</span>
+          <span class="tag" style="background:var(--red-bg);color:var(--red);">5 Days Overdue</span>
+          <span style="font-size:11px;color:var(--muted);width:130px;">Last reminder: Sep 18</span>
+          <button class="btn btn-gold" style="padding:9px 16px;font-size:12px;">Remind Again</button>
+        </div>
+        <div class="row">
+          <span style="width:16px;height:16px;border-radius:4px;border:1.5px solid var(--line);flex-shrink:0;"></span>
+          <div style="width:38px;height:38px;border-radius:50%;background:var(--gold-light);flex-shrink:0;"></div>
+          <div style="flex:1;">
+            <div style="font-weight:700;font-size:13.5px;">Usman Tariq</div>
+            <div style="font-size:11.5px;color:var(--muted);">10 Marla Residential Plot, Bahria Town · Installment #14</div>
+          </div>
+          <span class="chip">PKR 95,000</span>
+          <span class="tag" style="background:var(--amber-bg);color:var(--amber);">Due in 3 Days</span>
+          <span style="font-size:11px;color:var(--muted);width:130px;">Last reminder: never</span>
+          <button class="btn btn-line" style="padding:9px 16px;font-size:12px;">Send Reminder</button>
+        </div>
+        <div class="row">
+          <span style="width:16px;height:16px;border-radius:4px;border:1.5px solid var(--line);flex-shrink:0;"></span>
+          <div style="width:38px;height:38px;border-radius:50%;background:var(--gold-light);flex-shrink:0;"></div>
+          <div style="flex:1;">
+            <div style="font-weight:700;font-size:13.5px;">Fatima Sheikh</div>
+            <div style="font-size:11.5px;color:var(--muted);">Shop No. 4, Meridian Plaza · Installment #6</div>
+          </div>
+          <span class="chip">PKR 62,000</span>
+          <span class="tag" style="background:var(--amber-bg);color:var(--amber);">Due in 5 Days</span>
+          <span style="font-size:11px;color:var(--muted);width:130px;">Last reminder: never</span>
+          <button class="btn btn-line" style="padding:9px 16px;font-size:12px;">Send Reminder</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- REMINDER COMPOSER PANEL -->
+  <div style="width:380px;flex-shrink:0;background:#fff;border-left:1px solid var(--line);padding:26px 24px;display:flex;flex-direction:column;gap:16px;">
+    <div>
+      <div style="font-weight:700;font-size:15px;">Reminder Message</div>
+      <div style="font-size:11.5px;color:var(--muted);margin-top:4px;">Applies to reminders sent from this screen. Customize per-send if needed.</div>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:8px;">
+      <label style="font-size:12px;font-weight:700;">Send Via</label>
+      <div style="display:flex;gap:8px;flex-wrap:wrap;">
+        <span class="tag" style="background:var(--navy);color:#fff;">SMS</span>
+        <span class="tag" style="background:var(--navy);color:#fff;">In-App</span>
+        <span class="tag" style="background:#fff;border:1px solid var(--line);color:var(--muted);">WhatsApp</span>
+      </div>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:8px;">
+      <label style="font-size:12px;font-weight:700;">Message Template</label>
+      <div class="card" style="padding:12px;font-size:12.5px;line-height:1.6;color:var(--ink);">Hi {{name}}, a friendly reminder that installment {{installment_no}} of PKR {{amount}} for {{property}} is due on {{due_date}}. Reply here if you have any questions.</div>
+    </div>
+    <div class="card" style="padding:14px;background:var(--gold-light);border-color:var(--gold);">
+      <div style="font-size:11.5px;color:#5B4A2A;line-height:1.6;">Reminders reference the installment schedule already on record — nothing here changes the plan or payment terms.</div>
+    </div>
+    <button class="btn btn-gold">Save Template</button>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":1320}}'>
+class Component extends DCLogic {
+  renderVals(){ return {}; }
+}
+</script>
+</body>
+</html>

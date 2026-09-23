@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Dealer90.com — Customers &amp; Installments</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<style>
+:root{
+  --navy:#10213A; --navy-2:#16294A; --ink:#1C2430; --ink-soft:#5B6472;
+  --paper:#F6F4EF; --paper-2:#FFFFFF; --gold:#B98B33; --gold-light:#E7C77E;
+  --green:#2F6F4E; --green-bg:#E7F1EA; --amber:#B9772E; --amber-bg:#F6EADA;
+  --red:#B4453A; --red-bg:#F7E7E4; --line:#E4DFD3;
+}
+body{margin:0;background:var(--paper);font-family:'Work Sans',sans-serif;color:var(--ink)}
+h1,h2,h3{font-family:'Fraunces',serif;margin:0}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:11px 20px;border-radius:8px;font-weight:600;font-size:13px;border:1px solid transparent;cursor:pointer}
+.btn-gold{background:var(--gold);color:#fff}
+.btn-outline{background:#fff;border-color:var(--line);color:var(--ink);border-width:1px;border-style:solid;}
+.tag{display:inline-flex;padding:5px 12px;border-radius:999px;font-size:12px;font-weight:600;}
+.card{background:var(--paper-2);border:1px solid var(--line);border-radius:14px;}
+table{width:100%;border-collapse:collapse;}
+th{text-align:left;font-size:11px;color:var(--ink-soft);font-weight:600;padding:10px 14px;border-bottom:1px solid var(--line);text-transform:uppercase;letter-spacing:.03em;}
+td{padding:13px 14px;border-bottom:1px solid var(--line);font-size:13px;}
+.custrow{display:flex;align-items:center;gap:12px;padding:14px 18px;border-bottom:1px solid var(--line);cursor:pointer;}
+.custrow.active{background:var(--amber-bg);}
+</style>
+</helmet>
+<div style="width:1440px;height:1020px;box-sizing:border-box;background:var(--paper);display:flex;flex-direction:column;">
+
+  <div style="height:76px;flex-shrink:0;display:flex;align-items:center;justify-content:space-between;padding:0 40px;border-bottom:1px solid var(--line);background:#fff;">
+    <div>
+      <div style="font-size:12px;color:var(--ink-soft);">Al-Noor Builders</div>
+      <h1 style="font-size:20px;color:var(--navy);">Customers &amp; Installment Plans</h1>
+    </div>
+    <div style="display:flex;gap:10px;">
+      <button class="btn btn-outline">+ Create Installment Plan</button>
+      <button class="btn btn-gold">+ Add Customer</button>
+    </div>
+  </div>
+
+  <div style="flex:1;display:flex;overflow:hidden;">
+
+    <!-- CUSTOMER LIST -->
+    <div style="width:340px;flex-shrink:0;border-right:1px solid var(--line);background:#fff;display:flex;flex-direction:column;">
+      <div style="padding:16px 18px;">
+        <input placeholder="Search customers…" style="width:100%;box-sizing:border-box;border:1px solid var(--line);border-radius:8px;padding:10px 12px;font-size:13px;">
+      </div>
+      <div class="custrow active">
+        <div style="width:38px;height:38px;border-radius:50%;background:var(--gold-light);flex-shrink:0;"></div>
+        <div style="flex:1;">
+          <div style="font-weight:600;font-size:14px;">Usman Tariq</div>
+          <div style="font-size:12px;color:var(--ink-soft);">5 Marla Corner Villa</div>
+        </div>
+        <span class="tag" style="background:var(--green-bg);color:var(--green);">On track</span>
+      </div>
+      <div class="custrow">
+        <div style="width:38px;height:38px;border-radius:50%;background:#8FA6C7;flex-shrink:0;"></div>
+        <div style="flex:1;">
+          <div style="font-weight:600;font-size:14px;">Zara Ahmed</div>
+          <div style="font-size:12px;color:var(--ink-soft);">3-Bed Apartment, Gulberg</div>
+        </div>
+        <span class="tag" style="background:var(--green-bg);color:var(--green);">On track</span>
+      </div>
+      <div class="custrow">
+        <div style="width:38px;height:38px;border-radius:50%;background:#C79A6B;flex-shrink:0;"></div>
+        <div style="flex:1;">
+          <div style="font-weight:600;font-size:14px;">Bilal Sheikh</div>
+          <div style="font-size:12px;color:var(--ink-soft);">Shop 9, Al-Noor Arcade</div>
+        </div>
+        <span class="tag" style="background:var(--red-bg);color:var(--red);">Overdue</span>
+      </div>
+      <div class="custrow">
+        <div style="width:38px;height:38px;border-radius:50%;background:#9CC7A6;flex-shrink:0;"></div>
+        <div style="flex:1;">
+          <div style="font-weight:600;font-size:14px;">Hina Malik</div>
+          <div style="font-size:12px;color:var(--ink-soft);">Shop 12, Al-Noor Arcade</div>
+        </div>
+        <span class="tag" style="background:#EFE9DA;color:var(--navy);">Completed</span>
+      </div>
+    </div>
+
+    <!-- DETAIL -->
+    <div style="flex:1;padding:28px 36px;overflow:auto;display:flex;flex-direction:column;gap:22px;">
+
+      <div style="display:flex;justify-content:space-between;align-items:flex-start;">
+        <div style="display:flex;gap:16px;align-items:center;">
+          <div style="width:56px;height:56px;border-radius:50%;background:var(--gold-light);"></div>
+          <div>
+            <div style="font-size:19px;font-weight:600;">Usman Tariq</div>
+            <div style="font-size:13px;color:var(--ink-soft);">+92 300 1234567 · usman.tariq@email.com</div>
+            <div style="font-size:13px;color:var(--ink-soft);">Property: 5 Marla Corner Villa, DHA Phase 6</div>
+          </div>
+        </div>
+        <div style="display:flex;gap:10px;">
+          <button class="btn btn-outline">Edit Plan</button>
+          <button class="btn btn-outline">Print Statement</button>
+          <button class="btn btn-gold">+ Record Payment</button>
+        </div>
+      </div>
+
+      <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:16px;">
+        <div class="card" style="padding:16px;"><div style="font-size:12px;color:var(--ink-soft);">Total Plan Value</div><div style="font-size:20px;font-weight:700;color:var(--navy);font-family:'Fraunces',serif;">PKR 28.5M</div></div>
+        <div class="card" style="padding:16px;"><div style="font-size:12px;color:var(--ink-soft);">Paid to Date</div><div style="font-size:20px;font-weight:700;color:var(--green);font-family:'Fraunces',serif;">PKR 12.75M</div></div>
+        <div class="card" style="padding:16px;"><div style="font-size:12px;color:var(--ink-soft);">Remaining Balance</div><div style="font-size:20px;font-weight:700;color:var(--amber);font-family:'Fraunces',serif;">PKR 15.75M</div></div>
+        <div class="card" style="padding:16px;"><div style="font-size:12px;color:var(--ink-soft);">Next Installment</div><div style="font-size:20px;font-weight:700;color:var(--navy);font-family:'Fraunces',serif;">Oct 5</div></div>
+      </div>
+
+      <div class="card">
+        <div style="padding:16px 20px;border-bottom:1px solid var(--line);font-weight:600;font-size:14px;">Installment Schedule</div>
+        <table>
+          <tr><th>#</th><th>Due Date</th><th>Amount</th><th>Paid Date</th><th>Status</th><th></th></tr>
+          <tr><td>1</td><td>Jun 5, 2026</td><td>PKR 1,958,333</td><td>Jun 4, 2026</td><td><span class="tag" style="background:var(--green-bg);color:var(--green);">Paid</span></td><td><span style="color:var(--ink-soft);cursor:pointer;">Edit</span></td></tr>
+          <tr><td>2</td><td>Jul 5, 2026</td><td>PKR 1,958,333</td><td>Jul 6, 2026</td><td><span class="tag" style="background:var(--green-bg);color:var(--green);">Paid</span></td><td><span style="color:var(--ink-soft);cursor:pointer;">Edit</span></td></tr>
+          <tr><td>3</td><td>Aug 5, 2026</td><td>PKR 1,958,333</td><td>Aug 5, 2026</td><td><span class="tag" style="background:var(--green-bg);color:var(--green);">Paid</span></td><td><span style="color:var(--ink-soft);cursor:pointer;">Edit</span></td></tr>
+          <tr><td>4</td><td>Sep 5, 2026</td><td>PKR 1,958,333</td><td>—</td><td><span class="tag" style="background:var(--amber-bg);color:var(--amber);">Pending</span></td><td><span style="color:var(--gold);font-weight:600;cursor:pointer;">Record</span></td></tr>
+          <tr><td>5</td><td>Oct 5, 2026</td><td>PKR 1,958,333</td><td>—</td><td><span class="tag" style="background:#EFE9DA;color:var(--navy);">Upcoming</span></td><td><span style="color:var(--gold);font-weight:600;cursor:pointer;">Record</span></td></tr>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":1020}}'>
+class Component extends DCLogic {
+  renderVals(){ return {}; }
+}
+</script>
+</body>
+</html>

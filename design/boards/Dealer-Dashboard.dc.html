@@ -1,0 +1,232 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Dealer90.com — Dealer Dashboard</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<style>
+:root{
+  --navy:#10213A; --navy-2:#16294A; --ink:#1C2430; --ink-soft:#5B6472;
+  --paper:#F6F4EF; --paper-2:#FFFFFF; --gold:#B98B33; --gold-light:#E7C77E;
+  --green:#2F6F4E; --green-bg:#E7F1EA; --amber:#B9772E; --amber-bg:#F6EADA;
+  --red:#B4453A; --red-bg:#F7E7E4; --line:#E4DFD3; --violet:#6C4E9C; --violet-bg:#EFE9F6;
+  --slate:#5E7CA8; --slate-bg:#E9EEF5;
+}
+.kpi{padding:18px 20px;border-top:3px solid var(--line);display:flex;flex-direction:column;gap:6px;}
+.kpi .lbl{font-size:12.5px;color:var(--ink-soft);}
+.kpi .val{font-size:25px;font-weight:700;color:var(--navy);font-family:'Fraunces',serif;}
+.kpi .sub{font-size:11px;color:var(--ink-soft);}
+.legend-row{display:flex;align-items:center;gap:10px;font-size:12.5px;padding:9px 0;border-bottom:1px solid var(--line);}
+.legend-row:last-child{border-bottom:none;}
+.legend-dot{width:11px;height:11px;border-radius:3px;flex-shrink:0;}
+body{margin:0;background:var(--paper);font-family:'Work Sans',sans-serif;color:var(--ink)}
+h1,h2,h3{font-family:'Fraunces',serif;margin:0}
+a{color:inherit;text-decoration:none}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:11px 20px;border-radius:8px;font-weight:600;font-size:14px;border:1px solid transparent;cursor:pointer}
+.btn-gold{background:var(--gold);color:#fff}
+.tag{display:inline-flex;padding:5px 12px;border-radius:999px;font-size:12px;font-weight:600;}
+.card{background:var(--paper-2);border:1px solid var(--line);border-radius:14px;}
+.navitem{display:flex;align-items:center;gap:12px;padding:11px 18px;border-radius:9px;font-size:14px;font-weight:500;color:#C7CEDB;position:relative;}
+.navitem.active{background:var(--navy-2);color:#fff;}
+.navitem.locked{color:#5C6C85;cursor:not-allowed;}
+.navitem.locked .lock-ic{margin-left:auto;font-size:11.5px;}
+.navitem.locked .tooltip{position:absolute;left:calc(100% + 10px);top:50%;transform:translateY(-50%);background:var(--ink);color:#fff;font-size:11.5px;font-weight:500;line-height:1.4;padding:9px 13px;border-radius:8px;width:200px;white-space:normal;opacity:0;pointer-events:none;transition:opacity .15s ease;box-shadow:0 8px 20px rgba(0,0,0,.25);z-index:80;}
+.navitem.locked .tooltip::before{content:"";position:absolute;right:100%;top:50%;transform:translateY(-50%);border:6px solid transparent;border-right-color:var(--ink);}
+.navitem.locked:hover .tooltip{opacity:1;}
+table{width:100%;border-collapse:collapse;}
+th{text-align:left;font-size:12px;color:var(--ink-soft);font-weight:600;padding:12px 16px;border-bottom:1px solid var(--line);text-transform:uppercase;letter-spacing:.03em;}
+td{padding:14px 16px;border-bottom:1px solid var(--line);font-size:14px;vertical-align:middle;}
+</style>
+</helmet>
+<div style="width:1440px;height:1120px;box-sizing:border-box;background:var(--paper);display:flex;">
+
+  <!-- SIDEBAR -->
+  <div style="width:250px;flex-shrink:0;background:var(--navy);padding:28px 16px;display:flex;flex-direction:column;gap:4px;">
+    <div style="display:flex;align-items:center;gap:10px;padding:0 10px 24px;">
+      <div style="width:34px;height:34px;border-radius:8px;background:var(--gold-light);"></div>
+      <div style="color:#fff;font-family:'Fraunces',serif;font-size:17px;font-weight:600;">Al-Noor Builders</div>
+    </div>
+    <div class="navitem active">Dashboard</div>
+    <div class="navitem">Buyer Requests <span style="background:var(--gold);color:var(--navy);font-size:10px;font-weight:700;border-radius:999px;padding:2px 7px;margin-left:auto;">4 new</span></div>
+    <div class="navitem">Transfer Requests <span style="background:var(--gold);color:var(--navy);font-size:10px;font-weight:700;border-radius:999px;padding:2px 7px;margin-left:auto;">1 new</span></div>
+    <div class="navitem">Properties</div>
+    <div class="navitem">Customers</div>
+    <div class="navitem">Installment Plans</div>
+    <div class="navitem">Payments</div>
+    <div class="navitem locked">Marketing <span class="lock-ic">🔒</span>
+      <div class="tooltip">This feature isn't enabled for your account. Please contact Admin to enable this feature.</div>
+    </div>
+    <div class="navitem">Branding</div>
+    <div class="navitem">Settings</div>
+    <div style="margin-top:auto;padding:14px 10px 0;border-top:1px solid #26385A;display:flex;align-items:center;gap:10px;">
+      <div style="width:32px;height:32px;border-radius:50%;background:var(--gold-light);"></div>
+      <div style="color:#fff;font-size:13px;">Ahmed Raza</div>
+    </div>
+  </div>
+
+  <!-- MAIN -->
+  <div style="flex:1;display:flex;flex-direction:column;overflow:hidden;">
+
+    <div style="height:80px;flex-shrink:0;display:flex;align-items:center;justify-content:space-between;padding:0 36px;border-bottom:1px solid var(--line);">
+      <div>
+        <h1 style="font-size:22px;color:var(--navy);">Welcome back, Al-Noor Builders</h1>
+        <div style="font-size:13px;color:var(--ink-soft);display:flex;align-items:center;gap:8px;">Here's how your listings are performing <span class="tag" style="background:#EFE9DA;color:var(--ink-soft);font-weight:600;">🔒 Marketing restricted by Admin</span></div>
+      </div>
+      <button class="btn btn-gold">+ Add Property</button>
+    </div>
+
+    <div style="padding:28px 36px;display:flex;flex-direction:column;gap:26px;overflow:auto;">
+
+      <div style="display:flex;justify-content:space-between;align-items:baseline;">
+        <div style="font-weight:600;font-size:14px;color:var(--navy);">Reporting Snapshot — This Month</div>
+      </div>
+
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:18px;">
+        <div class="card kpi" style="border-top-color:var(--navy);">
+          <div class="lbl">Total Properties Listed</div>
+          <div class="val">34</div>
+          <div class="sub">27 public · 7 internal-only</div>
+        </div>
+        <div class="card kpi" style="border-top-color:var(--green);">
+          <div class="lbl">Total Sold</div>
+          <div class="val" style="color:var(--green);">11</div>
+          <div class="sub">4 sold this month</div>
+        </div>
+        <div class="card kpi" style="border-top-color:var(--green);">
+          <div class="lbl">Cash Received This Month</div>
+          <div class="val" style="color:var(--green);">PKR 41.2L</div>
+          <div class="sub">19 installments collected</div>
+        </div>
+        <div class="card kpi" style="border-top-color:var(--amber);">
+          <div class="lbl">Pending Cash This Month</div>
+          <div class="val" style="color:var(--amber);">PKR 9.8L</div>
+          <div class="sub">7 installments still due</div>
+        </div>
+        <div class="card kpi" style="border-top-color:var(--red);">
+          <div class="lbl">Overdue Installment Amount</div>
+          <div class="val" style="color:var(--red);">PKR 2.43L</div>
+          <div class="sub">across overdue accounts</div>
+        </div>
+        <div class="card kpi" style="border-top-color:var(--red);">
+          <div class="lbl">Overdue Installments</div>
+          <div class="val" style="color:var(--red);">3</div>
+          <div class="sub">2 customers · 1 to 3 mo. late</div>
+        </div>
+      </div>
+
+      <div style="display:grid;grid-template-columns:1.5fr 1fr;gap:20px;align-items:stretch;">
+
+        <!-- RECOVERY TREND -->
+        <div class="card" style="padding:22px 24px;display:flex;flex-direction:column;gap:6px;">
+          <div style="display:flex;justify-content:space-between;align-items:baseline;">
+            <div style="font-weight:600;font-size:15px;color:var(--navy);">Cash Recovery Trend — Last 6 Months</div>
+            <span class="tag" style="background:var(--green-bg);color:var(--green);">+47% vs. Apr</span>
+          </div>
+          <div style="font-size:11.5px;color:var(--ink-soft);margin-bottom:6px;">Total installment cash collected per month, PKR (Lacs)</div>
+          <svg viewBox="0 0 640 220" width="100%" height="200" style="overflow:visible;">
+            <line x1="24" y1="190" x2="616" y2="190" stroke="var(--line)" stroke-width="1"></line>
+            <line x1="24" y1="123.6" x2="616" y2="123.6" stroke="var(--line)" stroke-width="1" stroke-dasharray="2,4"></line>
+            <line x1="24" y1="57.2" x2="616" y2="57.2" stroke="var(--line)" stroke-width="1" stroke-dasharray="2,4"></line>
+            <text x="0" y="193" font-size="10" fill="var(--ink-soft)" font-family="'Work Sans',sans-serif">20L</text>
+            <text x="0" y="127" font-size="10" fill="var(--ink-soft)" font-family="'Work Sans',sans-serif">30L</text>
+            <text x="0" y="61" font-size="10" fill="var(--ink-soft)" font-family="'Work Sans',sans-serif">40L</text>
+            <polygon points="24.0,136.9 142.4,117.0 260.8,90.4 379.2,70.5 497.6,103.7 616.0,49.2 616.0,190 24.0,190" fill="var(--green)" opacity="0.10"></polygon>
+            <polyline points="24.0,136.9 142.4,117.0 260.8,90.4 379.2,70.5 497.6,103.7 616.0,49.2" fill="none" stroke="var(--green)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"></polyline>
+            <circle cx="24.0" cy="136.9" r="4" fill="var(--paper-2)" stroke="var(--green)" stroke-width="2"></circle>
+            <circle cx="142.4" cy="117.0" r="4" fill="var(--paper-2)" stroke="var(--green)" stroke-width="2"></circle>
+            <circle cx="260.8" cy="90.4" r="4" fill="var(--paper-2)" stroke="var(--green)" stroke-width="2"></circle>
+            <circle cx="379.2" cy="70.5" r="4" fill="var(--paper-2)" stroke="var(--green)" stroke-width="2"></circle>
+            <circle cx="497.6" cy="103.7" r="4" fill="var(--paper-2)" stroke="var(--green)" stroke-width="2"></circle>
+            <circle cx="616.0" cy="49.2" r="4.5" fill="var(--green)" stroke="var(--paper-2)" stroke-width="2"></circle>
+            <text x="24" y="153" font-size="11" font-weight="600" fill="var(--ink)" font-family="'Work Sans',sans-serif">28.0L</text>
+            <text x="586" y="36" font-size="11" font-weight="700" fill="var(--green)" font-family="'Work Sans',sans-serif">41.2L</text>
+            <text x="24" y="210" font-size="10.5" fill="var(--ink-soft)" font-family="'Work Sans',sans-serif">Apr</text>
+            <text x="132" y="210" font-size="10.5" fill="var(--ink-soft)" font-family="'Work Sans',sans-serif">May</text>
+            <text x="252" y="210" font-size="10.5" fill="var(--ink-soft)" font-family="'Work Sans',sans-serif">Jun</text>
+            <text x="371" y="210" font-size="10.5" fill="var(--ink-soft)" font-family="'Work Sans',sans-serif">Jul</text>
+            <text x="489" y="210" font-size="10.5" fill="var(--ink-soft)" font-family="'Work Sans',sans-serif">Aug</text>
+            <text x="602" y="210" font-size="10.5" fill="var(--ink-soft)" font-family="'Work Sans',sans-serif">Sep</text>
+          </svg>
+        </div>
+
+        <!-- PROPERTIES BY STATUS DONUT -->
+        <div class="card" style="padding:22px 24px;display:flex;flex-direction:column;gap:14px;">
+          <div style="font-weight:600;font-size:15px;color:var(--navy);">Properties by Status</div>
+          <div style="display:flex;align-items:center;gap:20px;">
+            <div style="position:relative;width:126px;height:126px;flex-shrink:0;">
+              <div style="width:126px;height:126px;border-radius:50%;background:conic-gradient(var(--slate) 0% 24%, var(--amber) 24% 80%, var(--green) 80% 92%, var(--violet) 92% 100%);"></div>
+              <div style="position:absolute;top:19px;left:19px;width:88px;height:88px;border-radius:50%;background:var(--paper-2);display:flex;flex-direction:column;align-items:center;justify-content:center;">
+                <div style="font-size:20px;font-weight:700;color:var(--navy);font-family:'Fraunces',serif;">34</div>
+                <div style="font-size:10px;color:var(--ink-soft);">Total</div>
+              </div>
+            </div>
+            <div style="flex:1;">
+              <div class="legend-row"><span class="legend-dot" style="background:var(--slate);"></span><span style="flex:1;">Available</span><span style="font-weight:600;">8 · 24%</span></div>
+              <div class="legend-row"><span class="legend-dot" style="background:var(--amber);"></span><span style="flex:1;">On Installment</span><span style="font-weight:600;">19 · 56%</span></div>
+              <div class="legend-row"><span class="legend-dot" style="background:var(--green);"></span><span style="flex:1;">Sold</span><span style="font-weight:600;">4 · 12%</span></div>
+              <div class="legend-row"><span class="legend-dot" style="background:var(--violet);"></span><span style="flex:1;">Verified Resale</span><span style="font-weight:600;">3 · 8%</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div style="display:grid;grid-template-columns:1.6fr 1fr;gap:20px;align-items:start;">
+        <div class="card">
+          <div style="padding:18px 20px;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;align-items:center;">
+            <div style="font-weight:600;font-size:15px;">My Properties</div>
+            <a href="#" style="color:var(--gold);font-size:13px;font-weight:600;">View all →</a>
+          </div>
+          <table>
+            <tr><th>Property</th><th>Type</th><th>Price</th><th>Status</th><th>Customer</th></tr>
+            <tr>
+              <td style="font-weight:600;">5 Marla Corner Villa, DHA 6</td><td>Residential</td><td>PKR 2.85 Cr</td>
+              <td><span class="tag" style="background:var(--amber-bg);color:var(--amber);">On Installment</span></td><td>Usman Tariq</td>
+            </tr>
+            <tr>
+              <td style="font-weight:600;">Shop 12, Al-Noor Arcade</td><td>Commercial</td><td>PKR 1.4 Cr</td>
+              <td><span class="tag" style="background:var(--green-bg);color:var(--green);">Sold</span></td><td>Hina Malik</td>
+            </tr>
+            <tr>
+              <td style="font-weight:600;">8 Marla Plot, Block J</td><td>Plot</td><td>PKR 1.1 Cr</td>
+              <td><span class="tag" style="background:#EFE9DA;color:var(--navy);">Available</span></td><td>—</td>
+            </tr>
+            <tr>
+              <td style="font-weight:600;">3-Bed Apartment, Gulberg</td><td>Rental</td><td>PKR 85,000/mo</td>
+              <td><span class="tag" style="background:var(--amber-bg);color:var(--amber);">On Installment</span></td><td>Zara Ahmed</td>
+            </tr>
+          </table>
+        </div>
+
+        <div class="card" style="padding:20px;display:flex;flex-direction:column;gap:14px;">
+          <div style="font-weight:600;font-size:15px;">Recent Payments</div>
+          <div style="display:flex;justify-content:space-between;font-size:13px;padding-bottom:12px;border-bottom:1px solid var(--line);">
+            <div><div style="font-weight:600;">Usman Tariq</div><div style="color:var(--ink-soft);">Installment 4 of 12</div></div>
+            <div style="text-align:right;"><div style="font-weight:700;color:var(--green);">PKR 218,750</div><div style="color:var(--ink-soft);">Sep 19</div></div>
+          </div>
+          <div style="display:flex;justify-content:space-between;font-size:13px;padding-bottom:12px;border-bottom:1px solid var(--line);">
+            <div><div style="font-weight:600;">Zara Ahmed</div><div style="color:var(--ink-soft);">Installment 2 of 6</div></div>
+            <div style="text-align:right;"><div style="font-weight:700;color:var(--green);">PKR 85,000</div><div style="color:var(--ink-soft);">Sep 15</div></div>
+          </div>
+          <div style="display:flex;justify-content:space-between;font-size:13px;">
+            <div><div style="font-weight:600;">Bilal Sheikh</div><div style="color:var(--ink-soft);">Installment 6 of 10 — overdue</div></div>
+            <div style="text-align:right;"><div style="font-weight:700;color:var(--red);">PKR 156,000</div><div style="color:var(--ink-soft);">Due Sep 10</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":1120}}'>
+class Component extends DCLogic {
+  renderVals(){ return {}; }
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Dealer90.com — Super Admin — AI Provider Settings</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<style>
+:root{
+  --navy:#10213A; --navy-2:#16294A; --ink:#1C2430; --ink-soft:#5B6472;
+  --paper:#F6F4EF; --paper-2:#FFFFFF; --gold:#B98B33; --gold-light:#E7C77E;
+  --green:#2F6F4E; --green-bg:#E7F1EA; --amber:#B9772E; --amber-bg:#F6EADA;
+  --red:#B4453A; --red-bg:#F7E7E4; --line:#E4DFD3; --violet:#6C4E9C; --violet-bg:#EFE9F6;
+}
+body{margin:0;background:var(--paper);font-family:'Work Sans',sans-serif;color:var(--ink)}
+h1,h2,h3{font-family:'Fraunces',serif;margin:0}
+a{color:inherit;text-decoration:none}
+label{display:block;font-size:12px;font-weight:600;color:var(--ink);margin-bottom:6px;}
+.field{width:100%;box-sizing:border-box;border:1px solid var(--line);border-radius:8px;padding:10px 12px;font-size:13px;font-family:'Work Sans',sans-serif;color:var(--ink);background:#fff;}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:11px 20px;border-radius:8px;font-weight:600;font-size:14px;border:1px solid transparent;cursor:pointer}
+.btn-gold{background:var(--gold);color:#fff}
+.btn-outline{background:#fff;border:1px solid var(--line);color:var(--ink);}
+.tag{display:inline-flex;padding:5px 12px;border-radius:999px;font-size:11.5px;font-weight:600;}
+.card{background:var(--paper-2);border:1px solid var(--line);border-radius:14px;}
+.navitem{display:flex;align-items:center;gap:12px;padding:11px 18px;border-radius:9px;font-size:14px;font-weight:500;color:#C7CEDB;}
+.navitem.active{background:var(--navy-2);color:#fff;}
+table{width:100%;border-collapse:collapse;}
+th{text-align:left;font-size:11px;color:var(--ink-soft);font-weight:600;padding:11px 14px;border-bottom:1px solid var(--line);text-transform:uppercase;letter-spacing:.03em;}
+td{padding:13px 14px;border-bottom:1px solid var(--line);font-size:12.5px;vertical-align:middle;}
+.keyrow{display:flex;align-items:center;gap:12px;padding:14px 18px;border-bottom:1px solid var(--line);}
+.keyrow:last-child{border-bottom:none;}
+.dot{width:9px;height:9px;border-radius:50%;flex-shrink:0;}
+</style>
+</helmet>
+<div style="width:1440px;height:1050px;box-sizing:border-box;background:var(--paper);display:flex;">
+
+  <!-- SIDEBAR -->
+  <div style="width:250px;flex-shrink:0;background:var(--navy);padding:28px 16px;display:flex;flex-direction:column;gap:4px;">
+    <div style="display:flex;align-items:center;gap:10px;padding:0 10px 24px;">
+      <div style="width:58px;height:34px;border-radius:8px;background:var(--gold);display:flex;align-items:center;justify-content:center;font-family:'Fraunces',serif;font-weight:700;color:var(--navy);font-size:14px;letter-spacing:-.02em;">D90</div>
+      <div style="color:#fff;font-family:'Work Sans',sans-serif;font-size:18px;font-weight:700;letter-spacing:-.01em;">Dealer90.com Admin</div>
+    </div>
+    <div class="navitem">Dashboard</div>
+    <div class="navitem">Dealer Approvals</div>
+    <div class="navitem">All Dealers</div>
+    <div class="navitem">Dealer Credibility</div>
+    <div class="navitem">All Properties</div>
+    <div class="navitem">Customers</div>
+    <div class="navitem">🤖 AI Scraper &amp; Onboarding</div>
+    <div class="navitem active">⚙️ AI Provider Settings</div>
+    <div class="navitem">Reports</div>
+    <div class="navitem">Settings</div>
+    <div style="margin-top:auto;padding:14px 10px 0;border-top:1px solid #26385A;display:flex;align-items:center;gap:10px;">
+      <div style="width:32px;height:32px;border-radius:50%;background:var(--gold-light);"></div>
+      <div style="color:#fff;font-size:13px;">Super Admin</div>
+    </div>
+  </div>
+
+  <!-- MAIN -->
+  <div style="flex:1;display:flex;flex-direction:column;overflow:hidden;">
+
+    <div style="height:80px;flex-shrink:0;display:flex;align-items:center;justify-content:space-between;padding:0 36px;border-bottom:1px solid var(--line);">
+      <div>
+        <h1 style="font-size:22px;color:var(--navy);">AI Provider Settings</h1>
+        <div style="font-size:13px;color:var(--ink-soft);">One gateway behind every AI feature — swap providers without touching the app</div>
+      </div>
+      <button class="btn btn-gold">Save Changes</button>
+    </div>
+
+    <div style="padding:28px 36px;display:flex;flex-direction:column;gap:24px;overflow:auto;">
+
+      <div class="card" style="padding:16px 20px;background:var(--violet-bg);border:none;display:flex;gap:12px;align-items:flex-start;">
+        <span style="font-size:16px;line-height:1;">ⓘ</span>
+        <div style="font-size:12.5px;color:#4A3A6B;line-height:1.6;">Every generative AI feature calls through this same AI Gateway — the app never talks to a provider directly. Default policy is the cheapest capable model per feature. This is a fixed pick you review manually as pricing changes, not an automatic live-switching router.</div>
+      </div>
+
+      <!-- FEATURE ROUTING -->
+      <div class="card">
+        <div style="padding:18px 20px;border-bottom:1px solid var(--line);font-weight:600;font-size:15px;">Model Routing per Feature</div>
+        <table>
+          <tr><th>Feature</th><th>Provider / Model</th><th>Typical Call</th><th>Est. Cost / Call</th><th>Policy</th></tr>
+          <tr>
+            <td style="font-weight:600;">Marketing — Email &amp; SMS Copy</td>
+            <td><select class="field" style="width:auto;padding:8px 10px;"><option>Google · Gemini 2.5 Flash</option><option>Anthropic · Claude Haiku 4.5</option><option>OpenAI · GPT-5.6 Luna</option><option>Anthropic · Claude Sonnet 5</option></select></td>
+            <td>~1,000 in / 400 out</td>
+            <td>$0.0001</td>
+            <td><span class="tag" style="background:var(--green-bg);color:var(--green);">Cheapest available</span></td>
+          </tr>
+          <tr>
+            <td style="font-weight:600;">AI Scraper — Extraction</td>
+            <td><select class="field" style="width:auto;padding:8px 10px;"><option>Google · Gemini 2.5 Flash</option><option>OpenAI · GPT-5.6 Luna</option><option>Anthropic · Claude Haiku 4.5</option></select></td>
+            <td>~1,500 in / 120 out</td>
+            <td>$0.00015</td>
+            <td><span class="tag" style="background:var(--green-bg);color:var(--green);">Cheapest capable</span></td>
+          </tr>
+          <tr>
+            <td style="font-weight:600;">Build Cost Estimator</td>
+            <td><select class="field" style="width:auto;padding:8px 10px;"><option>Google · Gemini 2.5 Flash</option><option>Anthropic · Claude Haiku 4.5</option><option>OpenAI · GPT-5.6 Terra</option></select></td>
+            <td>~700 in / 450 out</td>
+            <td>$0.0002</td>
+            <td><span class="tag" style="background:var(--green-bg);color:var(--green);">Cheapest capable</span></td>
+          </tr>
+        </table>
+        <div style="padding:14px 20px;display:flex;justify-content:space-between;align-items:center;background:#F4F1EA;border-radius:0 0 13px 13px;">
+          <span style="font-size:12px;color:var(--ink-soft);">Estimated monthly AI spend at current volume (150 dealers, ~7,000 combined AI calls/mo)</span>
+          <span style="font-weight:700;color:var(--navy);font-size:14px;">~ $2 – $10 / month</span>
+        </div>
+      </div>
+
+      <!-- PROVIDER API KEYS -->
+      <div class="card">
+        <div style="padding:18px 20px;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;align-items:center;">
+          <div style="font-weight:600;font-size:15px;">Provider API Keys</div>
+          <span style="font-size:11.5px;color:var(--ink-soft);">Bring your own key for any provider — nothing is locked to Dealer90.com's account</span>
+        </div>
+        <div class="keyrow">
+          <span class="dot" style="background:var(--green);"></span>
+          <div style="flex:1;">
+            <div style="font-weight:600;font-size:13.5px;">Google AI (Gemini)</div>
+            <div style="font-size:11.5px;color:var(--ink-soft);">Default provider · key connected</div>
+          </div>
+          <input class="field" value="••••••••••••gk91" style="width:220px;" disabled="">
+          <button class="btn btn-outline" style="padding:8px 14px;font-size:12.5px;">Rotate Key</button>
+        </div>
+        <div class="keyrow">
+          <span class="dot" style="background:var(--green);"></span>
+          <div style="flex:1;">
+            <div style="font-weight:600;font-size:13.5px;">Anthropic (Claude)</div>
+            <div style="font-size:11.5px;color:var(--ink-soft);">Connected · available as override for any feature</div>
+          </div>
+          <input class="field" value="••••••••••••ck44" style="width:220px;" disabled="">
+          <button class="btn btn-outline" style="padding:8px 14px;font-size:12.5px;">Rotate Key</button>
+        </div>
+        <div class="keyrow">
+          <span class="dot" style="background:var(--line);"></span>
+          <div style="flex:1;">
+            <div style="font-weight:600;font-size:13.5px;">OpenAI (GPT)</div>
+            <div style="font-size:11.5px;color:var(--ink-soft);">Not connected</div>
+          </div>
+          <input class="field" placeholder="Paste API key to connect" style="width:220px;">
+          <button class="btn btn-gold" style="padding:8px 14px;font-size:12.5px;">Connect</button>
+        </div>
+        <div class="keyrow">
+          <span class="dot" style="background:var(--line);"></span>
+          <div style="flex:1;">
+            <div style="font-weight:600;font-size:13.5px;">Other / Custom Endpoint</div>
+            <div style="font-size:11.5px;color:var(--ink-soft);">Any OpenAI-compatible API — self-hosted or another vendor</div>
+          </div>
+          <input class="field" placeholder="Base URL + API key" style="width:220px;">
+          <button class="btn btn-outline" style="padding:8px 14px;font-size:12.5px;">Connect</button>
+        </div>
+      </div>
+
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px;">
+        <div class="card" style="padding:20px;">
+          <div style="font-weight:600;font-size:14px;color:var(--navy);margin-bottom:8px;">Why one gateway, not one vendor</div>
+          <div style="font-size:12px;color:var(--ink-soft);line-height:1.6;">Every feature calls an internal interface, never a provider SDK directly. Changing a model here is a config change, not a code change or a redeploy.</div>
+        </div>
+        <div class="card" style="padding:20px;">
+          <div style="font-weight:600;font-size:14px;color:var(--navy);margin-bottom:8px;">Review cadence</div>
+          <div style="font-size:12px;color:var(--ink-soft);line-height:1.6;">Provider pricing changes often, including time-limited promotions. This page's defaults are a fixed, documented pick — revisit every few months, not automated.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":1050}}'>
+class Component extends DCLogic {
+  renderVals(){ return {}; }
+}
+</script>
+</body>
+</html>

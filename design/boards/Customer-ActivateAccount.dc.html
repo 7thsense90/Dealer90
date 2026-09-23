@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Dealer90.com — Activate Your Account</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<style>
+:root{
+  --navy:#10213A; --navy-2:#16294A; --ink:#1C2430; --ink-soft:#5B6472;
+  --paper:#F6F4EF; --paper-2:#FFFFFF; --gold:#B98B33; --gold-light:#E7C77E;
+  --green:#2F6F4E; --green-bg:#E7F1EA; --line:#E4DFD3;
+}
+body{margin:0;background:var(--paper);font-family:'Work Sans',sans-serif;color:var(--ink)}
+h1,h2,h3{font-family:'Fraunces',serif;margin:0}
+label{display:block;font-size:13px;font-weight:600;margin-bottom:8px;}
+.field{width:100%;box-sizing:border-box;border:1px solid var(--line);border-radius:8px;padding:13px 14px;font-size:15px;font-family:'Work Sans',sans-serif;color:var(--ink);background:#fff;}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:13px 24px;border-radius:8px;font-weight:600;font-size:14px;border:1px solid transparent;cursor:pointer}
+.btn-gold{background:var(--gold);color:#fff}
+.card{background:var(--paper-2);border:1px solid var(--line);border-radius:14px;}
+.otpbox{width:48px;height:56px;border:1.5px solid var(--line);border-radius:8px;text-align:center;font-size:20px;font-weight:600;}
+</style>
+</helmet>
+<div style="width:1200px;height:1080px;box-sizing:border-box;background:var(--paper);display:flex;flex-direction:column;">
+
+  <div style="height:84px;background:var(--navy);display:flex;align-items:center;padding:0 56px;flex-shrink:0;">
+    <div style="display:flex;align-items:center;gap:12px;">
+      <div style="width:65px;height:38px;border-radius:9px;background:var(--gold);display:flex;align-items:center;justify-content:center;font-family:'Fraunces',serif;font-weight:700;color:var(--navy);font-size:15px;letter-spacing:-.02em;">D90</div>
+      <div style="color:#fff;font-family:'Work Sans',sans-serif;font-size:22px;font-weight:700;letter-spacing:-.01em;">Dealer90.com</div>
+    </div>
+  </div>
+
+  <div style="flex:1;display:flex;align-items:center;justify-content:center;">
+    <div class="card" style="width:460px;padding:40px;display:flex;flex-direction:column;gap:22px;box-shadow:0 20px 50px rgba(16,33,58,.10);">
+
+      <div style="text-align:center;">
+        <div style="width:52px;height:52px;border-radius:50%;background:var(--green-bg);display:flex;align-items:center;justify-content:center;margin:0 auto 14px;">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M5 12.5l4.5 4.5L19 7" stroke="var(--green)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+        </div>
+        <h1 style="font-size:22px;color:var(--navy);">We found your account, Usman</h1>
+        <div style="font-size:13px;color:var(--ink-soft);margin-top:8px;line-height:1.5;">This is your first time logging in since submitting Request #EST-4521. Verify it's you, then set a password.</div>
+      </div>
+
+      <div>
+        <label>Enter the code sent to +92 300 1234567</label>
+        <div style="display:flex;gap:8px;justify-content:center;margin-top:4px;">
+          <input class="otpbox" maxlength="1" value="4">
+          <input class="otpbox" maxlength="1" value="8">
+          <input class="otpbox" maxlength="1" value="2">
+          <input class="otpbox" maxlength="1" value="">
+          <input class="otpbox" maxlength="1" value="">
+          <input class="otpbox" maxlength="1" value="">
+        </div>
+        <div style="text-align:center;font-size:12px;color:var(--ink-soft);margin-top:10px;">Didn't get it? <a href="#" style="color:var(--gold);font-weight:600;">Resend code</a></div>
+      </div>
+
+      <div style="height:1px;background:var(--line);"></div>
+
+      <div>
+        <label>Create a Password</label>
+        <input class="field" type="password" placeholder="At least 8 characters">
+      </div>
+      <div>
+        <label>Confirm Password</label>
+        <input class="field" type="password" placeholder="Re-enter password">
+      </div>
+
+      <button class="btn btn-gold" style="width:100%;padding:15px;">Verify &amp; Activate Account</button>
+      <div style="font-size:11.5px;color:var(--ink-soft);text-align:center;line-height:1.5;">Verifying your phone keeps your account — and your installment records, once you have any — secure to only you.</div>
+    </div>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1200,"height":1080}}'>
+class Component extends DCLogic {
+  renderVals(){ return {}; }
+}
+</script>
+</body>
+</html>

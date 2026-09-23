@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Dealer90.com — Add Property</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<style>
+:root{
+  --navy:#10213A; --navy-2:#16294A; --ink:#1C2430; --ink-soft:#5B6472;
+  --paper:#F6F4EF; --paper-2:#FFFFFF; --gold:#B98B33; --gold-light:#E7C77E;
+  --green:#2F6F4E; --green-bg:#E7F1EA; --amber:#B9772E; --amber-bg:#F6EADA;
+  --line:#E4DFD3;
+}
+body{margin:0;background:var(--paper);font-family:'Work Sans',sans-serif;color:var(--ink)}
+h1,h2,h3{font-family:'Fraunces',serif;margin:0}
+label{display:block;font-size:13px;font-weight:600;color:var(--ink);margin-bottom:6px;}
+.field{width:100%;box-sizing:border-box;border:1px solid var(--line);border-radius:8px;padding:12px 14px;font-size:14px;font-family:'Work Sans',sans-serif;color:var(--ink);background:#fff;}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:12px 22px;border-radius:8px;font-weight:600;font-size:14px;border:1px solid transparent;cursor:pointer}
+.btn-gold{background:var(--gold);color:#fff}
+.btn-outline{background:#fff;border-color:var(--line);color:var(--ink);}
+.tag{display:inline-flex;padding:5px 12px;border-radius:999px;font-size:12px;font-weight:600;}
+.card{background:var(--paper-2);border:1px solid var(--line);border-radius:14px;}
+.chip{padding:9px 16px;border-radius:999px;font-size:13px;font-weight:600;border:1px solid var(--line);color:var(--ink-soft);}
+.chip.active{background:var(--navy);color:#fff;border-color:var(--navy);}
+table{width:100%;border-collapse:collapse;}
+th{text-align:left;font-size:11px;color:var(--ink-soft);font-weight:600;padding:10px 12px;border-bottom:1px solid var(--line);text-transform:uppercase;letter-spacing:.03em;}
+td{padding:11px 12px;border-bottom:1px solid var(--line);font-size:13px;}
+</style>
+</helmet>
+<div style="width:1440px;height:1900px;box-sizing:border-box;background:var(--paper);display:flex;flex-direction:column;">
+
+  <div style="height:76px;flex-shrink:0;display:flex;align-items:center;justify-content:space-between;padding:0 40px;border-bottom:1px solid var(--line);background:#fff;">
+    <div>
+      <div style="font-size:12px;color:var(--ink-soft);">Properties / Add New</div>
+      <h1 style="font-size:20px;color:var(--navy);">Add Property</h1>
+    </div>
+    <div style="display:flex;gap:10px;">
+      <button class="btn btn-outline">Save as Draft</button>
+      <button class="btn btn-gold">Publish Property</button>
+    </div>
+  </div>
+
+  <div style="padding:32px 40px;display:grid;grid-template-columns:1.5fr 1fr;gap:28px;">
+
+    <!-- FORM -->
+    <div class="card" style="padding:28px;display:flex;flex-direction:column;gap:22px;">
+
+      <div>
+        <label>Property Title</label>
+        <input class="field" value="5 Marla Corner Villa — DHA Phase 6">
+      </div>
+
+      <div>
+        <label>Property Type</label>
+        <div style="display:flex;gap:10px;">
+          <div class="chip active">Residential</div>
+          <div class="chip">Commercial</div>
+          <div class="chip">Plot</div>
+          <div class="chip">Rental</div>
+        </div>
+      </div>
+
+      <div class="card" style="padding:18px 20px;background:#fff;border:1.5px solid var(--line);display:flex;flex-direction:column;gap:14px;">
+        <div style="font-weight:600;font-size:14px;color:var(--navy);">Listing Visibility &amp; Compliance</div>
+        <div>
+          <label>Who can see this property?</label>
+          <div style="display:flex;gap:10px;">
+            <div class="chip">Internal Use Only <span style="font-weight:400;">— for creating installment plans, not shown on the public portal</span></div>
+            <div class="chip active">Publish Publicly</div>
+          </div>
+        </div>
+        <div>
+          <label>Show NOC / Regulatory Approval Status on Public Listing?</label>
+          <div style="display:flex;gap:10px;">
+            <div class="chip active">Yes, display it</div>
+            <div class="chip">No, keep private</div>
+          </div>
+          <div style="font-size:11.5px;color:var(--ink-soft);margin-top:8px;">Either way, your NOC/approval status stays visible to Dealer90.com admin and inside your own dashboard. This only controls whether customers see it on the listing.</div>
+        </div>
+      </div>
+
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
+        <div><label>City / Area</label><input class="field" value="DHA Phase 6, Lahore"></div>
+        <div><label>Size</label><input class="field" value="5 Marla"></div>
+      </div>
+
+      <div>
+        <label>Description</label>
+        <textarea class="field" rows="3">Corner villa with 4 bed, modern finishes, near community park. Ready for possession.</textarea>
+      </div>
+
+      <div>
+        <label>Photos</label>
+        <div style="display:flex;gap:12px;">
+          <div style="width:110px;height:88px;border:1.5px dashed var(--line);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:11px;color:var(--ink-soft);text-align:center;">+ Upload</div>
+          <div style="width:110px;height:88px;border-radius:10px;background:linear-gradient(135deg,#D9CFB8,#C7BC9E);"></div>
+          <div style="width:110px;height:88px;border-radius:10px;background:#EDE7D7;"></div>
+        </div>
+      </div>
+
+      <div style="height:1px;background:var(--line);"></div>
+      <div>
+        <div style="font-weight:600;font-size:15px;color:var(--navy);">Advisor Matching Tags</div>
+        <div style="font-size:12px;color:var(--ink-soft);margin-top:4px;">Used to match this property against buyer profiles in the Property Advisor. Growth corridor and delivery status are verified by Dealer90.com admin before they appear publicly.</div>
+      </div>
+      <div>
+        <label>Growth Corridor / Zone</label>
+        <select class="field"><option>DHA Phase 9–10 Expansion (Lahore)</option><option>Ring Road Southern Loop Corridor</option><option>Raiwind Road Corridor</option><option>Established / Near-Possession Scheme</option><option>Not yet tagged — pending admin review</option></select>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
+        <div>
+          <label>Risk Tier</label>
+          <div style="display:flex;gap:10px;">
+            <div class="chip active">Conservative</div>
+            <div class="chip">Balanced</div>
+            <div class="chip">Aggressive</div>
+          </div>
+        </div>
+        <div>
+          <label>Rental Yield Potential</label>
+          <div style="display:flex;gap:10px;">
+            <div class="chip">Low</div>
+            <div class="chip active">Medium</div>
+            <div class="chip">High</div>
+          </div>
+        </div>
+      </div>
+      <div class="card" style="padding:14px 16px;background:var(--amber-bg);border:none;display:flex;gap:10px;align-items:flex-start;">
+        <span style="font-size:16px;line-height:1;">ⓘ</span>
+        <div style="font-size:12px;color:#6B4E1E;line-height:1.5;">Credibility score and NOC status come from your dealer profile, set by Dealer90.com admin — not editable here. <a href="#" style="color:var(--navy);font-weight:600;">View your dealer profile →</a></div>
+      </div>
+
+      <div style="height:1px;background:var(--line);"></div>
+      <div style="font-weight:600;font-size:15px;color:var(--navy);">Pricing &amp; Valuation</div>
+
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
+        <div><label>Total Price (PKR)</label><input class="field" value="28,500,000"></div>
+        <div><label>Down Payment (PKR)</label><input class="field" value="5,000,000"></div>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
+        <div>
+          <label>Projected Value After 1 Year (PKR)</label>
+          <input class="field" value="31,500,000" style="border-color:var(--green);">
+        </div>
+        <div>
+          <label>Projected Value After 3 Years (PKR)</label>
+          <input class="field" value="38,200,000" style="border-color:var(--green);">
+        </div>
+      </div>
+      <div style="font-size:12px;color:var(--ink-soft);margin-top:-10px;">Shown to customers as your estimate, not Dealer90.com's — used to match this listing to a buyer's investment horizon. 3-year figure is optional but strongly recommended for Medium/Long-Term matching.</div>
+      <div>
+        <label>Basis for These Estimates</label>
+        <div style="display:flex;gap:10px;">
+          <div class="chip active">Comparable Sales</div>
+          <div class="chip">Area Market Trend</div>
+          <div class="chip">Personal Estimate</div>
+        </div>
+      </div>
+      <div class="card" style="padding:16px 18px;background:#fff;border:1.5px solid var(--line);display:flex;gap:12px;align-items:flex-start;">
+        <div style="width:20px;height:20px;border-radius:5px;border:1.5px solid var(--navy);background:var(--navy);flex-shrink:0;margin-top:1px;display:flex;align-items:center;justify-content:center;color:#fff;font-size:12px;font-weight:700;">✓</div>
+        <div style="font-size:12.5px;color:var(--ink);line-height:1.55;">I confirm these are good-faith estimates based on the selected basis. I understand they will be published as <strong>my projections</strong>, shown to customers with my dealer name attached, and that Dealer90.com has not independently verified them. Outlier estimates may be held for admin pricing review before the listing goes live.</div>
+      </div>
+
+      <div style="height:1px;background:var(--line);"></div>
+      <div style="font-weight:600;font-size:15px;color:var(--navy);">Installment Plan</div>
+      <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px;">
+        <div><label>Duration (months)</label><input class="field" value="12"></div>
+        <div><label>Frequency</label>
+          <select class="field"><option>Monthly</option><option>Quarterly</option></select>
+        </div>
+        <div><label>Monthly Installment (auto)</label><input class="field" value="1,958,333" disabled="" style="background:#F3F1EA;color:var(--ink-soft);"></div>
+      </div>
+    </div>
+
+    <!-- LIVE PREVIEW -->
+    <div style="display:flex;flex-direction:column;gap:20px;">
+      <div class="card" style="padding:16px;">
+        <div style="font-size:12px;font-weight:600;color:var(--ink-soft);margin-bottom:12px;text-transform:uppercase;letter-spacing:.03em;">Public Portal Preview</div>
+        <div style="border:1px solid var(--line);border-radius:12px;overflow:hidden;">
+          <div style="height:150px;background:linear-gradient(135deg,#D9CFB8,#C7BC9E);"></div>
+          <div style="padding:16px;display:flex;flex-direction:column;gap:8px;">
+            <span class="tag" style="background:#EFE9DA;color:var(--navy);align-self:flex-start;">Residential</span>
+            <div style="font-size:16px;font-weight:600;">5 Marla Corner Villa</div>
+            <div style="font-size:18px;font-weight:700;color:var(--navy);">PKR 2.85 Cr</div>
+            <div style="display:flex;gap:6px;flex-wrap:wrap;">
+              <span class="tag" style="background:var(--green-bg);color:var(--green);">1yr: PKR 3.15 Cr</span>
+              <span class="tag" style="background:var(--green-bg);color:var(--green);">3yr: PKR 3.82 Cr</span>
+            </div>
+            <div style="font-size:11px;color:var(--ink-soft);">Projected by Al-Noor Builders · not verified by Dealer90.com</div>
+            <div style="display:flex;align-items:center;gap:8px;padding-top:10px;border-top:1px solid var(--line);margin-top:4px;">
+              <div style="width:22px;height:22px;border-radius:6px;background:var(--gold-light);"></div>
+              <span style="font-size:12px;color:var(--ink-soft);">Al-Noor Builders</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card" style="padding:20px;">
+        <div style="font-size:12px;font-weight:600;color:var(--ink-soft);margin-bottom:12px;text-transform:uppercase;letter-spacing:.03em;">Generated Installment Schedule</div>
+        <table>
+          <tr><th>#</th><th>Due Date</th><th>Amount</th></tr>
+          <tr><td>1</td><td>Oct 5, 2026</td><td>PKR 1,958,333</td></tr>
+          <tr><td>2</td><td>Nov 5, 2026</td><td>PKR 1,958,333</td></tr>
+          <tr><td>3</td><td>Dec 5, 2026</td><td>PKR 1,958,333</td></tr>
+          <tr><td colspan="3" style="text-align:center;color:var(--ink-soft);border-bottom:none;">⋯ 9 more installments</td></tr>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":1900}}'>
+class Component extends DCLogic {
+  renderVals(){ return {}; }
+}
+</script>
+</body>
+</html>

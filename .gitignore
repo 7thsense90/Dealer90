@@ -1,0 +1,8 @@
+node_modules/
+dist/
+dist-preview/
+apps/web/visual/out/
+apps/web/visual/harness/*.html
+*.log
+.env.local
+__pycache__/

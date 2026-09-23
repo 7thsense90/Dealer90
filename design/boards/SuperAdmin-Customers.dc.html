@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Dealer90.com — Super Admin — Customer Data</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<style>
+:root{
+  --navy:#10213A; --navy-2:#16294A; --ink:#1C2430; --ink-soft:#5B6472;
+  --paper:#F6F4EF; --paper-2:#FFFFFF; --gold:#B98B33; --gold-light:#E7C77E;
+  --green:#2F6F4E; --green-bg:#E7F1EA; --amber:#B9772E; --amber-bg:#F6EADA;
+  --red:#B4453A; --red-bg:#F7E7E4; --line:#E4DFD3;
+}
+body{margin:0;background:var(--paper);font-family:'Work Sans',sans-serif;color:var(--ink)}
+h1,h2,h3{font-family:'Fraunces',serif;margin:0}
+a{color:inherit;text-decoration:none}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:11px 20px;border-radius:8px;font-weight:600;font-size:14px;border:1px solid transparent;cursor:pointer}
+.btn-gold{background:var(--gold);color:#fff}
+.tag{display:inline-flex;padding:5px 12px;border-radius:999px;font-size:11px;font-weight:600;}
+.card{background:var(--paper-2);border:1px solid var(--line);border-radius:14px;}
+.navitem{display:flex;align-items:center;gap:12px;padding:11px 18px;border-radius:9px;font-size:14px;font-weight:500;color:#C7CEDB;}
+.navitem.active{background:var(--navy-2);color:#fff;}
+table{width:100%;border-collapse:collapse;}
+th{text-align:left;font-size:11px;color:var(--ink-soft);font-weight:600;padding:11px 14px;border-bottom:1px solid var(--line);text-transform:uppercase;letter-spacing:.03em;}
+td{padding:12px 14px;border-bottom:1px solid var(--line);font-size:13px;vertical-align:middle;}
+.dealerrow{display:flex;align-items:center;gap:12px;padding:14px 18px;border-bottom:1px solid var(--line);cursor:pointer;}
+.dealerrow.active{background:var(--amber-bg);}
+</style>
+</helmet>
+<div style="width:1440px;height:570px;box-sizing:border-box;background:var(--paper);display:flex;">
+
+  <!-- SIDEBAR -->
+  <div style="width:250px;flex-shrink:0;background:var(--navy);padding:28px 16px;display:flex;flex-direction:column;gap:4px;">
+    <div style="display:flex;align-items:center;gap:10px;padding:0 10px 24px;">
+      <div style="width:58px;height:34px;border-radius:8px;background:var(--gold);display:flex;align-items:center;justify-content:center;font-family:'Fraunces',serif;font-weight:700;color:var(--navy);font-size:14px;letter-spacing:-.02em;">D90</div>
+      <div style="color:#fff;font-family:'Work Sans',sans-serif;font-size:18px;font-weight:700;letter-spacing:-.01em;">Dealer90.com Admin</div>
+    </div>
+    <div class="navitem">Dashboard</div>
+    <div class="navitem">Dealer Approvals</div>
+    <div class="navitem">All Dealers</div>
+    <div class="navitem">Dealer Credibility</div>
+    <div class="navitem">All Properties</div>
+    <div class="navitem active">Customers</div>
+    <div class="navitem">🤖 AI Scraper &amp; Onboarding</div>
+    <div class="navitem">⚙️ AI Provider Settings</div>
+    <div class="navitem">Reports</div>
+    <div class="navitem">Settings</div>
+    <div style="margin-top:auto;padding:14px 10px 0;border-top:1px solid #26385A;display:flex;align-items:center;gap:10px;">
+      <div style="width:32px;height:32px;border-radius:50%;background:var(--gold-light);"></div>
+      <div style="color:#fff;font-size:13px;">Super Admin</div>
+    </div>
+  </div>
+
+  <!-- MAIN -->
+  <div style="flex:1;display:flex;overflow:hidden;">
+
+    <!-- DEALER LIST -->
+    <div style="width:320px;flex-shrink:0;border-right:1px solid var(--line);background:#fff;display:flex;flex-direction:column;">
+      <div style="padding:18px 18px 12px;">
+        <div style="font-weight:600;font-size:15px;color:var(--navy);">Customer Data by Dealer</div>
+        <div style="font-size:11.5px;color:var(--ink-soft);margin-top:2px;">Every customer record a dealer has entered or imported</div>
+        <input placeholder="Search dealers…" style="width:100%;box-sizing:border-box;border:1px solid var(--line);border-radius:8px;padding:9px 11px;font-size:12.5px;margin-top:10px;">
+      </div>
+      <div class="dealerrow active">
+        <div style="width:34px;height:34px;border-radius:50%;background:var(--gold-light);flex-shrink:0;"></div>
+        <div style="flex:1;">
+          <div style="font-weight:600;font-size:13.5px;">Al-Noor Builders</div>
+          <div style="font-size:11.5px;color:var(--ink-soft);">Lahore</div>
+        </div>
+        <span class="tag" style="background:#EFE9DA;color:var(--navy);">28 customers</span>
+      </div>
+      <div class="dealerrow">
+        <div style="width:34px;height:34px;border-radius:50%;background:#8FA6C7;flex-shrink:0;"></div>
+        <div style="flex:1;">
+          <div style="font-weight:600;font-size:13.5px;">Green Valley Realty</div>
+          <div style="font-size:11.5px;color:var(--ink-soft);">Faisalabad</div>
+        </div>
+        <span class="tag" style="background:#EFE9DA;color:var(--navy);">41 customers</span>
+      </div>
+      <div class="dealerrow">
+        <div style="width:34px;height:34px;border-radius:50%;background:#C79A6B;flex-shrink:0;"></div>
+        <div style="flex:1;">
+          <div style="font-weight:600;font-size:13.5px;">Riverside Estates</div>
+          <div style="font-size:11.5px;color:var(--ink-soft);">Multan</div>
+        </div>
+        <span class="tag" style="background:#EFE9DA;color:var(--navy);">15 customers</span>
+      </div>
+      <div class="dealerrow">
+        <div style="width:34px;height:34px;border-radius:50%;background:#9CC7A6;flex-shrink:0;"></div>
+        <div style="flex:1;">
+          <div style="font-weight:600;font-size:13.5px;">Skyline Properties</div>
+          <div style="font-size:11.5px;color:var(--ink-soft);">Karachi</div>
+        </div>
+        <span class="tag" style="background:#EFE9DA;color:var(--navy);">63 customers</span>
+      </div>
+    </div>
+
+    <!-- DETAIL -->
+    <div style="flex:1;padding:26px 32px;overflow:auto;display:flex;flex-direction:column;gap:20px;">
+
+      <div style="display:flex;justify-content:space-between;align-items:center;">
+        <div>
+          <div style="font-size:12px;color:var(--ink-soft);">Dealer / Customer Data</div>
+          <h1 style="font-size:20px;color:var(--navy);">Al-Noor Builders — 28 Customers</h1>
+        </div>
+        <button class="btn btn-gold">Export CSV</button>
+      </div>
+
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px;">
+        <div class="card" style="padding:16px;"><div style="font-size:12px;color:var(--ink-soft);">Added Manually</div><div style="font-size:20px;font-weight:700;color:var(--navy);font-family:'Fraunces',serif;">19</div></div>
+        <div class="card" style="padding:16px;"><div style="font-size:12px;color:var(--ink-soft);">Imported via CSV/Excel</div><div style="font-size:20px;font-weight:700;color:var(--navy);font-family:'Fraunces',serif;">9</div></div>
+        <div class="card" style="padding:16px;"><div style="font-size:12px;color:var(--ink-soft);">With Active Plans</div><div style="font-size:20px;font-weight:700;color:var(--green);font-family:'Fraunces',serif;">19</div></div>
+      </div>
+
+      <div class="card">
+        <table>
+          <tr><th>Name</th><th>Phone</th><th>Email</th><th>CNIC</th><th>Source</th><th>Active Plan</th></tr>
+          <tr><td style="font-weight:600;">Usman Tariq</td><td>+92 300 1234567</td><td>usman.tariq@email.com</td><td>35202-1234567-1</td><td><span class="tag" style="background:#EFE9DA;color:var(--navy);">Manual</span></td><td><span class="tag" style="background:var(--green-bg);color:var(--green);">Yes</span></td></tr>
+          <tr><td style="font-weight:600;">Zara Ahmed</td><td>+92 301 7788990</td><td>zara.ahmed@email.com</td><td>35202-7654321-2</td><td><span class="tag" style="background:#EFE9DA;color:var(--navy);">Manual</span></td><td><span class="tag" style="background:var(--green-bg);color:var(--green);">Yes</span></td></tr>
+          <tr><td style="font-weight:600;">Bilal Sheikh</td><td>+92 333 4455667</td><td>—</td><td>—</td><td><span class="tag" style="background:var(--amber-bg);color:var(--amber);">CSV Import</span></td><td><span class="tag" style="background:var(--green-bg);color:var(--green);">Yes</span></td></tr>
+          <tr><td style="font-weight:600;">Hina Malik</td><td>+92 302 1122334</td><td>hina.malik@email.com</td><td>35202-9988776-3</td><td><span class="tag" style="background:#EFE9DA;color:var(--navy);">Manual</span></td><td><span class="tag" style="background:#EFE9DA;color:var(--navy);">Completed</span></td></tr>
+          <tr><td style="font-weight:600;">Naveed Iqbal</td><td>—</td><td>naveed.iqbal@email.com</td><td>—</td><td><span class="tag" style="background:var(--amber-bg);color:var(--amber);">CSV Import</span></td><td><span class="tag" style="background:#F3F1EA;color:var(--ink-soft);">No</span></td></tr>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":570}}'>
+class Component extends DCLogic {
+  renderVals(){ return {}; }
+}
+</script>
+</body>
+</html>

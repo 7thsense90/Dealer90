@@ -1,0 +1,274 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Dealer90.com — Build a Home</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<style>
+:root{
+  --navy:#10213A; --navy-2:#16294A; --ink:#1C2430; --ink-soft:#5B6472;
+  --paper:#F6F3EB; --paper-2:#FFFFFF; --gold:#A97D2F; --gold-light:#E7C77E;
+  --moss:#3F5B47; --moss-bg:#E6EEE6; --clay:#9C5B3C; --clay-bg:#F1E4DA;
+  --line:#E3DDCC; --line-dark:rgba(255,255,255,.12);
+}
+*{box-sizing:border-box;}
+body{margin:0;background:var(--paper);font-family:'Work Sans',sans-serif;color:var(--ink);}
+h1,h2,h3{font-family:'Fraunces',serif;margin:0;text-wrap:balance;}
+a{color:inherit;text-decoration:none;}
+.eyebrow{font-size:11.5px;font-weight:600;letter-spacing:.09em;text-transform:uppercase;color:var(--clay);}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:13px 24px;border-radius:7px;font-weight:600;font-size:14.5px;border:1px solid transparent;cursor:pointer;font-family:'Work Sans',sans-serif;}
+.btn-gold{background:var(--gold);color:#fff;}
+.btn-navy{background:var(--navy);color:#fff;}
+.btn-outline{background:transparent;border:1px solid var(--line);color:var(--ink);}
+.tag{display:inline-flex;align-items:center;gap:5px;padding:5px 11px;border-radius:5px;font-size:11.5px;font-weight:600;}
+.card{background:var(--paper-2);border:1px solid var(--line);border-radius:4px;}
+.num{font-variant-numeric:tabular-nums;}
+</style>
+</helmet>
+<div style="width:1440px;background:var(--paper);position:relative;font-family:'Work Sans',sans-serif;">
+
+  <!-- UTILITY BAR -->
+  <div style="background:var(--navy);color:rgba(255,255,255,.68);font-size:11.5px;padding:8px 64px;display:flex;justify-content:space-between;align-items:center;">
+    <div>Regulated &amp; verified against&nbsp; <span style="color:#fff;font-weight:600;">PCATP · PEC · LDA · CDA · DHA</span></div>
+    <div style="display:flex;gap:18px;">
+      <span>PKR ▾</span>
+      <span>English ▾</span>
+      <span>Dealer Login</span>
+    </div>
+  </div>
+
+  <!-- NAV -->
+  <div style="display:flex;align-items:center;justify-content:space-between;padding:20px 64px;border-bottom:1px solid var(--line);background:var(--paper-2);">
+    <div style="display:flex;align-items:center;gap:12px;">
+      <div style="width:38px;height:38px;border-radius:7px;background:var(--navy);color:var(--gold-light);display:flex;align-items:center;justify-content:center;font-family:'Fraunces',serif;font-weight:700;font-size:15px;">D90</div>
+      <div style="font-family:'Work Sans',sans-serif;font-weight:700;font-size:17px;letter-spacing:-.01em;">Dealer90.com</div>
+    </div>
+    <div style="display:flex;gap:34px;font-size:14px;font-weight:500;color:var(--ink-soft);">
+      <a href="#">Properties</a>
+      <a href="#">Invest by ROI</a>
+      <a href="#" style="color:var(--navy);font-weight:700;">Build a Home</a>
+      <a href="#">For Dealers</a>
+      <a href="#">For Builders</a>
+    </div>
+    <div style="display:flex;gap:10px;align-items:center;">
+      <a href="#" class="btn btn-outline" style="padding:10px 18px;font-size:13.5px;">Log In</a>
+      <a href="#" class="btn btn-gold" style="padding:10px 20px;font-size:13.5px;">List a Property</a>
+    </div>
+  </div>
+
+  <!-- HERO -->
+  <div style="display:flex;gap:56px;padding:76px 64px 56px;background:var(--paper-2);border-bottom:1px solid var(--line);">
+    <div style="flex:1.05;padding-top:6px;">
+      <div class="eyebrow" style="margin-bottom:18px;">BUILD COST ESTIMATOR</div>
+      <h1 style="font-size:46px;font-weight:600;line-height:1.1;color:var(--navy);letter-spacing:-.01em;">Know what a build actually costs — before you commit to it.</h1>
+      <p style="font-size:17px;line-height:1.6;color:var(--ink-soft);margin:22px 0 0;max-width:480px;">Pick a plot size and design style and get a real construction cost range in under a minute, built from actual submissions by verified architects and contractors — then request quotes when you're ready.</p>
+      <div style="display:flex;gap:12px;margin-top:32px;">
+        <a href="#" class="btn btn-navy" style="padding:14px 26px;">Start an Estimate →</a>
+        <a href="#" class="btn btn-outline" style="padding:14px 26px;">Browse Design Gallery</a>
+      </div>
+    </div>
+
+    <!-- ESTIMATE PREVIEW -->
+    <div style="flex:0.95;position:relative;padding-top:6px;">
+      <div class="card" style="overflow:hidden;box-shadow:0 24px 48px -20px rgba(16,33,58,.22);">
+        <div style="padding:20px 22px 16px;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;align-items:center;">
+          <div style="font-size:13.5px;font-weight:600;">Build Cost Estimator</div>
+          <span class="tag" style="background:var(--clay-bg);color:var(--clay);">Step 1 of 3</span>
+        </div>
+        <div style="padding:22px;">
+          <div style="font-size:11.5px;color:var(--ink-soft);font-weight:600;margin-bottom:10px;">PLOT SIZE</div>
+          <div style="display:flex;gap:8px;margin-bottom:20px;">
+            <span class="tag" style="background:var(--paper);color:var(--ink-soft);border:1px solid var(--line);">3 Marla</span>
+            <span class="tag" style="background:var(--navy);color:#fff;">5 Marla</span>
+            <span class="tag" style="background:var(--paper);color:var(--ink-soft);border:1px solid var(--line);">10 Marla</span>
+            <span class="tag" style="background:var(--paper);color:var(--ink-soft);border:1px solid var(--line);">1 Kanal</span>
+          </div>
+          <div style="font-size:11.5px;color:var(--ink-soft);font-weight:600;margin-bottom:10px;">DESIGN STYLE</div>
+          <div style="display:flex;gap:8px;margin-bottom:20px;">
+            <span class="tag" style="background:var(--gold);color:#fff;">Modern</span>
+            <span class="tag" style="background:var(--paper);color:var(--ink-soft);border:1px solid var(--line);">Contemporary</span>
+            <span class="tag" style="background:var(--paper);color:var(--ink-soft);border:1px solid var(--line);">Classic</span>
+          </div>
+          <div style="display:flex;justify-content:space-between;align-items:center;padding-top:18px;border-top:1px solid var(--line);margin-bottom:20px;">
+            <div style="font-size:12px;color:var(--ink-soft);">Estimated range</div>
+            <div class="num" style="font-family:'Fraunces',serif;font-size:22px;font-weight:600;color:var(--navy);">PKR 42–58 Lac</div>
+          </div>
+          <button class="btn btn-navy" style="width:100%;">Refine My Estimate →</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PROOF STRIP -->
+  <div style="display:flex;padding:26px 64px;background:var(--navy);color:#fff;">
+    <div style="flex:1;text-align:center;border-right:1px solid var(--line-dark);">
+      <div class="num" style="font-family:'Fraunces',serif;font-size:22px;font-weight:600;">3,200+</div>
+      <div style="font-size:11.5px;color:rgba(255,255,255,.6);margin-top:3px;">Build cost estimates generated</div>
+    </div>
+    <div style="flex:1;text-align:center;border-right:1px solid var(--line-dark);">
+      <div class="num" style="font-family:'Fraunces',serif;font-size:22px;font-weight:600;">240+</div>
+      <div style="font-size:11.5px;color:rgba(255,255,255,.6);margin-top:3px;">Verified architects &amp; contractors</div>
+    </div>
+    <div style="flex:1;text-align:center;border-right:1px solid var(--line-dark);">
+      <div class="num" style="font-family:'Fraunces',serif;font-size:22px;font-weight:600;">±8%</div>
+      <div style="font-size:11.5px;color:rgba(255,255,255,.6);margin-top:3px;">Avg. estimate-to-final-quote accuracy</div>
+    </div>
+    <div style="flex:1;text-align:center;">
+      <div class="num" style="font-family:'Fraunces',serif;font-size:22px;font-weight:600;">18</div>
+      <div style="font-size:11.5px;color:rgba(255,255,255,.6);margin-top:3px;">Cities covered</div>
+    </div>
+  </div>
+
+  <!-- HOW IT WORKS: ONE BY ONE -->
+  <div style="padding:72px 64px 8px;background:var(--paper);">
+    <div style="max-width:560px;margin-bottom:44px;">
+      <div class="eyebrow" style="margin-bottom:12px;">HOW IT WORKS</div>
+      <h2 style="font-size:30px;font-weight:600;color:var(--navy);">From plot size to a signed contractor — exactly as it looks.</h2>
+    </div>
+
+    <!-- ROW 1: PICK PLOT SIZE & DESIGN -->
+    <div style="display:flex;gap:52px;align-items:center;padding:40px 0;border-top:1px solid var(--line);">
+      <div style="flex:1;">
+        <span class="tag" style="background:var(--clay);color:#fff;margin-bottom:14px;">Step 1 · Plot Size &amp; Design</span>
+        <h3 style="font-size:22px;font-weight:600;color:var(--navy);margin-top:2px;">Choose plot size and style, get a range instantly.</h3>
+        <p style="font-size:14px;color:var(--ink-soft);line-height:1.65;margin-top:12px;max-width:400px;">The same panel shown in the hero above — pick your plot size in Marla or Kanal and a design style, and the range updates immediately.</p>
+      </div>
+      <div class="card" style="flex:1;padding:20px;">
+        <div style="font-size:11.5px;color:var(--ink-soft);font-weight:600;margin-bottom:10px;">PLOT SIZE</div>
+        <div style="display:flex;gap:8px;margin-bottom:16px;">
+          <span class="tag" style="background:var(--navy);color:#fff;">5 Marla</span>
+          <span class="tag" style="background:var(--paper);color:var(--ink-soft);border:1px solid var(--line);">10 Marla</span>
+          <span class="tag" style="background:var(--paper);color:var(--ink-soft);border:1px solid var(--line);">1 Kanal</span>
+        </div>
+        <div style="display:flex;justify-content:space-between;align-items:center;padding-top:14px;border-top:1px solid var(--line);">
+          <div style="font-size:12px;color:var(--ink-soft);">Estimated range</div>
+          <div class="num" style="font-family:'Fraunces',serif;font-size:20px;font-weight:600;color:var(--navy);">PKR 42–58 Lac</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ROW 2: ADD SERVICES (mockup left) -->
+    <div style="display:flex;gap:52px;align-items:center;padding:40px 0;border-top:1px solid var(--line);">
+      <div class="card" style="flex:1;padding:20px;order:1;">
+        <div style="font-size:11.5px;color:var(--ink-soft);font-weight:600;margin-bottom:12px;">SERVICES NEEDED</div>
+        <div style="display:flex;justify-content:space-between;align-items:center;font-size:13px;padding:9px 0;border-top:1px solid var(--line);"><span>☑ Architecture &amp; Structural Design</span><span class="num" style="color:var(--ink-soft);">Included</span></div>
+        <div style="display:flex;justify-content:space-between;align-items:center;font-size:13px;padding:9px 0;border-top:1px solid var(--line);"><span>☑ LDA / CDA Approval Facilitation</span><span class="num" style="color:var(--ink-soft);">Included</span></div>
+        <div style="display:flex;justify-content:space-between;align-items:center;font-size:13px;padding:9px 0;border-top:1px solid var(--line);"><span style="color:var(--ink-soft);">☐ Interior Design</span><span class="num" style="color:var(--ink-soft);">Skip</span></div>
+      </div>
+      <div style="flex:1;order:2;">
+        <span class="tag" style="background:var(--gold);color:#fff;margin-bottom:14px;">Step 2 · Services You Need</span>
+        <h3 style="font-size:22px;font-weight:600;color:var(--navy);margin-top:2px;">Pick what you actually need quoted.</h3>
+        <p style="font-size:14px;color:var(--ink-soft);line-height:1.65;margin-top:12px;max-width:400px;">Architecture, structural, interiors, LDA/CDA approvals — check what applies to your project and skip the rest. Your quote list updates as you go.</p>
+      </div>
+    </div>
+
+    <!-- ROW 3: GET QUOTES -->
+    <div style="display:flex;gap:52px;align-items:center;padding:40px 0 8px;border-top:1px solid var(--line);">
+      <div style="flex:1;">
+        <span class="tag" style="background:var(--moss-bg);color:var(--moss);margin-bottom:14px;">Step 3 · Get Quotes</span>
+        <h3 style="font-size:22px;font-weight:600;color:var(--navy);margin-top:2px;">Verified providers quote against your exact scope.</h3>
+        <p style="font-size:14px;color:var(--ink-soft);line-height:1.65;margin-top:12px;max-width:400px;">Your request goes to architects, contractors and designers with a visible credibility score, and quotes come back to compare side by side.</p>
+        <a href="#" style="font-size:13px;font-weight:600;color:var(--navy);margin-top:18px;display:inline-block;">Start an Estimate →</a>
+      </div>
+      <div class="card" style="flex:1;padding:0;overflow:hidden;">
+        <div style="padding:14px 18px;border-bottom:1px solid var(--line);font-size:12.5px;font-weight:600;">Quotes Received — 5 Marla, Modern</div>
+        <div style="display:flex;justify-content:space-between;align-items:center;padding:12px 18px;border-bottom:1px solid var(--line);">
+          <div style="font-size:13px;font-weight:600;">Al-Noor Builders</div>
+          <div class="num" style="font-size:13px;font-weight:600;">PKR 47 Lac</div>
+          <span class="tag" style="background:var(--moss-bg);color:var(--moss);">8.7/10</span>
+        </div>
+        <div style="display:flex;justify-content:space-between;align-items:center;padding:12px 18px;">
+          <div style="font-size:13px;font-weight:600;">Capital Frontier</div>
+          <div class="num" style="font-size:13px;font-weight:600;">PKR 51 Lac</div>
+          <span class="tag" style="background:var(--moss-bg);color:var(--moss);">8.1/10</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- DESIGN GALLERY PREVIEW -->
+  <div style="padding:16px 64px 72px;background:var(--paper);">
+    <div style="display:flex;justify-content:space-between;align-items:flex-end;max-width:900px;margin-bottom:28px;">
+      <div>
+        <div class="eyebrow" style="margin-bottom:12px;">DESIGN STYLES</div>
+        <h2 style="font-size:26px;font-weight:600;color:var(--navy);">Start from a design that already fits your budget.</h2>
+      </div>
+      <a href="#" style="font-size:13px;font-weight:600;color:var(--navy);">See Full Gallery →</a>
+    </div>
+    <div style="display:flex;gap:24px;">
+      <div class="card" style="flex:1;overflow:hidden;">
+        <div style="height:150px;background:linear-gradient(135deg,#2C4463,#10213A);"></div>
+        <div style="padding:16px 18px;">
+          <div style="font-size:14.5px;font-weight:600;">Modern</div>
+          <div style="font-size:12px;color:var(--ink-soft);margin-top:3px;">Clean lines, flat roofs, large glazing</div>
+        </div>
+      </div>
+      <div class="card" style="flex:1;overflow:hidden;">
+        <div style="height:150px;background:linear-gradient(135deg,#9C5B3C,#6B3F29);"></div>
+        <div style="padding:16px 18px;">
+          <div style="font-size:14.5px;font-weight:600;">Contemporary</div>
+          <div style="font-size:12px;color:var(--ink-soft);margin-top:3px;">Mixed materials, open-plan interiors</div>
+        </div>
+      </div>
+      <div class="card" style="flex:1;overflow:hidden;">
+        <div style="height:150px;background:linear-gradient(135deg,#5B4A2C,#3A2E17);"></div>
+        <div style="padding:16px 18px;">
+          <div style="font-size:14.5px;font-weight:600;">Classic</div>
+          <div style="font-size:12px;color:var(--ink-soft);margin-top:3px;">Symmetrical facades, traditional detailing</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CTA BAND -->
+  <div style="padding:56px 64px;background:var(--navy-2);color:#fff;display:flex;justify-content:space-between;align-items:center;">
+    <div>
+      <div class="eyebrow" style="color:var(--gold-light);margin-bottom:8px;">GET A REAL NUMBER</div>
+      <div style="font-family:'Fraunces',serif;font-size:26px;font-weight:600;max-width:480px;">Run a build cost estimate in under a minute.</div>
+    </div>
+    <a href="#" class="btn btn-gold" style="padding:14px 28px;">Start an Estimate →</a>
+  </div>
+
+  <!-- FOOTER -->
+  <div style="padding:44px 64px;background:var(--navy);color:rgba(255,255,255,.6);">
+    <div style="display:flex;justify-content:space-between;align-items:flex-start;padding-bottom:28px;border-bottom:1px solid var(--line-dark);">
+      <div>
+        <div style="display:flex;align-items:center;gap:10px;">
+          <div style="width:30px;height:30px;border-radius:6px;background:rgba(255,255,255,.08);color:var(--gold-light);display:flex;align-items:center;justify-content:center;font-family:'Fraunces',serif;font-weight:700;font-size:12px;">D90</div>
+          <div style="color:#fff;font-weight:700;font-size:15px;">Dealer90.com</div>
+        </div>
+        <p style="font-size:12.5px;max-width:320px;line-height:1.6;margin-top:12px;">Pakistan's installment property and build-services marketplace. Every figure shown is dealer- or provider-supplied — never guaranteed by Dealer90.com.</p>
+      </div>
+      <div style="display:flex;gap:56px;font-size:13px;">
+        <div>
+          <div style="color:#fff;font-weight:600;margin-bottom:10px;">Tools</div>
+          <div style="display:flex;flex-direction:column;gap:8px;">
+            <a href="#">Invest by ROI</a><a href="#">Build a Home</a><a href="#">Installment Plans</a>
+          </div>
+        </div>
+        <div>
+          <div style="color:#fff;font-weight:600;margin-bottom:10px;">Partners</div>
+          <div style="display:flex;flex-direction:column;gap:8px;">
+            <a href="#">For Dealers</a><a href="#">For Builders</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div style="display:flex;justify-content:space-between;align-items:center;padding-top:20px;font-size:11.5px;">
+      <div>© 2026 Dealer90.com</div>
+      <div>Regulated &amp; verified against PCATP · PEC · LDA · CDA · DHA</div>
+    </div>
+  </div>
+
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":2660}}'>class Component extends DCLogic{renderVals(){return {};}}</script>
+</body>
+</html>

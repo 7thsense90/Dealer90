@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Build Cost Estimator — Step 1: Plot Size & Design</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<style>
+:root{
+  --navy:#10213A; --navy-2:#1A3155; --gold:#B98B33; --gold-light:#EFE1C2; --ivory:#F6F4EF; --white:#FFFFFF;
+  --line:#E4E0D6; --ink:#20242C; --muted:#6B7178; --green:#3F6B4F; --green-bg:#E6EEE7;
+}
+body{margin:0;background:var(--ivory);font-family:'Work Sans',sans-serif;color:var(--ink)}
+h1,h2,h3{font-family:'Fraunces',serif;margin:0}
+a{color:inherit;text-decoration:none}
+.tag{display:inline-flex;padding:5px 12px;border-radius:999px;font-size:11px;font-weight:700;}
+.card{background:var(--white);border:1px solid var(--line);border-radius:16px;}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:14px 26px;border-radius:10px;font-weight:700;font-size:14px;border:1px solid transparent;cursor:pointer}
+.btn-gold{background:var(--gold);color:#fff}
+.btn-line{background:#fff;border-color:var(--line);color:var(--ink)}
+.chip{padding:10px 18px;border-radius:999px;border:1px solid var(--line);font-size:13px;font-weight:600;color:var(--ink);background:#fff;}
+.chip.selected{border-color:var(--navy);background:var(--navy);color:#fff;}
+.step-dot{width:8px;height:8px;border-radius:50%;background:var(--line);}
+.step-dot.active{background:var(--gold);width:22px;border-radius:4px;}
+.design-card{border:1.5px solid var(--line);border-radius:14px;overflow:hidden;cursor:pointer;background:#fff;}
+.design-card.selected{border-color:var(--gold);box-shadow:0 0 0 2px var(--gold-light);}
+</style>
+</helmet>
+<div style="width:1440px;height:1680px;box-sizing:border-box;background:var(--ivory);display:flex;flex-direction:column;">
+
+  <!-- NAV -->
+  <div style="height:84px;background:var(--navy);display:flex;align-items:center;justify-content:space-between;padding:0 56px;flex-shrink:0;">
+    <div style="display:flex;align-items:center;gap:12px;">
+      <div style="width:61px;height:36px;border-radius:10px;background:var(--gold);display:flex;align-items:center;justify-content:center;font-family:'Fraunces',serif;font-weight:600;color:#10213A;font-size:14px;letter-spacing:-.02em;">D90</div>
+      <div style="color:#fff;font-family:'Work Sans',sans-serif;font-size:21px;font-weight:700;letter-spacing:-.01em;">Dealer90.com</div>
+    </div>
+    <div style="color:#C9D2E0;font-size:13px;">Build Cost Estimator</div>
+  </div>
+
+  <!-- STEPPER -->
+  <div style="padding:32px 56px 0;display:flex;flex-direction:column;gap:12px;">
+    <div style="display:flex;gap:8px;">
+      <div class="step-dot active"></div>
+      <div class="step-dot"></div>
+      <div class="step-dot"></div>
+      <div class="step-dot"></div>
+    </div>
+    <div style="display:flex;gap:36px;font-size:13px;">
+      <span style="color:var(--navy);font-weight:700;">Plot &amp; Design</span>
+      <span style="color:var(--muted);">Other Services</span>
+      <span style="color:var(--muted);">Sign Up</span>
+      <span style="color:var(--muted);">Your Estimate</span>
+    </div>
+  </div>
+
+  <!-- HEADER -->
+  <div style="padding:32px 56px 0;display:flex;flex-direction:column;gap:10px;">
+    <h1 style="font-size:30px;">Let's estimate what your build could cost.</h1>
+    <div style="font-size:14.5px;color:var(--muted);max-width:680px;">Tell us your plot size and pick a design that's close to what you have in mind. Takes about a minute — you'll get a free ballpark estimate at the end.</div>
+  </div>
+
+  <!-- PLOT SIZE -->
+  <div style="padding:26px 56px 0;display:flex;flex-direction:column;gap:12px;">
+    <div style="font-weight:700;font-size:14px;">Plot Size</div>
+    <div style="display:flex;gap:10px;flex-wrap:wrap;">
+      <div class="chip">3 Marla</div>
+      <div class="chip selected">5 Marla</div>
+      <div class="chip">7 Marla</div>
+      <div class="chip">10 Marla</div>
+      <div class="chip">1 Kanal</div>
+      <div class="chip">2 Kanal</div>
+    </div>
+  </div>
+
+  <!-- DESIGN GALLERY -->
+  <div style="padding:28px 56px 0;">
+    <div style="font-weight:700;font-size:14px;margin-bottom:14px;">Pick a Design Style</div>
+    <div style="display:grid;grid-template-columns:repeat(5,1fr);gap:14px;">
+      <div class="design-card">
+        <div style="height:110px;background:linear-gradient(135deg,#D9CFB8,#B9A87E);"></div>
+        <div style="padding:14px;display:flex;flex-direction:column;gap:6px;">
+          <span class="tag" style="background:var(--ivory);color:var(--ink);align-self:flex-start;">Basic</span>
+          <div style="font-weight:700;font-size:13px;">Single-Storey, Functional</div>
+          <div style="font-size:11px;color:var(--muted);">2 Bed · 1 Bath</div>
+        </div>
+      </div>
+      <div class="design-card selected">
+        <div style="height:110px;background:linear-gradient(135deg,#CBD6D2,#8FA69C);"></div>
+        <div style="padding:14px;display:flex;flex-direction:column;gap:6px;">
+          <span class="tag" style="background:var(--gold-light);color:#8A6A24;align-self:flex-start;">Standard</span>
+          <div style="font-weight:700;font-size:13px;">Single-Storey, Modern Finish</div>
+          <div style="font-size:11px;color:var(--muted);">3 Bed · 2 Bath</div>
+        </div>
+      </div>
+      <div class="design-card">
+        <div style="height:110px;background:linear-gradient(135deg,#C7D2FE,#818CF8);"></div>
+        <div style="padding:14px;display:flex;flex-direction:column;gap:6px;">
+          <span class="tag" style="background:var(--ivory);color:var(--ink);align-self:flex-start;">Modern</span>
+          <div style="font-weight:700;font-size:13px;">Double-Storey, Open Plan</div>
+          <div style="font-size:11px;color:var(--muted);">4 Bed · 3 Bath</div>
+        </div>
+      </div>
+      <div class="design-card">
+        <div style="height:110px;background:linear-gradient(135deg,#E3CFC2,#CBAE9B);"></div>
+        <div style="padding:14px;display:flex;flex-direction:column;gap:6px;">
+          <span class="tag" style="background:var(--ivory);color:var(--ink);align-self:flex-start;">Premium</span>
+          <div style="font-weight:700;font-size:13px;">Double-Storey, Designer Finish</div>
+          <div style="font-size:11px;color:var(--muted);">4 Bed · 4 Bath</div>
+        </div>
+      </div>
+      <div class="design-card">
+        <div style="height:110px;background:linear-gradient(135deg,#0F172A,#334155);"></div>
+        <div style="padding:14px;display:flex;flex-direction:column;gap:6px;">
+          <span class="tag" style="background:#EDE9FE;color:#5B21B6;align-self:flex-start;">Ultra-Modern</span>
+          <div style="font-weight:700;font-size:13px;">Double-Storey, Smart Home</div>
+          <div style="font-size:11px;color:var(--muted);">5 Bed · 6 Bath</div>
+        </div>
+      </div>
+    </div>
+    <div style="margin-top:14px;font-size:12px;color:var(--muted);">Designs shown are real submissions from verified architects on Dealer90.com — select one you like, and you can request that exact design later.</div>
+  </div>
+
+  <!-- ACTIONS -->
+  <div style="padding:34px 56px 0;display:flex;justify-content:flex-end;">
+    <button class="btn btn-gold">Continue →</button>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":1680}}'>
+class Component extends DCLogic {
+  renderVals(){ return {}; }
+}
+</script>
+</body>
+</html>

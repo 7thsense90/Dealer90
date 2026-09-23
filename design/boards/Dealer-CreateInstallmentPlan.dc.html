@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Dealer90.com — Create Installment Plan</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<style>
+:root{
+  --navy:#10213A; --navy-2:#16294A; --ink:#1C2430; --ink-soft:#5B6472;
+  --paper:#F6F4EF; --paper-2:#FFFFFF; --gold:#B98B33; --gold-light:#E7C77E;
+  --green:#2F6F4E; --green-bg:#E7F1EA; --amber:#B9772E; --amber-bg:#F6EADA;
+  --red:#B4453A; --red-bg:#F7E7E4; --line:#E4DFD3;
+}
+body{margin:0;background:var(--paper);font-family:'Work Sans',sans-serif;color:var(--ink)}
+h1,h2,h3{font-family:'Fraunces',serif;margin:0}
+label{display:block;font-size:12.5px;font-weight:600;color:var(--ink);margin-bottom:6px;}
+.field{width:100%;box-sizing:border-box;border:1px solid var(--line);border-radius:8px;padding:11px 13px;font-size:13.5px;font-family:'Work Sans',sans-serif;color:var(--ink);background:#fff;}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:11px 20px;border-radius:8px;font-weight:600;font-size:13.5px;border:1px solid transparent;cursor:pointer}
+.btn-gold{background:var(--gold);color:#fff}
+.btn-outline{background:#fff;border:1px solid var(--line);color:var(--ink);}
+.tag{display:inline-flex;padding:4px 11px;border-radius:999px;font-size:11px;font-weight:700;}
+.card{background:var(--paper-2);border:1px solid var(--line);border-radius:14px;}
+.chip{padding:8px 14px;border-radius:999px;font-size:12.5px;font-weight:600;border:1px solid var(--line);color:var(--ink-soft);cursor:pointer;}
+.chip.active{background:var(--navy);color:#fff;border-color:var(--navy);}
+.sectionhead{font-weight:600;font-size:14.5px;color:var(--navy);display:flex;align-items:center;gap:9px;}
+.stepnum{width:22px;height:22px;border-radius:50%;background:var(--navy);color:#fff;font-size:11px;font-weight:700;display:inline-flex;align-items:center;justify-content:center;flex-shrink:0;}
+table{width:100%;border-collapse:collapse;}
+th{text-align:left;font-size:10.5px;color:var(--ink-soft);font-weight:600;padding:9px 12px;border-bottom:1px solid var(--line);text-transform:uppercase;letter-spacing:.03em;}
+td{padding:10px 12px;border-bottom:1px solid var(--line);font-size:12.5px;vertical-align:middle;}
+tr.bulk-row td{background:var(--amber-bg);}
+.bulkfield-row{display:grid;grid-template-columns:1fr 1fr 32px;gap:10px;align-items:end;}
+.remove-x{width:32px;height:38px;border-radius:8px;border:1px solid var(--line);background:#fff;display:flex;align-items:center;justify-content:center;color:var(--red);font-size:15px;cursor:pointer;flex-shrink:0;}
+</style>
+</helmet>
+<div style="width:1440px;height:1460px;box-sizing:border-box;background:var(--paper);display:flex;flex-direction:column;">
+
+  <div style="height:76px;flex-shrink:0;display:flex;align-items:center;justify-content:space-between;padding:0 40px;border-bottom:1px solid var(--line);background:#fff;">
+    <div>
+      <div style="font-size:12px;color:var(--ink-soft);">Customers &amp; Installments / New Plan</div>
+      <h1 style="font-size:20px;color:var(--navy);">Create Installment Plan</h1>
+    </div>
+    <div style="display:flex;gap:10px;">
+      <button class="btn btn-outline">Cancel</button>
+      <button class="btn btn-gold">Activate Plan →</button>
+    </div>
+  </div>
+
+  <div style="padding:32px 40px;display:grid;grid-template-columns:1.45fr 1fr;gap:28px;">
+
+    <!-- FORM -->
+    <div style="display:flex;flex-direction:column;gap:22px;">
+
+      <!-- STEP 1: CUSTOMER -->
+      <div class="card" style="padding:26px;display:flex;flex-direction:column;gap:18px;">
+        <div class="sectionhead"><span class="stepnum">1</span>Customer</div>
+
+        <div>
+          <label>Select Existing Customer</label>
+          <select class="field"><option>Usman Tariq — +92 300 1234567</option><option>Zara Ahmed — +92 301 7788990</option><option>Bilal Sheikh — +92 333 4455667</option><option>+ New Customer</option></select>
+        </div>
+
+        <div style="font-size:11.5px;color:var(--ink-soft);margin-top:-8px;">Editing the fields below updates this customer's record on Dealer90.com.</div>
+
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
+          <div><label>Full Name</label><input class="field" value="Usman Tariq"></div>
+          <div><label>Phone Number</label><input class="field" value="+92 300 1234567"></div>
+        </div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
+          <div><label>CNIC</label><input class="field" value="35202-1234567-1"></div>
+          <div><label>Email</label><input class="field" value="usman.tariq@email.com"></div>
+        </div>
+      </div>
+
+      <!-- STEP 2: PROPERTY, PRICE & ROI -->
+      <div class="card" style="padding:26px;display:flex;flex-direction:column;gap:18px;">
+        <div class="sectionhead"><span class="stepnum">2</span>Property, Selling Price &amp; ROI</div>
+
+        <div>
+          <label>Select Property</label>
+          <select class="field"><option>5 Marla Corner Villa — DHA Phase 6</option><option>8 Marla Plot, Block J</option><option>Shop 9, Al-Noor Arcade</option></select>
+        </div>
+
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
+          <div><label>Selling Price (PKR)</label><input class="field" value="28,500,000"></div>
+          <div><label>Down Payment (PKR)</label><input class="field" value="5,000,000"></div>
+        </div>
+
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
+          <div>
+            <label>Projected ROI %</label>
+            <input class="field" value="10.5" style="border-color:var(--green);">
+          </div>
+          <div>
+            <label>ROI Basis</label>
+            <div style="display:flex;gap:10px;">
+              <div class="chip active">Comparable Sales</div>
+              <div class="chip">Personal Estimate</div>
+            </div>
+          </div>
+        </div>
+        <div style="font-size:11.5px;color:var(--ink-soft);margin-top:-8px;">Selling price and ROI% are editable here for this specific plan — shown to the customer as your figure, never guaranteed by Dealer90.com.</div>
+      </div>
+
+      <!-- STEP 3: INSTALLMENT STRUCTURE -->
+      <div class="card" style="padding:26px;display:flex;flex-direction:column;gap:18px;">
+        <div class="sectionhead"><span class="stepnum">3</span>Installment Structure</div>
+
+        <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px;">
+          <div><label>Number of Installments</label><input class="field" value="18"></div>
+          <div><label>Frequency</label><select class="field"><option>Monthly</option><option>Quarterly</option></select></div>
+          <div><label>First Due Date</label><input class="field" value="Oct 5, 2026"></div>
+        </div>
+      </div>
+
+      <!-- STEP 4: BULK PAYMENTS -->
+      <div class="card" style="padding:26px;display:flex;flex-direction:column;gap:16px;">
+        <div class="sectionhead"><span class="stepnum">4</span>Bulk Payments <span style="font-weight:500;font-size:12px;color:var(--ink-soft);">(optional — larger lump-sum amounts due on specific installments, on top of the regular amount)</span></div>
+
+        <div style="display:grid;grid-template-columns:1fr 1fr 32px;gap:10px;">
+          <label style="margin-bottom:0;">Installment #</label>
+          <label style="margin-bottom:0;">Bulk Amount (PKR)</label>
+          <div></div>
+        </div>
+
+        <div class="bulkfield-row">
+          <input class="field" value="5">
+          <input class="field" value="1,500,000">
+          <div class="remove-x">×</div>
+        </div>
+        <div class="bulkfield-row">
+          <input class="field" value="12">
+          <input class="field" value="2,000,000">
+          <div class="remove-x">×</div>
+        </div>
+        <div class="bulkfield-row">
+          <input class="field" value="18">
+          <input class="field" value="2,500,000">
+          <div class="remove-x">×</div>
+        </div>
+
+        <button class="btn btn-outline" style="align-self:flex-start;">+ Add Bulk Payment</button>
+
+        <div class="card" style="padding:14px 16px;background:var(--amber-bg);border:none;display:flex;gap:10px;align-items:flex-start;">
+          <span style="font-size:15px;line-height:1;">ⓘ</span>
+          <div style="font-size:12px;color:#6B4E1E;line-height:1.5;">On installments #5, #12 and #18, the customer will owe the regular monthly amount <strong>plus</strong> the bulk amount you set — the schedule on the right recalculates automatically as you edit any field.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- LIVE SUMMARY + SCHEDULE -->
+    <div style="display:flex;flex-direction:column;gap:20px;">
+
+      <div class="card" style="padding:22px;">
+        <div style="font-size:12px;font-weight:600;color:var(--ink-soft);margin-bottom:14px;text-transform:uppercase;letter-spacing:.03em;">Plan Summary — Auto-Calculated</div>
+        <div style="display:flex;flex-direction:column;gap:11px;">
+          <div style="display:flex;justify-content:space-between;font-size:13px;"><span style="color:var(--ink-soft);">Selling Price</span><span style="font-weight:700;">PKR 28,500,000</span></div>
+          <div style="display:flex;justify-content:space-between;font-size:13px;"><span style="color:var(--ink-soft);">Down Payment</span><span style="font-weight:700;">PKR 5,000,000</span></div>
+          <div style="display:flex;justify-content:space-between;font-size:13px;padding-bottom:11px;border-bottom:1px solid var(--line);"><span style="color:var(--ink-soft);">Amount to Finance</span><span style="font-weight:700;color:var(--navy);">PKR 23,500,000</span></div>
+          <div style="display:flex;justify-content:space-between;font-size:13px;"><span style="color:var(--ink-soft);">Installments</span><span style="font-weight:700;">18 monthly</span></div>
+          <div style="display:flex;justify-content:space-between;font-size:13px;"><span style="color:var(--ink-soft);">Bulk Payments</span><span style="font-weight:700;">3 (#5, #12, #18)</span></div>
+          <div style="display:flex;justify-content:space-between;font-size:13px;padding-bottom:11px;border-bottom:1px solid var(--line);"><span style="color:var(--ink-soft);">Total Bulk Amount</span><span style="font-weight:700;color:var(--amber);">PKR 6,000,000</span></div>
+          <div style="display:flex;justify-content:space-between;font-size:14px;"><span style="color:var(--ink-soft);">Regular Installment</span><span style="font-weight:700;color:var(--green);">PKR 972,222 / mo</span></div>
+          <div style="display:flex;justify-content:space-between;font-size:14px;"><span style="color:var(--ink-soft);">Projected ROI</span><span style="font-weight:700;color:var(--green);">10.5%</span></div>
+        </div>
+        <div style="font-size:10.5px;color:var(--ink-soft);margin-top:12px;padding-top:12px;border-top:1px solid var(--line);">Regular Installment = (Amount to Finance − Total Bulk Amount) ÷ Number of Installments.</div>
+      </div>
+
+      <div class="card">
+        <div style="padding:16px 20px;border-bottom:1px solid var(--line);font-weight:600;font-size:14px;">Generated Installment Schedule</div>
+        <table>
+          <tr><th>#</th><th>Due Date</th><th>Regular</th><th>Bulk</th><th>Total Due</th></tr>
+          <tr><td>1</td><td>Oct 5, 2026</td><td>PKR 972,222</td><td>—</td><td style="font-weight:600;">PKR 972,222</td></tr>
+          <tr><td>2</td><td>Nov 5, 2026</td><td>PKR 972,222</td><td>—</td><td style="font-weight:600;">PKR 972,222</td></tr>
+          <tr><td>3</td><td>Dec 5, 2026</td><td>PKR 972,222</td><td>—</td><td style="font-weight:600;">PKR 972,222</td></tr>
+          <tr><td>4</td><td>Jan 5, 2027</td><td>PKR 972,222</td><td>—</td><td style="font-weight:600;">PKR 972,222</td></tr>
+          <tr class="bulk-row"><td>5</td><td>Feb 5, 2027</td><td>PKR 972,222</td><td style="font-weight:700;color:var(--amber);">PKR 1,500,000</td><td style="font-weight:700;">PKR 2,472,222 <span class="tag" style="background:var(--gold);color:#fff;margin-left:4px;">Bulk</span></td></tr>
+          <tr><td colspan="5" style="text-align:center;color:var(--ink-soft);border-bottom:1px solid var(--line);">⋯ installments 6–11, regular PKR 972,222 each ⋯</td></tr>
+          <tr class="bulk-row"><td>12</td><td>Sep 5, 2027</td><td>PKR 972,222</td><td style="font-weight:700;color:var(--amber);">PKR 2,000,000</td><td style="font-weight:700;">PKR 2,972,222 <span class="tag" style="background:var(--gold);color:#fff;margin-left:4px;">Bulk</span></td></tr>
+          <tr><td colspan="5" style="text-align:center;color:var(--ink-soft);border-bottom:1px solid var(--line);">⋯ installments 13–17, regular PKR 972,222 each ⋯</td></tr>
+          <tr class="bulk-row"><td>18</td><td>Mar 5, 2028</td><td>PKR 972,222</td><td style="font-weight:700;color:var(--amber);">PKR 2,500,000</td><td style="font-weight:700;">PKR 3,472,222 <span class="tag" style="background:var(--gold);color:#fff;margin-left:4px;">Bulk · Final</span></td></tr>
+        </table>
+        <div style="padding:14px 20px;display:flex;justify-content:space-between;background:var(--navy);border-radius:0 0 13px 13px;">
+          <span style="color:#B7C0D1;font-size:12.5px;font-weight:600;">Total Plan Value (Down Payment + 18 Installments)</span>
+          <span style="color:#fff;font-size:14px;font-weight:700;">PKR 28,500,000</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":1460}}'>
+class Component extends DCLogic {
+  renderVals(){ return {}; }
+}
+</script>
+</body>
+</html>

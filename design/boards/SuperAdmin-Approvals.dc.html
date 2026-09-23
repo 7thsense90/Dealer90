@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Dealer90.com — Super Admin</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<style>
+:root{
+  --navy:#10213A; --navy-2:#16294A; --ink:#1C2430; --ink-soft:#5B6472;
+  --paper:#F6F4EF; --paper-2:#FFFFFF; --gold:#B98B33; --gold-light:#E7C77E;
+  --green:#2F6F4E; --green-bg:#E7F1EA; --amber:#B9772E; --amber-bg:#F6EADA;
+  --red:#B4453A; --red-bg:#F7E7E4; --line:#E4DFD3;
+}
+body{margin:0;background:var(--paper);font-family:'Work Sans',sans-serif;color:var(--ink)}
+h1,h2,h3{font-family:'Fraunces',serif;margin:0}
+a{color:inherit;text-decoration:none}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:11px 20px;border-radius:8px;font-weight:600;font-size:14px;border:1px solid transparent;cursor:pointer}
+.btn-gold{background:var(--gold);color:#fff}
+.btn-outline{background:#fff;border-color:var(--line);color:var(--ink);}
+.tag{display:inline-flex;padding:5px 12px;border-radius:999px;font-size:12px;font-weight:600;}
+.card{background:var(--paper-2);border:1px solid var(--line);border-radius:14px;}
+.navitem{display:flex;align-items:center;gap:12px;padding:11px 18px;border-radius:9px;font-size:14px;font-weight:500;color:#C7CEDB;}
+.navitem.active{background:var(--navy-2);color:#fff;}
+table{width:100%;border-collapse:collapse;}
+th{text-align:left;font-size:12px;color:var(--ink-soft);font-weight:600;padding:12px 16px;border-bottom:1px solid var(--line);text-transform:uppercase;letter-spacing:.03em;}
+td{padding:16px;border-bottom:1px solid var(--line);font-size:14px;vertical-align:middle;}
+</style>
+</helmet>
+<div style="width:1440px;height:1300px;box-sizing:border-box;background:var(--paper);display:flex;">
+
+  <!-- SIDEBAR -->
+  <div style="width:250px;flex-shrink:0;background:var(--navy);padding:28px 16px;display:flex;flex-direction:column;gap:4px;">
+    <div style="display:flex;align-items:center;gap:10px;padding:0 10px 24px;">
+      <div style="width:58px;height:34px;border-radius:8px;background:var(--gold);display:flex;align-items:center;justify-content:center;font-family:'Fraunces',serif;font-weight:700;color:var(--navy);font-size:14px;letter-spacing:-.02em;">D90</div>
+      <div style="color:#fff;font-family:'Work Sans',sans-serif;font-size:18px;font-weight:700;letter-spacing:-.01em;">Dealer90.com Admin</div>
+    </div>
+    <div class="navitem">Dashboard</div>
+    <div class="navitem active">Dealer Approvals</div>
+    <div class="navitem">All Dealers</div>
+    <div class="navitem">Dealer Credibility</div>
+    <div class="navitem">All Properties</div>
+    <div class="navitem">Customers</div>
+    <div class="navitem">🤖 AI Scraper &amp; Onboarding</div>
+    <div class="navitem">⚙️ AI Provider Settings</div>
+    <div class="navitem">Reports</div>
+    <div class="navitem">Settings</div>
+    <div style="margin-top:auto;padding:14px 10px 0;border-top:1px solid #26385A;display:flex;align-items:center;gap:10px;">
+      <div style="width:32px;height:32px;border-radius:50%;background:var(--gold-light);"></div>
+      <div style="color:#fff;font-size:13px;">Super Admin</div>
+    </div>
+  </div>
+
+  <!-- MAIN -->
+  <div style="flex:1;display:flex;flex-direction:column;overflow:hidden;">
+
+    <div style="height:80px;flex-shrink:0;display:flex;align-items:center;justify-content:space-between;padding:0 36px;border-bottom:1px solid var(--line);">
+      <div>
+        <h1 style="font-size:22px;color:var(--navy);">Dealer Approvals</h1>
+        <div style="font-size:13px;color:var(--ink-soft);">Review new registrations and manage dealer access</div>
+      </div>
+      <button class="btn btn-gold">+ Create Dealer Account</button>
+    </div>
+
+    <div style="padding:28px 36px;display:flex;flex-direction:column;gap:28px;overflow:auto;">
+
+      <!-- STATS -->
+      <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:20px;">
+        <div class="card" style="padding:20px;">
+          <div style="font-size:13px;color:var(--ink-soft);">Pending Approvals</div>
+          <div style="font-size:30px;font-weight:700;color:var(--amber);font-family:'Fraunces',serif;">6</div>
+        </div>
+        <div class="card" style="padding:20px;">
+          <div style="font-size:13px;color:var(--ink-soft);">Active Dealers</div>
+          <div style="font-size:30px;font-weight:700;color:var(--navy);font-family:'Fraunces',serif;">142</div>
+        </div>
+        <div class="card" style="padding:20px;">
+          <div style="font-size:13px;color:var(--ink-soft);">Total Properties Listed</div>
+          <div style="font-size:30px;font-weight:700;color:var(--navy);font-family:'Fraunces',serif;">3,214</div>
+        </div>
+        <div class="card" style="padding:20px;">
+          <div style="font-size:13px;color:var(--ink-soft);">Registered Customers</div>
+          <div style="font-size:30px;font-weight:700;color:var(--navy);font-family:'Fraunces',serif;">1,986</div>
+        </div>
+      </div>
+
+      <!-- FLAGGED PRICING REVIEW -->
+      <div class="card">
+        <div style="padding:18px 20px;border-bottom:1px solid var(--line);">
+          <div style="font-weight:600;font-size:15px;">Flagged Pricing Estimates</div>
+          <div style="font-size:12px;color:var(--ink-soft);margin-top:2px;">Dealer-submitted 1-year projections that sit well above comparable listings in their area — held before going live.</div>
+        </div>
+        <table>
+          <tr><th>Property</th><th>Dealer</th><th>Price</th><th>Dealer's Projection</th><th>Area Comparable Avg.</th><th>Flag</th><th>Actions</th></tr>
+          <tr>
+            <td style="font-weight:600;">Shop 3, Meridian Heights</td><td>Riverside Estates</td><td>PKR 1.1 Cr</td><td style="color:var(--red);font-weight:600;">+38% in 1yr</td><td>+14% in 1yr</td>
+            <td><span class="tag" style="background:var(--red-bg);color:var(--red);">Outlier</span></td>
+            <td><span style="color:var(--green);font-weight:600;margin-right:14px;cursor:pointer;">Approve as-is</span><span style="color:var(--red);font-weight:600;margin-right:14px;cursor:pointer;">Request revision</span><span style="color:var(--ink-soft);cursor:pointer;">View</span></td>
+          </tr>
+          <tr>
+            <td style="font-weight:600;">12 Marla Plot, Sector B</td><td>Green Valley Realty</td><td>PKR 2.2 Cr</td><td style="color:var(--red);font-weight:600;">+29% in 1yr</td><td>+15% in 1yr</td>
+            <td><span class="tag" style="background:var(--red-bg);color:var(--red);">Outlier</span></td>
+            <td><span style="color:var(--green);font-weight:600;margin-right:14px;cursor:pointer;">Approve as-is</span><span style="color:var(--red);font-weight:600;margin-right:14px;cursor:pointer;">Request revision</span><span style="color:var(--ink-soft);cursor:pointer;">View</span></td>
+          </tr>
+        </table>
+      </div>
+
+      <!-- PENDING TABLE -->
+      <div class="card">
+        <div style="padding:18px 20px;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;align-items:center;">
+          <div style="font-weight:600;font-size:15px;">Pending Dealer Registrations</div>
+          <input placeholder="Search dealers…" style="border:1px solid var(--line);border-radius:8px;padding:8px 12px;font-size:13px;width:220px;">
+        </div>
+        <table>
+          <tr><th>Business Name</th><th>Owner</th><th>Email / Phone</th><th>City</th><th>Submitted</th><th>Status</th><th>Actions</th></tr>
+          <tr>
+            <td style="font-weight:600;">Al-Noor Builders</td><td>Ahmed Raza</td><td>ahmed@alnoor.pk</td><td>Lahore</td><td>Sep 18, 2026</td>
+            <td><span class="tag" style="background:var(--amber-bg);color:var(--amber);">Pending Review</span></td>
+            <td><span style="color:var(--green);font-weight:600;margin-right:14px;cursor:pointer;">Approve &amp; Set Access</span><span style="color:var(--red);font-weight:600;margin-right:14px;cursor:pointer;">Reject</span><span style="color:var(--ink-soft);cursor:pointer;">View</span></td>
+          </tr>
+          <tr>
+            <td style="font-weight:600;">Green Valley Realty</td><td>Saima Iqbal</td><td>saima@gvr.pk</td><td>Faisalabad</td><td>Sep 17, 2026</td>
+            <td><span class="tag" style="background:var(--amber-bg);color:var(--amber);">Pending Review</span></td>
+            <td><span style="color:var(--green);font-weight:600;margin-right:14px;cursor:pointer;">Approve &amp; Set Access</span><span style="color:var(--red);font-weight:600;margin-right:14px;cursor:pointer;">Reject</span><span style="color:var(--ink-soft);cursor:pointer;">View</span></td>
+          </tr>
+          <tr>
+            <td style="font-weight:600;">Riverside Estates</td><td>Bilal Khan</td><td>bilal@riverside.pk</td><td>Multan</td><td>Sep 15, 2026</td>
+            <td><span class="tag" style="background:var(--amber-bg);color:var(--amber);">Documents Missing</span></td>
+            <td><span style="color:var(--green);font-weight:600;margin-right:14px;cursor:pointer;">Approve &amp; Set Access</span><span style="color:var(--red);font-weight:600;margin-right:14px;cursor:pointer;">Reject</span><span style="color:var(--ink-soft);cursor:pointer;">View</span></td>
+          </tr>
+          <tr>
+            <td style="font-weight:600;">Skyline Properties</td><td>Fatima Sheikh</td><td>fatima@skyline.pk</td><td>Karachi</td><td>Sep 12, 2026</td>
+            <td><span class="tag" style="background:var(--green-bg);color:var(--green);">Approved</span></td>
+            <td><span style="color:var(--ink-soft);cursor:pointer;">View</span></td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":1300}}'>
+class Component extends DCLogic {
+  renderVals(){ return {}; }
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Dealer90.com — Property Advisor</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<style>
+:root{
+  --navy:#10213A; --navy-2:#16294A; --ink:#1C2430; --ink-soft:#5B6472;
+  --paper:#F6F4EF; --paper-2:#FFFFFF; --gold:#B98B33; --gold-light:#E7C77E;
+  --green:#2F6F4E; --green-bg:#E7F1EA; --line:#E4DFD3;
+}
+body{margin:0;background:var(--paper);font-family:'Work Sans',sans-serif;color:var(--ink)}
+h1,h2,h3{font-family:'Fraunces',serif;margin:0}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:13px 24px;border-radius:8px;font-weight:600;font-size:14px;border:1px solid transparent;cursor:pointer}
+.btn-gold{background:var(--gold);color:#fff}
+.btn-outline{background:#fff;border:1px solid var(--line);color:var(--ink);}
+.card{background:var(--paper-2);border:1px solid var(--line);border-radius:14px;}
+label{display:block;font-size:13px;font-weight:600;margin-bottom:8px;}
+.optcard{border:1.5px solid var(--line);border-radius:12px;padding:16px 18px;cursor:pointer;background:#fff;}
+.optcard.active{border-color:var(--navy);background:#F2F0E8;}
+.optcard .t{font-weight:600;font-size:14px;}
+.optcard .d{font-size:12px;color:var(--ink-soft);margin-top:4px;line-height:1.4;}
+</style>
+</helmet>
+<div style="width:1440px;height:1200px;box-sizing:border-box;background:var(--paper);display:flex;flex-direction:column;">
+
+  <!-- NAV -->
+  <div style="height:84px;background:var(--navy);display:flex;align-items:center;justify-content:space-between;padding:0 56px;flex-shrink:0;">
+    <div style="display:flex;align-items:center;gap:12px;">
+      <div style="width:65px;height:38px;border-radius:9px;background:var(--gold);display:flex;align-items:center;justify-content:center;font-family:'Fraunces',serif;font-weight:700;color:var(--navy);font-size:15px;letter-spacing:-.02em;">D90</div>
+      <div style="color:#fff;font-family:'Work Sans',sans-serif;font-size:22px;font-weight:700;letter-spacing:-.01em;">Dealer90.com</div>
+    </div>
+    <div style="color:#B9C3D6;font-size:13px;">Property Advisor</div>
+  </div>
+
+  <div style="max-width:920px;margin:0 auto;width:100%;padding:52px 24px 0;display:flex;flex-direction:column;gap:34px;">
+
+    <div style="text-align:center;">
+      <div style="font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--gold);margin-bottom:10px;">Property Advisor</div>
+      <h1 style="font-size:32px;color:var(--navy);">A few questions to match you with the right opportunities</h1>
+      <div style="font-size:14px;color:var(--ink-soft);margin-top:8px;">Takes about a minute. Your answers are only used to filter and rank listings — never shared without your consent.</div>
+    </div>
+
+    <!-- STEPPER -->
+    <div style="display:flex;align-items:center;justify-content:center;gap:0;">
+      <div style="display:flex;align-items:center;gap:10px;">
+        <div style="width:30px;height:30px;border-radius:50%;background:var(--green);color:#fff;display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:700;">✓</div>
+        <div style="font-size:13px;font-weight:600;color:var(--ink);">Capital Profile</div>
+      </div>
+      <div style="width:80px;height:2px;background:var(--green);margin:0 14px;"></div>
+      <div style="display:flex;align-items:center;gap:10px;">
+        <div style="width:30px;height:30px;border-radius:50%;background:var(--navy);color:#fff;display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:700;">2</div>
+        <div style="font-size:13px;font-weight:600;color:var(--navy);">Horizon &amp; Risk</div>
+      </div>
+      <div style="width:80px;height:2px;background:var(--line);margin:0 14px;"></div>
+      <div style="display:flex;align-items:center;gap:10px;">
+        <div style="width:30px;height:30px;border-radius:50%;background:#fff;border:1.5px solid var(--line);color:var(--ink-soft);display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:700;">3</div>
+        <div style="font-size:13px;font-weight:600;color:var(--ink-soft);">Dealer Offers</div>
+      </div>
+    </div>
+
+    <!-- STEP 2 FORM -->
+    <div class="card" style="padding:36px;display:flex;flex-direction:column;gap:28px;">
+
+      <div>
+        <label>Investment Horizon</label>
+        <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px;">
+          <div class="optcard"><div class="t">Short-Term</div><div class="d">Flip within 12–18 months</div></div>
+          <div class="optcard active"><div class="t">Medium-Term</div><div class="d">Capital appreciation, 2–3 years</div></div>
+          <div class="optcard"><div class="t">Long-Term</div><div class="d">Wealth building or construction, 5+ years</div></div>
+        </div>
+      </div>
+
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px;">
+        <div>
+          <label>City Preference</label>
+          <select style="width:100%;box-sizing:border-box;border:1px solid var(--line);border-radius:8px;padding:12px 14px;font-size:14px;background:#fff;">
+            <option>Lahore</option><option>Islamabad / Rawalpindi</option><option>Karachi</option><option>Recommend highest-growth corridor for me</option>
+          </select>
+        </div>
+        <div>
+          <label>Primary Motivation</label>
+          <select style="width:100%;box-sizing:border-box;border:1px solid var(--line);border-radius:8px;padding:12px 14px;font-size:14px;background:#fff;">
+            <option>Maximum capital growth</option><option>Rental yield / income</option><option>Safe haven / inflation hedge</option>
+          </select>
+        </div>
+      </div>
+
+      <div>
+        <label>Risk Appetite</label>
+        <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px;">
+          <div class="optcard active"><div class="t">Conservative</div><div class="d">Approved schemes with near-possession, established areas</div></div>
+          <div class="optcard"><div class="t">Balanced</div><div class="d">Emerging corridors backed by established dealers</div></div>
+          <div class="optcard"><div class="t">Aggressive</div><div class="d">Early-stage or developmental files, higher upside &amp; risk</div></div>
+        </div>
+      </div>
+    </div>
+
+    <div style="display:flex;justify-content:space-between;padding-bottom:56px;">
+      <button class="btn btn-outline">← Back</button>
+      <button class="btn btn-gold">Submit My Request to Dealers →</button>
+    </div>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":1200}}'>
+class Component extends DCLogic {
+  renderVals(){ return {}; }
+}
+</script>
+</body>
+</html>
