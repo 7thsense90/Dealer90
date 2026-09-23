@@ -1,0 +1,26 @@
+/* AUTO-GENERATED from design/boards/Dealer-Marketing-EmailEditor.dc.html (scoped verbatim copy of the board styles) */
+.pg-dealer-marketing-emaileditor{--navy:#10213A; --navy-2:#1A3155; --gold:#B98B33; --gold-light:#EFE1C2; --ivory:#F6F4EF; --white:#FFFFFF;
+  --line:#E4E0D6; --ink:#20242C; --muted:#6B7178; --green:#3F6B4F; --green-bg:#E6EEE7; --amber-bg:#F6EADA; --amber:#B9772E;
+  --violet:#6C4E9C; --violet-bg:#EFE9F6;}
+.pg-dealer-marketing-emaileditor{margin:0;background:var(--ivory);font-family:'Work Sans',sans-serif;color:var(--ink)}
+.pg-dealer-marketing-emaileditor h1,.pg-dealer-marketing-emaileditor h2,.pg-dealer-marketing-emaileditor h3{font-family:'D90 Fraunces 500-600',serif;margin:0}
+.pg-dealer-marketing-emaileditor a{color:inherit;text-decoration:none}
+.pg-dealer-marketing-emaileditor .tag{display:inline-flex;padding:5px 12px;border-radius:999px;font-size:11px;font-weight:700;}
+.pg-dealer-marketing-emaileditor .card{background:var(--white);border:1px solid var(--line);border-radius:16px;}
+.pg-dealer-marketing-emaileditor .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:12px 20px;border-radius:10px;font-weight:700;font-size:13px;border:1px solid transparent;cursor:pointer}
+.pg-dealer-marketing-emaileditor .btn-gold{background:var(--gold);color:#fff}
+.pg-dealer-marketing-emaileditor .btn-line{background:#fff;border-color:var(--line);color:var(--ink)}
+.pg-dealer-marketing-emaileditor .btn-ai{background:linear-gradient(135deg,#6C4E9C,#8A6BC0);color:#fff;}
+.pg-dealer-marketing-emaileditor .navitem{display:flex;align-items:center;gap:12px;padding:12px 18px;border-radius:10px;font-size:14px;font-weight:600;color:#B7C0D1;}
+.pg-dealer-marketing-emaileditor .navitem.active{background:var(--navy-2);color:#fff;}
+.pg-dealer-marketing-emaileditor .badge{background:var(--gold);color:#10213A;font-size:10px;font-weight:800;padding:2px 7px;border-radius:999px;margin-left:auto;}
+.pg-dealer-marketing-emaileditor .badge-red{background:#B3432E;color:#fff;font-size:10px;font-weight:800;padding:2px 7px;border-radius:999px;margin-left:auto;}
+.pg-dealer-marketing-emaileditor .chip{padding:8px 14px;border-radius:999px;border:1px solid var(--line);font-size:12px;font-weight:600;color:var(--ink);background:#fff;cursor:pointer;}
+.pg-dealer-marketing-emaileditor .chip.selected{border-color:var(--navy);background:var(--navy);color:#fff;}
+.pg-dealer-marketing-emaileditor .ai-pill{display:inline-flex;align-items:center;gap:5px;background:var(--violet-bg);color:var(--violet);font-size:10.5px;font-weight:800;padding:4px 9px;border-radius:999px;}
+.pg-dealer-marketing-emaileditor .ai-chip{padding:8px 13px;border-radius:999px;border:1px solid #D9CDEE;font-size:11.5px;font-weight:600;color:var(--violet);background:var(--violet-bg);cursor:pointer;}
+.pg-dealer-marketing-emaileditor .field label{font-size:12px;font-weight:700;color:var(--ink);display:block;margin-bottom:6px;}
+.pg-dealer-marketing-emaileditor .field input,.pg-dealer-marketing-emaileditor .field textarea{border:1px solid var(--line);border-radius:8px;padding:11px 12px;font-size:13px;font-family:'Work Sans',sans-serif;background:#fff;width:100%;box-sizing:border-box;}
+.pg-dealer-marketing-emaileditor .editable{border:1.5px dashed #C9BEE0;border-radius:8px;padding:10px 12px;position:relative;}
+.pg-dealer-marketing-emaileditor .editable:hover{border-color:var(--violet);}
+.pg-dealer-marketing-emaileditor .ai-mark{position:absolute;top:-10px;right:10px;background:var(--violet);color:#fff;font-size:9.5px;font-weight:800;padding:2px 8px;border-radius:999px;}

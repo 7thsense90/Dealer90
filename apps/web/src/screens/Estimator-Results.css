@@ -1,0 +1,12 @@
+/* AUTO-GENERATED from design/boards/Estimator-Results.dc.html (scoped verbatim copy of the board styles) */
+.pg-estimator-results{--navy:#10213A; --navy-2:#1A3155; --gold:#B98B33; --gold-light:#EFE1C2; --ivory:#F6F4EF; --white:#FFFFFF;
+  --line:#E4E0D6; --ink:#20242C; --muted:#6B7178; --green:#3F6B4F; --green-bg:#E6EEE7; --amber:#B9772E; --amber-bg:#F6EADA;}
+.pg-estimator-results{margin:0;background:var(--ivory);font-family:'Work Sans',sans-serif;color:var(--ink)}
+.pg-estimator-results h1,.pg-estimator-results h2,.pg-estimator-results h3{font-family:'D90 Fraunces 500-600',serif;margin:0}
+.pg-estimator-results a{color:inherit;text-decoration:none}
+.pg-estimator-results .tag{display:inline-flex;padding:5px 12px;border-radius:999px;font-size:11px;font-weight:700;}
+.pg-estimator-results .card{background:var(--white);border:1px solid var(--line);border-radius:16px;}
+.pg-estimator-results .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:14px 26px;border-radius:10px;font-weight:700;font-size:14px;border:1px solid transparent;cursor:pointer}
+.pg-estimator-results .btn-gold{background:var(--gold);color:#fff}
+.pg-estimator-results .btn-line{background:#fff;border-color:var(--line);color:var(--ink)}
+.pg-estimator-results .row{display:flex;justify-content:space-between;align-items:center;padding:14px 0;border-bottom:1px solid var(--line);}

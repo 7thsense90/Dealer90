@@ -1,0 +1,15 @@
+/* AUTO-GENERATED from design/boards/Advisor-Wizard.dc.html (scoped verbatim copy of the board styles) */
+.pg-advisor-wizard{--navy:#10213A; --navy-2:#16294A; --ink:#1C2430; --ink-soft:#5B6472;
+  --paper:#F6F4EF; --paper-2:#FFFFFF; --gold:#B98B33; --gold-light:#E7C77E;
+  --green:#2F6F4E; --green-bg:#E7F1EA; --line:#E4DFD3;}
+.pg-advisor-wizard{margin:0;background:var(--paper);font-family:'Work Sans',sans-serif;color:var(--ink)}
+.pg-advisor-wizard h1,.pg-advisor-wizard h2,.pg-advisor-wizard h3{font-family:'D90 Fraunces 400-600-700',serif;margin:0}
+.pg-advisor-wizard .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:13px 24px;border-radius:8px;font-weight:600;font-size:14px;border:1px solid transparent;cursor:pointer}
+.pg-advisor-wizard .btn-gold{background:var(--gold);color:#fff}
+.pg-advisor-wizard .btn-outline{background:#fff;border:1px solid var(--line);color:var(--ink);}
+.pg-advisor-wizard .card{background:var(--paper-2);border:1px solid var(--line);border-radius:14px;}
+.pg-advisor-wizard label{display:block;font-size:13px;font-weight:600;margin-bottom:8px;}
+.pg-advisor-wizard .optcard{border:1.5px solid var(--line);border-radius:12px;padding:16px 18px;cursor:pointer;background:#fff;}
+.pg-advisor-wizard .optcard.active{border-color:var(--navy);background:#F2F0E8;}
+.pg-advisor-wizard .optcard .t{font-weight:600;font-size:14px;}
+.pg-advisor-wizard .optcard .d{font-size:12px;color:var(--ink-soft);margin-top:4px;line-height:1.4;}

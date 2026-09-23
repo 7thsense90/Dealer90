@@ -1,0 +1,17 @@
+/* AUTO-GENERATED from design/boards/Dealer-Customers.dc.html (scoped verbatim copy of the board styles) */
+.pg-dealer-customers{--navy:#10213A; --navy-2:#16294A; --ink:#1C2430; --ink-soft:#5B6472;
+  --paper:#F6F4EF; --paper-2:#FFFFFF; --gold:#B98B33; --gold-light:#E7C77E;
+  --green:#2F6F4E; --green-bg:#E7F1EA; --amber:#B9772E; --amber-bg:#F6EADA;
+  --red:#B4453A; --red-bg:#F7E7E4; --line:#E4DFD3;}
+.pg-dealer-customers{margin:0;background:var(--paper);font-family:'Work Sans',sans-serif;color:var(--ink)}
+.pg-dealer-customers h1,.pg-dealer-customers h2,.pg-dealer-customers h3{font-family:'D90 Fraunces 400-600-700',serif;margin:0}
+.pg-dealer-customers .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:11px 20px;border-radius:8px;font-weight:600;font-size:13px;border:1px solid transparent;cursor:pointer}
+.pg-dealer-customers .btn-gold{background:var(--gold);color:#fff}
+.pg-dealer-customers .btn-outline{background:#fff;border-color:var(--line);color:var(--ink);border-width:1px;border-style:solid;}
+.pg-dealer-customers .tag{display:inline-flex;padding:5px 12px;border-radius:999px;font-size:12px;font-weight:600;}
+.pg-dealer-customers .card{background:var(--paper-2);border:1px solid var(--line);border-radius:14px;}
+.pg-dealer-customers table{width:100%;border-collapse:collapse;}
+.pg-dealer-customers th{text-align:left;font-size:11px;color:var(--ink-soft);font-weight:600;padding:10px 14px;border-bottom:1px solid var(--line);text-transform:uppercase;letter-spacing:.03em;}
+.pg-dealer-customers td{padding:13px 14px;border-bottom:1px solid var(--line);font-size:13px;}
+.pg-dealer-customers .custrow{display:flex;align-items:center;gap:12px;padding:14px 18px;border-bottom:1px solid var(--line);cursor:pointer;}
+.pg-dealer-customers .custrow.active{background:var(--amber-bg);}

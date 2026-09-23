@@ -1,0 +1,16 @@
+/* AUTO-GENERATED from design/boards/Customer-Offers.dc.html (scoped verbatim copy of the board styles) */
+.pg-customer-offers{--navy:#10213A; --navy-2:#16294A; --ink:#1C2430; --ink-soft:#5B6472;
+  --paper:#F6F4EF; --paper-2:#FFFFFF; --gold:#B98B33; --gold-light:#E7C77E;
+  --green:#2F6F4E; --green-bg:#E7F1EA; --amber:#B9772E; --amber-bg:#F6EADA;
+  --line:#E4DFD3;}
+.pg-customer-offers{margin:0;background:var(--paper);font-family:'Work Sans',sans-serif;color:var(--ink)}
+.pg-customer-offers h1,.pg-customer-offers h2,.pg-customer-offers h3{font-family:'D90 Fraunces 400-600-700',serif;margin:0}
+.pg-customer-offers .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:11px 18px;border-radius:8px;font-weight:600;font-size:13px;border:1px solid transparent;cursor:pointer}
+.pg-customer-offers .btn-gold{background:var(--gold);color:#fff}
+.pg-customer-offers .btn-outline{background:#fff;border:1px solid var(--line);color:var(--ink);}
+.pg-customer-offers .tag{display:inline-flex;padding:5px 12px;border-radius:999px;font-size:11px;font-weight:700;}
+.pg-customer-offers .card{background:var(--paper-2);border:1px solid var(--line);border-radius:14px;}
+.pg-customer-offers .navitem{display:flex;align-items:center;gap:12px;padding:11px 18px;border-radius:9px;font-size:14px;font-weight:500;color:#C7CEDB;}
+.pg-customer-offers .navitem.active{background:var(--navy-2);color:#fff;}
+.pg-customer-offers .rowlabel{font-size:11px;color:var(--ink-soft);}
+.pg-customer-offers .rowval{font-size:13px;font-weight:600;}

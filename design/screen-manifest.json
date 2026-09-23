@@ -1,0 +1,2269 @@
+[
+  {
+    "id": "Main-Editorial",
+    "route": "/",
+    "group": "public",
+    "title": "Dealer90.com — Homepage (Editorial Marketplace Redesign)",
+    "component": "MainEditorialScreen",
+    "fontAlias": "D90 Fraunces 400-500-600-700",
+    "frauncesWeights": [
+      400,
+      500,
+      600,
+      700
+    ],
+    "links": [
+      {
+        "label": "Properties Invest by ROI",
+        "route": "/properties"
+      },
+      {
+        "label": "Build a Home",
+        "route": "/build"
+      },
+      {
+        "label": "For Dealers",
+        "route": "/for-dealers"
+      },
+      {
+        "label": "For Builders",
+        "route": "/for-builders"
+      },
+      {
+        "label": "Log In",
+        "route": "/login"
+      },
+      {
+        "label": "List a Property",
+        "route": "/for-dealers"
+      },
+      {
+        "label": "See Matches",
+        "route": "/advisor"
+      },
+      {
+        "label": "See How It Works",
+        "route": "/invest"
+      },
+      {
+        "label": "Get Matched",
+        "route": "/advisor"
+      },
+      {
+        "label": "Start an Estimate",
+        "route": "/estimator"
+      },
+      {
+        "label": "Start an Estimate",
+        "route": "/estimator"
+      },
+      {
+        "label": "See How Plans Work",
+        "route": "/properties"
+      },
+      {
+        "label": "See My Offers",
+        "route": "/customer/offers"
+      },
+      {
+        "label": "Compare & Accept",
+        "route": "/customer/offers"
+      },
+      {
+        "label": "Register as a Dealer",
+        "route": "/login"
+      },
+      {
+        "label": "Register Your Practice",
+        "route": "/login"
+      },
+      {
+        "label": "Invest by ROI",
+        "route": "/invest"
+      },
+      {
+        "label": "Build a Home",
+        "route": "/build"
+      },
+      {
+        "label": "Installment Plans",
+        "route": "/properties"
+      },
+      {
+        "label": "For Dealers",
+        "route": "/for-dealers"
+      },
+      {
+        "label": "For Builders",
+        "route": "/for-builders"
+      }
+    ]
+  },
+  {
+    "id": "Properties",
+    "route": "/properties",
+    "group": "public",
+    "title": "Dealer90.com — Browse Properties",
+    "component": "PropertiesScreen",
+    "fontAlias": "D90 Fraunces 400-500-600-700",
+    "frauncesWeights": [
+      400,
+      500,
+      600,
+      700
+    ],
+    "links": [
+      {
+        "label": "Properties",
+        "route": "/properties"
+      },
+      {
+        "label": "Invest by ROI",
+        "route": "/invest"
+      },
+      {
+        "label": "Build a Home",
+        "route": "/build"
+      },
+      {
+        "label": "For Dealers",
+        "route": "/for-dealers"
+      },
+      {
+        "label": "For Builders",
+        "route": "/for-builders"
+      },
+      {
+        "label": "Log In",
+        "route": "/login"
+      },
+      {
+        "label": "List a Property",
+        "route": "/for-dealers"
+      },
+      {
+        "label": "Try the Property Advisor",
+        "route": "/advisor"
+      },
+      {
+        "label": "See Offer",
+        "route": "/customer/offers"
+      },
+      {
+        "label": "See Offer",
+        "route": "/customer/offers"
+      },
+      {
+        "label": "See Offer",
+        "route": "/customer/offers"
+      },
+      {
+        "label": "See Offer",
+        "route": "/customer/offers"
+      },
+      {
+        "label": "See Offer",
+        "route": "/customer/offers"
+      },
+      {
+        "label": "See Offer",
+        "route": "/customer/offers"
+      },
+      {
+        "label": "Load More Listings",
+        "route": null
+      },
+      {
+        "label": "Compare & Accept",
+        "route": "/customer/offers"
+      },
+      {
+        "label": "Get Matched",
+        "route": "/advisor"
+      },
+      {
+        "label": "Invest by ROI",
+        "route": "/invest"
+      },
+      {
+        "label": "Build a Home",
+        "route": "/build"
+      },
+      {
+        "label": "Installment Plans",
+        "route": "/properties"
+      },
+      {
+        "label": "For Dealers",
+        "route": "/for-dealers"
+      },
+      {
+        "label": "For Builders",
+        "route": "/for-builders"
+      }
+    ]
+  },
+  {
+    "id": "InvestByROI",
+    "route": "/invest",
+    "group": "public",
+    "title": "Dealer90.com — Invest by Target ROI",
+    "component": "InvestByROIScreen",
+    "fontAlias": "D90 Fraunces 400-500-600-700",
+    "frauncesWeights": [
+      400,
+      500,
+      600,
+      700
+    ],
+    "links": [
+      {
+        "label": "Properties",
+        "route": "/properties"
+      },
+      {
+        "label": "Invest by ROI",
+        "route": "/invest"
+      },
+      {
+        "label": "Build a Home",
+        "route": "/build"
+      },
+      {
+        "label": "For Dealers",
+        "route": "/for-dealers"
+      },
+      {
+        "label": "For Builders",
+        "route": "/for-builders"
+      },
+      {
+        "label": "Log In",
+        "route": "/login"
+      },
+      {
+        "label": "List a Property",
+        "route": "/for-dealers"
+      },
+      {
+        "label": "Start Matching",
+        "route": "/advisor"
+      },
+      {
+        "label": "See Sample Matches",
+        "route": "/properties"
+      },
+      {
+        "label": "Submit to Dealers to Bid Their Offers",
+        "route": "/advisor"
+      },
+      {
+        "label": "Get Matched",
+        "route": "/advisor"
+      },
+      {
+        "label": "Invest by ROI",
+        "route": "/invest"
+      },
+      {
+        "label": "Build a Home",
+        "route": "/build"
+      },
+      {
+        "label": "Installment Plans",
+        "route": "/properties"
+      },
+      {
+        "label": "For Dealers",
+        "route": "/for-dealers"
+      },
+      {
+        "label": "For Builders",
+        "route": "/for-builders"
+      }
+    ]
+  },
+  {
+    "id": "BuildAHome",
+    "route": "/build",
+    "group": "public",
+    "title": "Dealer90.com — Build a Home",
+    "component": "BuildAHomeScreen",
+    "fontAlias": "D90 Fraunces 400-500-600-700",
+    "frauncesWeights": [
+      400,
+      500,
+      600,
+      700
+    ],
+    "links": [
+      {
+        "label": "Properties",
+        "route": "/properties"
+      },
+      {
+        "label": "Invest by ROI",
+        "route": "/invest"
+      },
+      {
+        "label": "Build a Home",
+        "route": "/build"
+      },
+      {
+        "label": "For Dealers",
+        "route": "/for-dealers"
+      },
+      {
+        "label": "For Builders",
+        "route": "/for-builders"
+      },
+      {
+        "label": "Log In",
+        "route": "/login"
+      },
+      {
+        "label": "List a Property",
+        "route": "/for-dealers"
+      },
+      {
+        "label": "Start an Estimate",
+        "route": "/estimator"
+      },
+      {
+        "label": "Browse Design Gallery",
+        "route": "/estimator"
+      },
+      {
+        "label": "Refine My Estimate",
+        "route": "/estimator"
+      },
+      {
+        "label": "Start an Estimate",
+        "route": "/estimator"
+      },
+      {
+        "label": "See Full Gallery",
+        "route": "/estimator"
+      },
+      {
+        "label": "Start an Estimate",
+        "route": "/estimator"
+      },
+      {
+        "label": "Invest by ROI",
+        "route": "/invest"
+      },
+      {
+        "label": "Build a Home",
+        "route": "/build"
+      },
+      {
+        "label": "Installment Plans",
+        "route": "/properties"
+      },
+      {
+        "label": "For Dealers",
+        "route": "/for-dealers"
+      },
+      {
+        "label": "For Builders",
+        "route": "/for-builders"
+      }
+    ]
+  },
+  {
+    "id": "ForDealers",
+    "route": "/for-dealers",
+    "group": "public",
+    "title": "Dealer90.com — For Dealers",
+    "component": "ForDealersScreen",
+    "fontAlias": "D90 Fraunces 400-500-600-700",
+    "frauncesWeights": [
+      400,
+      500,
+      600,
+      700
+    ],
+    "links": [
+      {
+        "label": "Properties",
+        "route": "/properties"
+      },
+      {
+        "label": "Invest by ROI",
+        "route": "/invest"
+      },
+      {
+        "label": "Build a Home",
+        "route": "/build"
+      },
+      {
+        "label": "For Dealers",
+        "route": "/for-dealers"
+      },
+      {
+        "label": "For Builders",
+        "route": "/for-builders"
+      },
+      {
+        "label": "Log In",
+        "route": "/login"
+      },
+      {
+        "label": "Register as a Dealer",
+        "route": "/login"
+      },
+      {
+        "label": "Register as a Dealer",
+        "route": "/login"
+      },
+      {
+        "label": "See Dealer Dashboard",
+        "route": "/dealer"
+      },
+      {
+        "label": "Open Email Templates",
+        "route": "/dealer/marketing/email"
+      },
+      {
+        "label": "Edit with AI",
+        "route": "/dealer/marketing/email/editor"
+      },
+      {
+        "label": "Edit with AI",
+        "route": "/dealer/marketing/email/editor"
+      },
+      {
+        "label": "Edit with AI",
+        "route": "/dealer/marketing/email/editor"
+      },
+      {
+        "label": "Send Campaign",
+        "route": "/dealer/marketing/email"
+      },
+      {
+        "label": "Open SMS Templates",
+        "route": "/dealer/marketing/sms"
+      },
+      {
+        "label": "Open Payment Reminders",
+        "route": "/dealer/reminders"
+      },
+      {
+        "label": "Send to 86 Matched Buyers",
+        "route": "/dealer/offers"
+      },
+      {
+        "label": "Open Send Offers",
+        "route": "/dealer/offers"
+      },
+      {
+        "label": "Open Import Contacts",
+        "route": "/dealer/marketing/import"
+      },
+      {
+        "label": "Confirm & Import",
+        "route": "/dealer/marketing/import"
+      },
+      {
+        "label": "Register as a Dealer",
+        "route": "/login"
+      },
+      {
+        "label": "Register as a Dealer",
+        "route": "/login"
+      },
+      {
+        "label": "Invest by ROI",
+        "route": "/invest"
+      },
+      {
+        "label": "Build a Home",
+        "route": "/build"
+      },
+      {
+        "label": "Installment Plans",
+        "route": "/properties"
+      },
+      {
+        "label": "For Dealers",
+        "route": "/for-dealers"
+      },
+      {
+        "label": "For Builders",
+        "route": "/for-builders"
+      }
+    ]
+  },
+  {
+    "id": "ForBuilders",
+    "route": "/for-builders",
+    "group": "public",
+    "title": "Dealer90.com — For Builders",
+    "component": "ForBuildersScreen",
+    "fontAlias": "D90 Fraunces 400-500-600-700",
+    "frauncesWeights": [
+      400,
+      500,
+      600,
+      700
+    ],
+    "links": [
+      {
+        "label": "Properties",
+        "route": "/properties"
+      },
+      {
+        "label": "Invest by ROI",
+        "route": "/invest"
+      },
+      {
+        "label": "Build a Home",
+        "route": "/build"
+      },
+      {
+        "label": "For Dealers",
+        "route": "/for-dealers"
+      },
+      {
+        "label": "For Builders",
+        "route": "/for-builders"
+      },
+      {
+        "label": "Log In",
+        "route": "/login"
+      },
+      {
+        "label": "Register Your Practice",
+        "route": "/login"
+      },
+      {
+        "label": "Register Your Practice",
+        "route": "/login"
+      },
+      {
+        "label": "See Provider Dashboard",
+        "route": "/provider"
+      },
+      {
+        "label": "Build a Quote",
+        "route": "/provider"
+      },
+      {
+        "label": "Register Your Practice",
+        "route": "/login"
+      },
+      {
+        "label": "Register Your Practice",
+        "route": "/login"
+      },
+      {
+        "label": "Invest by ROI",
+        "route": "/invest"
+      },
+      {
+        "label": "Build a Home",
+        "route": "/build"
+      },
+      {
+        "label": "Installment Plans",
+        "route": "/properties"
+      },
+      {
+        "label": "For Dealers",
+        "route": "/for-dealers"
+      },
+      {
+        "label": "For Builders",
+        "route": "/for-builders"
+      }
+    ]
+  },
+  {
+    "id": "Advisor-Wizard",
+    "route": "/advisor",
+    "group": "advisor",
+    "title": "Dealer90.com — Property Advisor",
+    "component": "AdvisorWizardScreen",
+    "fontAlias": "D90 Fraunces 400-600-700",
+    "frauncesWeights": [
+      400,
+      600,
+      700
+    ],
+    "links": [
+      {
+        "label": "Back",
+        "route": "/"
+      },
+      {
+        "label": "Submit My Request to Dealers",
+        "route": "/advisor/send-offers"
+      }
+    ]
+  },
+  {
+    "id": "Advisor-LeadCapture",
+    "route": "/advisor/send-offers",
+    "group": "advisor",
+    "title": "Dealer90.com — Where Should We Send Your Offers?",
+    "component": "AdvisorLeadCaptureScreen",
+    "fontAlias": "D90 Fraunces 400-600-700",
+    "frauncesWeights": [
+      400,
+      600,
+      700
+    ],
+    "links": [
+      {
+        "label": "Send My Request",
+        "route": "/advisor/submitted"
+      },
+      {
+        "label": "Back",
+        "route": "/advisor"
+      }
+    ]
+  },
+  {
+    "id": "Advisor-Results",
+    "route": "/advisor/submitted",
+    "group": "advisor",
+    "title": "Dealer90.com — Request Submitted",
+    "component": "AdvisorResultsScreen",
+    "fontAlias": "D90 Fraunces 400-600-700",
+    "frauncesWeights": [
+      400,
+      600,
+      700
+    ],
+    "links": [
+      {
+        "label": "Edit criteria",
+        "route": "/advisor"
+      },
+      {
+        "label": "Browse Listings While You Wait",
+        "route": "/properties"
+      },
+      {
+        "label": "Go to My Offers",
+        "route": "/customer/offers"
+      }
+    ]
+  },
+  {
+    "id": "Estimator-DesignGallery",
+    "route": "/estimator",
+    "group": "estimator",
+    "title": "Build Cost Estimator — Step 1: Plot Size & Design",
+    "component": "EstimatorDesignGalleryScreen",
+    "fontAlias": "D90 Fraunces 500-600",
+    "frauncesWeights": [
+      500,
+      600
+    ],
+    "links": [
+      {
+        "label": "Continue",
+        "route": "/estimator/services"
+      }
+    ]
+  },
+  {
+    "id": "Estimator-Services",
+    "route": "/estimator/services",
+    "group": "estimator",
+    "title": "Build Cost Estimator — Step 2: Other Services",
+    "component": "EstimatorServicesScreen",
+    "fontAlias": "D90 Fraunces 500-600",
+    "frauncesWeights": [
+      500,
+      600
+    ],
+    "links": [
+      {
+        "label": "Change",
+        "route": "/estimator"
+      },
+      {
+        "label": "Back",
+        "route": "/estimator"
+      },
+      {
+        "label": "See My Estimate",
+        "route": "/estimator/signup"
+      }
+    ]
+  },
+  {
+    "id": "Estimator-Signup",
+    "route": "/estimator/signup",
+    "group": "estimator",
+    "title": "Build Cost Estimator — Step 3: Sign Up to See Your Estimate",
+    "component": "EstimatorSignupScreen",
+    "fontAlias": "D90 Fraunces 500-600",
+    "frauncesWeights": [
+      500,
+      600
+    ],
+    "links": [
+      {
+        "label": "Show My Estimate",
+        "route": "/estimator/results"
+      },
+      {
+        "label": "Log in",
+        "route": "/login"
+      }
+    ]
+  },
+  {
+    "id": "Estimator-Results",
+    "route": "/estimator/results",
+    "group": "estimator",
+    "title": "Build Cost Estimator — Your Estimate",
+    "component": "EstimatorResultsScreen",
+    "fontAlias": "D90 Fraunces 500-600",
+    "frauncesWeights": [
+      500,
+      600
+    ],
+    "links": [
+      {
+        "label": "Request Actual Quotes",
+        "route": "/build-advisor/services"
+      },
+      {
+        "label": "Save This Estimate",
+        "route": null
+      },
+      {
+        "label": "Download as PDF",
+        "route": null
+      }
+    ]
+  },
+  {
+    "id": "BuildAdvisor-Services",
+    "route": "/build-advisor/services",
+    "group": "estimator",
+    "title": "Build Advisor — Step 3: Services You Need",
+    "component": "BuildAdvisorServicesScreen",
+    "fontAlias": "D90 Fraunces 500-600",
+    "frauncesWeights": [
+      500,
+      600
+    ],
+    "links": [
+      {
+        "label": "Back",
+        "route": "/estimator/results"
+      },
+      {
+        "label": "Continue to Send Request",
+        "route": "/build-advisor/confirmation"
+      }
+    ]
+  },
+  {
+    "id": "BuildAdvisor-Confirmation",
+    "route": "/build-advisor/confirmation",
+    "group": "estimator",
+    "title": "Build Advisor — Request Sent to Service Providers",
+    "component": "BuildAdvisorConfirmationScreen",
+    "fontAlias": "D90 Fraunces 500-600",
+    "frauncesWeights": [
+      500,
+      600
+    ],
+    "links": [
+      {
+        "label": "Browse Verified Providers",
+        "route": "/for-builders"
+      },
+      {
+        "label": "Go to My Build Project",
+        "route": "/customer/build-project"
+      }
+    ]
+  },
+  {
+    "id": "Customer-Login",
+    "route": "/login",
+    "group": "customer",
+    "title": "Dealer90.com — Customer Login",
+    "component": "CustomerLoginScreen",
+    "fontAlias": "D90 Fraunces 400-600-700",
+    "frauncesWeights": [
+      400,
+      600,
+      700
+    ],
+    "links": [
+      {
+        "label": "Log In",
+        "route": "/customer"
+      },
+      {
+        "label": "Forgot password?",
+        "route": null
+      },
+      {
+        "label": "New here? Try the Property Advisor",
+        "route": "/advisor"
+      }
+    ]
+  },
+  {
+    "id": "Customer-ActivateAccount",
+    "route": "/activate",
+    "group": "customer",
+    "title": "Dealer90.com — Activate Your Account",
+    "component": "CustomerActivateAccountScreen",
+    "fontAlias": "D90 Fraunces 400-600-700",
+    "frauncesWeights": [
+      400,
+      600,
+      700
+    ],
+    "links": [
+      {
+        "label": "Resend code",
+        "route": null
+      },
+      {
+        "label": "Verify & Activate Account",
+        "route": "/customer"
+      }
+    ]
+  },
+  {
+    "id": "Customer-Portal",
+    "route": "/customer",
+    "group": "customer",
+    "title": "Dealer90.com — My Properties",
+    "component": "CustomerPortalScreen",
+    "fontAlias": "D90 Fraunces 400-600-700",
+    "frauncesWeights": [
+      400,
+      600,
+      700
+    ],
+    "links": [
+      {
+        "label": "My Properties",
+        "route": "/customer"
+      },
+      {
+        "label": "My Offers",
+        "route": "/customer/offers"
+      },
+      {
+        "label": "Resale Requests",
+        "route": "/customer/resell"
+      },
+      {
+        "label": "Payments",
+        "route": "/customer"
+      },
+      {
+        "label": "Profile",
+        "route": null
+      },
+      {
+        "label": "Sell This Property",
+        "route": "/customer/resell"
+      },
+      {
+        "label": "Download Statement",
+        "route": null
+      }
+    ]
+  },
+  {
+    "id": "Customer-Offers",
+    "route": "/customer/offers",
+    "group": "customer",
+    "title": "Dealer90.com — My Offers",
+    "component": "CustomerOffersScreen",
+    "fontAlias": "D90 Fraunces 400-600-700",
+    "frauncesWeights": [
+      400,
+      600,
+      700
+    ],
+    "links": [
+      {
+        "label": "My Properties",
+        "route": "/customer"
+      },
+      {
+        "label": "My Offers",
+        "route": "/customer/offers"
+      },
+      {
+        "label": "Resale Requests",
+        "route": "/customer/resell"
+      },
+      {
+        "label": "Payments",
+        "route": "/customer"
+      },
+      {
+        "label": "Profile",
+        "route": null
+      },
+      {
+        "label": "View Full Details",
+        "route": null
+      },
+      {
+        "label": "Accept Offer",
+        "route": "/customer"
+      },
+      {
+        "label": "View Full Details",
+        "route": null
+      },
+      {
+        "label": "Accept Offer",
+        "route": "/customer"
+      }
+    ]
+  },
+  {
+    "id": "Customer-Resell",
+    "route": "/customer/resell",
+    "group": "customer",
+    "title": "Dealer90.com — Sell This Property",
+    "component": "CustomerResellScreen",
+    "fontAlias": "D90 Fraunces 400-600-700",
+    "frauncesWeights": [
+      400,
+      600,
+      700
+    ],
+    "links": [
+      {
+        "label": "My Properties",
+        "route": "/customer"
+      },
+      {
+        "label": "My Offers",
+        "route": "/customer/offers"
+      },
+      {
+        "label": "Resale Requests",
+        "route": "/customer/resell"
+      },
+      {
+        "label": "Payments",
+        "route": "/customer"
+      },
+      {
+        "label": "Profile",
+        "route": null
+      },
+      {
+        "label": "Back to My Properties",
+        "route": "/customer"
+      },
+      {
+        "label": "Cancel",
+        "route": "/customer"
+      },
+      {
+        "label": "Submit for Dealer Approval",
+        "route": "/customer"
+      }
+    ]
+  },
+  {
+    "id": "Customer-BuildProject",
+    "route": "/customer/build-project",
+    "group": "customer",
+    "title": "Customer — My Build Project",
+    "component": "CustomerBuildProjectScreen",
+    "fontAlias": "D90 Fraunces 500-600",
+    "frauncesWeights": [
+      500,
+      600
+    ],
+    "links": [
+      {
+        "label": "My Properties",
+        "route": "/customer"
+      },
+      {
+        "label": "My Offers",
+        "route": "/customer/offers"
+      },
+      {
+        "label": "My Build Project",
+        "route": "/customer/build-project"
+      },
+      {
+        "label": "Resale Requests",
+        "route": "/customer/resell"
+      },
+      {
+        "label": "Payments",
+        "route": "/customer"
+      },
+      {
+        "label": "Profile",
+        "route": null
+      },
+      {
+        "label": "Request a New Service",
+        "route": null
+      },
+      {
+        "label": "View Details",
+        "route": null
+      },
+      {
+        "label": "Compare Quotes",
+        "route": null
+      },
+      {
+        "label": "Compare Quotes",
+        "route": null
+      },
+      {
+        "label": "Request This Service",
+        "route": null
+      }
+    ]
+  },
+  {
+    "id": "Dealer-Dashboard",
+    "route": "/dealer",
+    "group": "dealer",
+    "title": "Dealer90.com — Dealer Dashboard",
+    "component": "DealerDashboardScreen",
+    "fontAlias": "D90 Fraunces 400-600-700",
+    "frauncesWeights": [
+      400,
+      600,
+      700
+    ],
+    "links": [
+      {
+        "label": "Dashboard",
+        "route": "/dealer"
+      },
+      {
+        "label": "Buyer Requests",
+        "route": "/dealer/buyer-requests"
+      },
+      {
+        "label": "Transfer Requests",
+        "route": "/dealer/transfer-requests"
+      },
+      {
+        "label": "Properties",
+        "route": "/dealer/properties/new"
+      },
+      {
+        "label": "Customers",
+        "route": "/dealer/customers"
+      },
+      {
+        "label": "Installment Plans",
+        "route": "/dealer/installment-plans/new"
+      },
+      {
+        "label": "Payments",
+        "route": "/dealer/reminders"
+      },
+      {
+        "label": "Branding",
+        "route": null
+      },
+      {
+        "label": "Settings",
+        "route": null
+      },
+      {
+        "label": "+ Add Property",
+        "route": "/dealer/properties/new"
+      },
+      {
+        "label": "View all",
+        "route": null
+      }
+    ]
+  },
+  {
+    "id": "Dealer-AddProperty",
+    "route": "/dealer/properties/new",
+    "group": "dealer",
+    "title": "Dealer90.com — Add Property",
+    "component": "DealerAddPropertyScreen",
+    "fontAlias": "D90 Fraunces 400-600-700",
+    "frauncesWeights": [
+      400,
+      600,
+      700
+    ],
+    "links": [
+      {
+        "label": "Save as Draft",
+        "route": null
+      },
+      {
+        "label": "Publish Property",
+        "route": "/dealer"
+      },
+      {
+        "label": "View your dealer profile",
+        "route": null
+      }
+    ]
+  },
+  {
+    "id": "Dealer-Customers",
+    "route": "/dealer/customers",
+    "group": "dealer",
+    "title": "Dealer90.com — Customers & Installments",
+    "component": "DealerCustomersScreen",
+    "fontAlias": "D90 Fraunces 400-600-700",
+    "frauncesWeights": [
+      400,
+      600,
+      700
+    ],
+    "links": [
+      {
+        "label": "+ Create Installment Plan",
+        "route": "/dealer/installment-plans/new"
+      },
+      {
+        "label": "+ Add Customer",
+        "route": null
+      },
+      {
+        "label": "Edit Plan",
+        "route": null
+      },
+      {
+        "label": "Print Statement",
+        "route": null
+      },
+      {
+        "label": "+ Record Payment",
+        "route": null
+      }
+    ]
+  },
+  {
+    "id": "Dealer-CreateInstallmentPlan",
+    "route": "/dealer/installment-plans/new",
+    "group": "dealer",
+    "title": "Dealer90.com — Create Installment Plan",
+    "component": "DealerCreateInstallmentPlanScreen",
+    "fontAlias": "D90 Fraunces 400-600-700",
+    "frauncesWeights": [
+      400,
+      600,
+      700
+    ],
+    "links": [
+      {
+        "label": "Cancel",
+        "route": "/dealer/customers"
+      },
+      {
+        "label": "Activate Plan",
+        "route": "/dealer/customers"
+      },
+      {
+        "label": "+ Add Bulk Payment",
+        "route": null
+      }
+    ]
+  },
+  {
+    "id": "Dealer-BuyerRequests",
+    "route": "/dealer/buyer-requests",
+    "group": "dealer",
+    "title": "Dealer90.com — Buyer Requests",
+    "component": "DealerBuyerRequestsScreen",
+    "fontAlias": "D90 Fraunces 400-600-700",
+    "frauncesWeights": [
+      400,
+      600,
+      700
+    ],
+    "links": [
+      {
+        "label": "Dashboard",
+        "route": "/dealer"
+      },
+      {
+        "label": "Buyer Requests",
+        "route": "/dealer/buyer-requests"
+      },
+      {
+        "label": "Transfer Requests",
+        "route": "/dealer/transfer-requests"
+      },
+      {
+        "label": "Properties",
+        "route": "/dealer/properties/new"
+      },
+      {
+        "label": "Customers",
+        "route": "/dealer/customers"
+      },
+      {
+        "label": "Installment Plans",
+        "route": "/dealer/installment-plans/new"
+      },
+      {
+        "label": "Payments",
+        "route": "/dealer/reminders"
+      },
+      {
+        "label": "Marketing",
+        "route": "/dealer/marketing/email"
+      },
+      {
+        "label": "Branding",
+        "route": null
+      },
+      {
+        "label": "Settings",
+        "route": null
+      },
+      {
+        "label": "Save Draft",
+        "route": null
+      },
+      {
+        "label": "Send Offer to Buyer",
+        "route": null
+      }
+    ]
+  },
+  {
+    "id": "Dealer-TransferRequests",
+    "route": "/dealer/transfer-requests",
+    "group": "dealer",
+    "title": "Dealer90.com — Transfer Requests",
+    "component": "DealerTransferRequestsScreen",
+    "fontAlias": "D90 Fraunces 400-600-700",
+    "frauncesWeights": [
+      400,
+      600,
+      700
+    ],
+    "links": [
+      {
+        "label": "Dashboard",
+        "route": "/dealer"
+      },
+      {
+        "label": "Buyer Requests",
+        "route": "/dealer/buyer-requests"
+      },
+      {
+        "label": "Transfer Requests",
+        "route": "/dealer/transfer-requests"
+      },
+      {
+        "label": "Properties",
+        "route": "/dealer/properties/new"
+      },
+      {
+        "label": "Customers",
+        "route": "/dealer/customers"
+      },
+      {
+        "label": "Installment Plans",
+        "route": "/dealer/installment-plans/new"
+      },
+      {
+        "label": "Payments",
+        "route": "/dealer/reminders"
+      },
+      {
+        "label": "Marketing",
+        "route": "/dealer/marketing/email"
+      },
+      {
+        "label": "Branding",
+        "route": null
+      },
+      {
+        "label": "Settings",
+        "route": null
+      },
+      {
+        "label": "Decline Transfer",
+        "route": null
+      },
+      {
+        "label": "Approve & List for Resale",
+        "route": null
+      }
+    ]
+  },
+  {
+    "id": "Dealer-Reminders",
+    "route": "/dealer/reminders",
+    "group": "dealer",
+    "title": "Dealer — Payment Reminders",
+    "component": "DealerRemindersScreen",
+    "fontAlias": "D90 Fraunces 500-600",
+    "frauncesWeights": [
+      500,
+      600
+    ],
+    "links": [
+      {
+        "label": "Dashboard",
+        "route": "/dealer"
+      },
+      {
+        "label": "My Properties",
+        "route": "/dealer/properties/new"
+      },
+      {
+        "label": "Customers",
+        "route": "/dealer/customers"
+      },
+      {
+        "label": "Reminders",
+        "route": "/dealer/reminders"
+      },
+      {
+        "label": "Customer Offers",
+        "route": "/dealer/offers"
+      },
+      {
+        "label": "Buyer Requests",
+        "route": "/dealer/buyer-requests"
+      },
+      {
+        "label": "Transfer Requests",
+        "route": "/dealer/transfer-requests"
+      },
+      {
+        "label": "Marketing",
+        "route": "/dealer/marketing/email"
+      },
+      {
+        "label": "Send Reminder to 3 Selected",
+        "route": null
+      },
+      {
+        "label": "Send Reminder",
+        "route": null
+      },
+      {
+        "label": "Remind Again",
+        "route": null
+      },
+      {
+        "label": "Send Reminder",
+        "route": null
+      },
+      {
+        "label": "Send Reminder",
+        "route": null
+      },
+      {
+        "label": "Save Template",
+        "route": null
+      }
+    ]
+  },
+  {
+    "id": "Dealer-CustomerOffers",
+    "route": "/dealer/offers",
+    "group": "dealer",
+    "title": "Dealer — Send Offers to Customers",
+    "component": "DealerCustomerOffersScreen",
+    "fontAlias": "D90 Fraunces 500-600",
+    "frauncesWeights": [
+      500,
+      600
+    ],
+    "links": [
+      {
+        "label": "Dashboard",
+        "route": "/dealer"
+      },
+      {
+        "label": "My Properties",
+        "route": "/dealer/properties/new"
+      },
+      {
+        "label": "Customers",
+        "route": "/dealer/customers"
+      },
+      {
+        "label": "Reminders",
+        "route": "/dealer/reminders"
+      },
+      {
+        "label": "Customer Offers",
+        "route": "/dealer/offers"
+      },
+      {
+        "label": "Buyer Requests",
+        "route": "/dealer/buyer-requests"
+      },
+      {
+        "label": "Transfer Requests",
+        "route": "/dealer/transfer-requests"
+      },
+      {
+        "label": "Marketing",
+        "route": "/dealer/marketing/email"
+      },
+      {
+        "label": "Save Draft",
+        "route": null
+      },
+      {
+        "label": "Send to 34 Customers",
+        "route": null
+      }
+    ]
+  },
+  {
+    "id": "Dealer-Marketing-Email",
+    "route": "/dealer/marketing/email",
+    "group": "dealer",
+    "title": "Dealer — Marketing — Email Templates",
+    "component": "DealerMarketingEmailScreen",
+    "fontAlias": "D90 Fraunces 500-600",
+    "frauncesWeights": [
+      500,
+      600
+    ],
+    "links": [
+      {
+        "label": "Dashboard",
+        "route": "/dealer"
+      },
+      {
+        "label": "My Properties",
+        "route": "/dealer/properties/new"
+      },
+      {
+        "label": "Customers",
+        "route": "/dealer/customers"
+      },
+      {
+        "label": "Reminders",
+        "route": "/dealer/reminders"
+      },
+      {
+        "label": "Customer Offers",
+        "route": "/dealer/offers"
+      },
+      {
+        "label": "Buyer Requests",
+        "route": "/dealer/buyer-requests"
+      },
+      {
+        "label": "Transfer Requests",
+        "route": "/dealer/transfer-requests"
+      },
+      {
+        "label": "Marketing",
+        "route": "/dealer/marketing/email"
+      },
+      {
+        "label": "Email Marketing",
+        "route": "/dealer/marketing/email"
+      },
+      {
+        "label": "SMS Marketing",
+        "route": "/dealer/marketing/sms"
+      },
+      {
+        "label": "Preview",
+        "route": null
+      },
+      {
+        "label": "Use Template",
+        "route": "/dealer/marketing/email/editor"
+      },
+      {
+        "label": "Preview",
+        "route": null
+      },
+      {
+        "label": "Use Template",
+        "route": "/dealer/marketing/email/editor"
+      },
+      {
+        "label": "Preview",
+        "route": null
+      },
+      {
+        "label": "Use Template",
+        "route": "/dealer/marketing/email/editor"
+      },
+      {
+        "label": "Preview",
+        "route": null
+      },
+      {
+        "label": "Use Template",
+        "route": "/dealer/marketing/email/editor"
+      },
+      {
+        "label": "Preview",
+        "route": null
+      },
+      {
+        "label": "Use Template",
+        "route": "/dealer/marketing/email/editor"
+      },
+      {
+        "label": "Preview",
+        "route": null
+      },
+      {
+        "label": "Use Template",
+        "route": "/dealer/marketing/email/editor"
+      }
+    ]
+  },
+  {
+    "id": "Dealer-Marketing-EmailEditor",
+    "route": "/dealer/marketing/email/editor",
+    "group": "dealer",
+    "title": "Dealer — Marketing — Edit Email With AI",
+    "component": "DealerMarketingEmailEditorScreen",
+    "fontAlias": "D90 Fraunces 500-600",
+    "frauncesWeights": [
+      500,
+      600
+    ],
+    "links": [
+      {
+        "label": "Dashboard",
+        "route": "/dealer"
+      },
+      {
+        "label": "My Properties",
+        "route": "/dealer/properties/new"
+      },
+      {
+        "label": "Customers",
+        "route": "/dealer/customers"
+      },
+      {
+        "label": "Reminders",
+        "route": "/dealer/reminders"
+      },
+      {
+        "label": "Customer Offers",
+        "route": "/dealer/offers"
+      },
+      {
+        "label": "Buyer Requests",
+        "route": "/dealer/buyer-requests"
+      },
+      {
+        "label": "Transfer Requests",
+        "route": "/dealer/transfer-requests"
+      },
+      {
+        "label": "Marketing",
+        "route": "/dealer/marketing/email"
+      },
+      {
+        "label": "Templates",
+        "route": "/dealer/marketing/email"
+      },
+      {
+        "label": "Send Test Email",
+        "route": null
+      },
+      {
+        "label": "Send to 34 Customers",
+        "route": null
+      },
+      {
+        "label": "Regenerate with AI",
+        "route": null
+      },
+      {
+        "label": "View the Plots",
+        "route": null
+      },
+      {
+        "label": "Unsubscribe",
+        "route": null
+      }
+    ]
+  },
+  {
+    "id": "Dealer-Marketing-SMS",
+    "route": "/dealer/marketing/sms",
+    "group": "dealer",
+    "title": "Dealer — Marketing — SMS Templates",
+    "component": "DealerMarketingSMSScreen",
+    "fontAlias": "D90 Fraunces 500-600",
+    "frauncesWeights": [
+      500,
+      600
+    ],
+    "links": [
+      {
+        "label": "Dashboard",
+        "route": "/dealer"
+      },
+      {
+        "label": "My Properties",
+        "route": "/dealer/properties/new"
+      },
+      {
+        "label": "Customers",
+        "route": "/dealer/customers"
+      },
+      {
+        "label": "Reminders",
+        "route": "/dealer/reminders"
+      },
+      {
+        "label": "Customer Offers",
+        "route": "/dealer/offers"
+      },
+      {
+        "label": "Buyer Requests",
+        "route": "/dealer/buyer-requests"
+      },
+      {
+        "label": "Transfer Requests",
+        "route": "/dealer/transfer-requests"
+      },
+      {
+        "label": "Marketing",
+        "route": "/dealer/marketing/email"
+      },
+      {
+        "label": "Email Marketing",
+        "route": "/dealer/marketing/email"
+      },
+      {
+        "label": "SMS Marketing",
+        "route": "/dealer/marketing/sms"
+      },
+      {
+        "label": "Preview",
+        "route": null
+      },
+      {
+        "label": "Use Template",
+        "route": null
+      },
+      {
+        "label": "Preview",
+        "route": null
+      },
+      {
+        "label": "Use Template",
+        "route": null
+      },
+      {
+        "label": "Preview",
+        "route": null
+      },
+      {
+        "label": "Use Template",
+        "route": null
+      },
+      {
+        "label": "Preview",
+        "route": null
+      },
+      {
+        "label": "Use Template",
+        "route": null
+      },
+      {
+        "label": "Preview",
+        "route": null
+      },
+      {
+        "label": "Use Template",
+        "route": null
+      },
+      {
+        "label": "Send to 34 Customers",
+        "route": null
+      }
+    ]
+  },
+  {
+    "id": "Dealer-Marketing-ImportContacts",
+    "route": "/dealer/marketing/import",
+    "group": "dealer",
+    "title": "Dealer — Marketing — Import Contacts",
+    "component": "DealerMarketingImportContactsScreen",
+    "fontAlias": "D90 Fraunces 500-600",
+    "frauncesWeights": [
+      500,
+      600
+    ],
+    "links": [
+      {
+        "label": "Dashboard",
+        "route": "/dealer"
+      },
+      {
+        "label": "My Properties",
+        "route": "/dealer/properties/new"
+      },
+      {
+        "label": "Customers",
+        "route": "/dealer/customers"
+      },
+      {
+        "label": "Reminders",
+        "route": "/dealer/reminders"
+      },
+      {
+        "label": "Customer Offers",
+        "route": "/dealer/offers"
+      },
+      {
+        "label": "Buyer Requests",
+        "route": "/dealer/buyer-requests"
+      },
+      {
+        "label": "Transfer Requests",
+        "route": "/dealer/transfer-requests"
+      },
+      {
+        "label": "Marketing",
+        "route": "/dealer/marketing/email"
+      },
+      {
+        "label": "Marketing",
+        "route": "/dealer/marketing/email"
+      },
+      {
+        "label": "Add 462 Eligible Contacts",
+        "route": null
+      },
+      {
+        "label": "Replace File",
+        "route": null
+      }
+    ]
+  },
+  {
+    "id": "Provider-Dashboard",
+    "route": "/provider",
+    "group": "provider",
+    "title": "Service Provider — Incoming Build Requests",
+    "component": "ProviderDashboardScreen",
+    "fontAlias": "D90 Fraunces 500-600",
+    "frauncesWeights": [
+      500,
+      600
+    ],
+    "links": [
+      {
+        "label": "Incoming Requests",
+        "route": "/provider"
+      },
+      {
+        "label": "My Quotes",
+        "route": null
+      },
+      {
+        "label": "Active Projects",
+        "route": null
+      },
+      {
+        "label": "Credentials & Verification",
+        "route": null
+      },
+      {
+        "label": "Profile",
+        "route": null
+      },
+      {
+        "label": "Save Draft",
+        "route": null
+      },
+      {
+        "label": "Send Quote",
+        "route": null
+      }
+    ]
+  },
+  {
+    "id": "SuperAdmin-Dashboard",
+    "route": "/admin",
+    "group": "admin",
+    "title": "Dealer90.com — Super Admin Dashboard",
+    "component": "SuperAdminDashboardScreen",
+    "fontAlias": "D90 Fraunces 400-600-700",
+    "frauncesWeights": [
+      400,
+      600,
+      700
+    ],
+    "links": [
+      {
+        "label": "Dashboard",
+        "route": "/admin"
+      },
+      {
+        "label": "Dealer Approvals",
+        "route": "/admin/approvals"
+      },
+      {
+        "label": "All Dealers",
+        "route": "/admin/feature-access"
+      },
+      {
+        "label": "Dealer Credibility",
+        "route": "/admin/credibility"
+      },
+      {
+        "label": "All Properties",
+        "route": null
+      },
+      {
+        "label": "Customers",
+        "route": "/admin/customers"
+      },
+      {
+        "label": "AI Scraper & Onboarding",
+        "route": "/admin/ai-scraper"
+      },
+      {
+        "label": "AI Provider Settings",
+        "route": "/admin/ai-providers"
+      },
+      {
+        "label": "Reports",
+        "route": null
+      },
+      {
+        "label": "Settings",
+        "route": null
+      }
+    ]
+  },
+  {
+    "id": "SuperAdmin-Approvals",
+    "route": "/admin/approvals",
+    "group": "admin",
+    "title": "Dealer90.com — Super Admin",
+    "component": "SuperAdminApprovalsScreen",
+    "fontAlias": "D90 Fraunces 400-600-700",
+    "frauncesWeights": [
+      400,
+      600,
+      700
+    ],
+    "links": [
+      {
+        "label": "Dashboard",
+        "route": "/admin"
+      },
+      {
+        "label": "Dealer Approvals",
+        "route": "/admin/approvals"
+      },
+      {
+        "label": "All Dealers",
+        "route": "/admin/feature-access"
+      },
+      {
+        "label": "Dealer Credibility",
+        "route": "/admin/credibility"
+      },
+      {
+        "label": "All Properties",
+        "route": null
+      },
+      {
+        "label": "Customers",
+        "route": "/admin/customers"
+      },
+      {
+        "label": "AI Scraper & Onboarding",
+        "route": "/admin/ai-scraper"
+      },
+      {
+        "label": "AI Provider Settings",
+        "route": "/admin/ai-providers"
+      },
+      {
+        "label": "Reports",
+        "route": null
+      },
+      {
+        "label": "Settings",
+        "route": null
+      },
+      {
+        "label": "+ Create Dealer Account",
+        "route": null
+      }
+    ]
+  },
+  {
+    "id": "SuperAdmin-DealerFeatureAccess",
+    "route": "/admin/feature-access",
+    "group": "admin",
+    "title": "Dealer90.com — Super Admin — Dealer Feature & Tab Access",
+    "component": "SuperAdminDealerFeatureAccessScreen",
+    "fontAlias": "D90 Fraunces 400-600-700",
+    "frauncesWeights": [
+      400,
+      600,
+      700
+    ],
+    "links": [
+      {
+        "label": "Dashboard",
+        "route": "/admin"
+      },
+      {
+        "label": "Dealer Approvals",
+        "route": "/admin/approvals"
+      },
+      {
+        "label": "All Dealers",
+        "route": "/admin/feature-access"
+      },
+      {
+        "label": "Dealer Credibility",
+        "route": "/admin/credibility"
+      },
+      {
+        "label": "All Properties",
+        "route": null
+      },
+      {
+        "label": "Customers",
+        "route": "/admin/customers"
+      },
+      {
+        "label": "AI Scraper & Onboarding",
+        "route": "/admin/ai-scraper"
+      },
+      {
+        "label": "AI Provider Settings",
+        "route": "/admin/ai-providers"
+      },
+      {
+        "label": "Reports",
+        "route": null
+      },
+      {
+        "label": "Settings",
+        "route": null
+      },
+      {
+        "label": "Cancel",
+        "route": "/admin/approvals"
+      },
+      {
+        "label": "Save & Approve Dealer",
+        "route": "/admin/approvals"
+      },
+      {
+        "label": "Enable All",
+        "route": null
+      },
+      {
+        "label": "Standard Preset",
+        "route": null
+      }
+    ]
+  },
+  {
+    "id": "SuperAdmin-DealerCredibility",
+    "route": "/admin/credibility",
+    "group": "admin",
+    "title": "Dealer90.com — Dealer Credibility Profile",
+    "component": "SuperAdminDealerCredibilityScreen",
+    "fontAlias": "D90 Fraunces 400-600-700",
+    "frauncesWeights": [
+      400,
+      600,
+      700
+    ],
+    "links": [
+      {
+        "label": "Dashboard",
+        "route": "/admin"
+      },
+      {
+        "label": "Dealer Approvals",
+        "route": "/admin/approvals"
+      },
+      {
+        "label": "All Dealers",
+        "route": "/admin/feature-access"
+      },
+      {
+        "label": "Dealer Credibility",
+        "route": "/admin/credibility"
+      },
+      {
+        "label": "All Properties",
+        "route": null
+      },
+      {
+        "label": "Customers",
+        "route": "/admin/customers"
+      },
+      {
+        "label": "AI Scraper & Onboarding",
+        "route": "/admin/ai-scraper"
+      },
+      {
+        "label": "AI Provider Settings",
+        "route": "/admin/ai-providers"
+      },
+      {
+        "label": "Reports",
+        "route": null
+      },
+      {
+        "label": "Settings",
+        "route": null
+      },
+      {
+        "label": "View Public Profile",
+        "route": null
+      },
+      {
+        "label": "Save Changes",
+        "route": null
+      }
+    ]
+  },
+  {
+    "id": "SuperAdmin-Customers",
+    "route": "/admin/customers",
+    "group": "admin",
+    "title": "Dealer90.com — Super Admin — Customer Data",
+    "component": "SuperAdminCustomersScreen",
+    "fontAlias": "D90 Fraunces 400-600-700",
+    "frauncesWeights": [
+      400,
+      600,
+      700
+    ],
+    "links": [
+      {
+        "label": "Dashboard",
+        "route": "/admin"
+      },
+      {
+        "label": "Dealer Approvals",
+        "route": "/admin/approvals"
+      },
+      {
+        "label": "All Dealers",
+        "route": "/admin/feature-access"
+      },
+      {
+        "label": "Dealer Credibility",
+        "route": "/admin/credibility"
+      },
+      {
+        "label": "All Properties",
+        "route": null
+      },
+      {
+        "label": "Customers",
+        "route": "/admin/customers"
+      },
+      {
+        "label": "AI Scraper & Onboarding",
+        "route": "/admin/ai-scraper"
+      },
+      {
+        "label": "AI Provider Settings",
+        "route": "/admin/ai-providers"
+      },
+      {
+        "label": "Reports",
+        "route": null
+      },
+      {
+        "label": "Settings",
+        "route": null
+      },
+      {
+        "label": "Export CSV",
+        "route": null
+      }
+    ]
+  },
+  {
+    "id": "SuperAdmin-AIScraper",
+    "route": "/admin/ai-scraper",
+    "group": "admin",
+    "title": "Dealer90.com — Super Admin — AI Scraper & Onboarding",
+    "component": "SuperAdminAIScraperScreen",
+    "fontAlias": "D90 Fraunces 400-600-700",
+    "frauncesWeights": [
+      400,
+      600,
+      700
+    ],
+    "links": [
+      {
+        "label": "Dashboard",
+        "route": "/admin"
+      },
+      {
+        "label": "Dealer Approvals",
+        "route": "/admin/approvals"
+      },
+      {
+        "label": "All Dealers",
+        "route": "/admin/feature-access"
+      },
+      {
+        "label": "Dealer Credibility",
+        "route": "/admin/credibility"
+      },
+      {
+        "label": "All Properties",
+        "route": null
+      },
+      {
+        "label": "Customers",
+        "route": "/admin/customers"
+      },
+      {
+        "label": "AI Scraper & Onboarding",
+        "route": "/admin/ai-scraper"
+      },
+      {
+        "label": "AI Provider Settings",
+        "route": "/admin/ai-providers"
+      },
+      {
+        "label": "Reports",
+        "route": null
+      },
+      {
+        "label": "Settings",
+        "route": null
+      },
+      {
+        "label": "Start Scraping Job",
+        "route": null
+      },
+      {
+        "label": "Create Accounts & Send Free Access — 3 Selected",
+        "route": null
+      },
+      {
+        "label": "Google Listing",
+        "route": null
+      },
+      {
+        "label": "Facebook Page",
+        "route": null
+      },
+      {
+        "label": "Property Portal",
+        "route": null
+      },
+      {
+        "label": "Google Listing",
+        "route": null
+      }
+    ]
+  },
+  {
+    "id": "SuperAdmin-AIProviderSettings",
+    "route": "/admin/ai-providers",
+    "group": "admin",
+    "title": "Dealer90.com — Super Admin — AI Provider Settings",
+    "component": "SuperAdminAIProviderSettingsScreen",
+    "fontAlias": "D90 Fraunces 400-600-700",
+    "frauncesWeights": [
+      400,
+      600,
+      700
+    ],
+    "links": [
+      {
+        "label": "Dashboard",
+        "route": "/admin"
+      },
+      {
+        "label": "Dealer Approvals",
+        "route": "/admin/approvals"
+      },
+      {
+        "label": "All Dealers",
+        "route": "/admin/feature-access"
+      },
+      {
+        "label": "Dealer Credibility",
+        "route": "/admin/credibility"
+      },
+      {
+        "label": "All Properties",
+        "route": null
+      },
+      {
+        "label": "Customers",
+        "route": "/admin/customers"
+      },
+      {
+        "label": "AI Scraper & Onboarding",
+        "route": "/admin/ai-scraper"
+      },
+      {
+        "label": "AI Provider Settings",
+        "route": "/admin/ai-providers"
+      },
+      {
+        "label": "Reports",
+        "route": null
+      },
+      {
+        "label": "Settings",
+        "route": null
+      },
+      {
+        "label": "Save Changes",
+        "route": null
+      },
+      {
+        "label": "Rotate Key",
+        "route": null
+      },
+      {
+        "label": "Rotate Key",
+        "route": null
+      },
+      {
+        "label": "Connect",
+        "route": null
+      },
+      {
+        "label": "Connect",
+        "route": null
+      }
+    ]
+  }
+]

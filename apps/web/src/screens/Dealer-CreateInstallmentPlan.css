@@ -1,0 +1,24 @@
+/* AUTO-GENERATED from design/boards/Dealer-CreateInstallmentPlan.dc.html (scoped verbatim copy of the board styles) */
+.pg-dealer-createinstallmentplan{--navy:#10213A; --navy-2:#16294A; --ink:#1C2430; --ink-soft:#5B6472;
+  --paper:#F6F4EF; --paper-2:#FFFFFF; --gold:#B98B33; --gold-light:#E7C77E;
+  --green:#2F6F4E; --green-bg:#E7F1EA; --amber:#B9772E; --amber-bg:#F6EADA;
+  --red:#B4453A; --red-bg:#F7E7E4; --line:#E4DFD3;}
+.pg-dealer-createinstallmentplan{margin:0;background:var(--paper);font-family:'Work Sans',sans-serif;color:var(--ink)}
+.pg-dealer-createinstallmentplan h1,.pg-dealer-createinstallmentplan h2,.pg-dealer-createinstallmentplan h3{font-family:'D90 Fraunces 400-600-700',serif;margin:0}
+.pg-dealer-createinstallmentplan label{display:block;font-size:12.5px;font-weight:600;color:var(--ink);margin-bottom:6px;}
+.pg-dealer-createinstallmentplan .field{width:100%;box-sizing:border-box;border:1px solid var(--line);border-radius:8px;padding:11px 13px;font-size:13.5px;font-family:'Work Sans',sans-serif;color:var(--ink);background:#fff;}
+.pg-dealer-createinstallmentplan .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:11px 20px;border-radius:8px;font-weight:600;font-size:13.5px;border:1px solid transparent;cursor:pointer}
+.pg-dealer-createinstallmentplan .btn-gold{background:var(--gold);color:#fff}
+.pg-dealer-createinstallmentplan .btn-outline{background:#fff;border:1px solid var(--line);color:var(--ink);}
+.pg-dealer-createinstallmentplan .tag{display:inline-flex;padding:4px 11px;border-radius:999px;font-size:11px;font-weight:700;}
+.pg-dealer-createinstallmentplan .card{background:var(--paper-2);border:1px solid var(--line);border-radius:14px;}
+.pg-dealer-createinstallmentplan .chip{padding:8px 14px;border-radius:999px;font-size:12.5px;font-weight:600;border:1px solid var(--line);color:var(--ink-soft);cursor:pointer;}
+.pg-dealer-createinstallmentplan .chip.active{background:var(--navy);color:#fff;border-color:var(--navy);}
+.pg-dealer-createinstallmentplan .sectionhead{font-weight:600;font-size:14.5px;color:var(--navy);display:flex;align-items:center;gap:9px;}
+.pg-dealer-createinstallmentplan .stepnum{width:22px;height:22px;border-radius:50%;background:var(--navy);color:#fff;font-size:11px;font-weight:700;display:inline-flex;align-items:center;justify-content:center;flex-shrink:0;}
+.pg-dealer-createinstallmentplan table{width:100%;border-collapse:collapse;}
+.pg-dealer-createinstallmentplan th{text-align:left;font-size:10.5px;color:var(--ink-soft);font-weight:600;padding:9px 12px;border-bottom:1px solid var(--line);text-transform:uppercase;letter-spacing:.03em;}
+.pg-dealer-createinstallmentplan td{padding:10px 12px;border-bottom:1px solid var(--line);font-size:12.5px;vertical-align:middle;}
+.pg-dealer-createinstallmentplan tr.bulk-row td{background:var(--amber-bg);}
+.pg-dealer-createinstallmentplan .bulkfield-row{display:grid;grid-template-columns:1fr 1fr 32px;gap:10px;align-items:end;}
+.pg-dealer-createinstallmentplan .remove-x{width:32px;height:38px;border-radius:8px;border:1px solid var(--line);background:#fff;display:flex;align-items:center;justify-content:center;color:var(--red);font-size:15px;cursor:pointer;flex-shrink:0;}

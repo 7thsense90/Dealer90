@@ -1,0 +1,372 @@
+{
+  "v": 3,
+  "attachments": {},
+  "boards": {
+    "Advisor-LeadCapture.dc.html": {
+      "h": 1080,
+      "title": "Property Advisor — Where to Send Offers (Lead Capture)",
+      "w": 1440,
+      "x": 1740,
+      "y": 5760
+    },
+    "Advisor-Results.dc.html": {
+      "h": 1360,
+      "title": "Property Advisor — Request Submitted",
+      "w": 1440,
+      "x": 3480,
+      "y": 5760
+    },
+    "Advisor-Wizard.dc.html": {
+      "h": 1200,
+      "title": "Property Advisor — Step 2: Horizon & Risk",
+      "w": 1440,
+      "x": 0,
+      "y": 5760
+    },
+    "BuildAHome.dc.html": {
+      "h": 2660,
+      "title": "Public Portal — Build a Home (Nav Page)",
+      "w": 1440,
+      "x": -4761,
+      "y": 5710
+    },
+    "BuildAdvisor-Confirmation.dc.html": {
+      "h": 1380,
+      "title": "Build Advisor — Request Sent to Service Providers",
+      "w": 1440,
+      "x": 6960,
+      "y": 5760
+    },
+    "BuildAdvisor-Services.dc.html": {
+      "h": 1480,
+      "title": "Build Advisor — Step 3: Services You Need",
+      "w": 1440,
+      "x": 5220,
+      "y": 5760
+    },
+    "Customer-ActivateAccount.dc.html": {
+      "h": 1080,
+      "title": "Customer — Verify & Set Password (First Login)",
+      "w": 1200,
+      "x": 1500,
+      "y": 7740
+    },
+    "Customer-BuildProject.dc.html": {
+      "h": 1280,
+      "title": "Customer — My Build Project",
+      "w": 1440,
+      "x": 8220,
+      "y": 7740
+    },
+    "Customer-Login.dc.html": {
+      "h": 900,
+      "title": "Customer — Log In",
+      "w": 1200,
+      "x": 0,
+      "y": 7740
+    },
+    "Customer-Offers.dc.html": {
+      "h": 1220,
+      "title": "Customer — My Offers (Compare & Accept)",
+      "w": 1440,
+      "x": 4740,
+      "y": 7740
+    },
+    "Customer-Portal.dc.html": {
+      "h": 1220,
+      "title": "Customer — My Properties",
+      "w": 1440,
+      "x": 3000,
+      "y": 7740
+    },
+    "Customer-Resell.dc.html": {
+      "h": 1280,
+      "title": "Customer — Sell This Property (Resale Request)",
+      "w": 1440,
+      "x": 6480,
+      "y": 7740
+    },
+    "Dealer-AddProperty.dc.html": {
+      "h": 1900,
+      "title": "Dealer — Add Property, Installment Plan & Attestation",
+      "w": 1440,
+      "x": 1740,
+      "y": 9420
+    },
+    "Dealer-BuyerRequests.dc.html": {
+      "h": 1080,
+      "title": "Dealer — Buyer Requests Inbox & Offer Builder",
+      "w": 1440,
+      "x": 6960,
+      "y": 9420
+    },
+    "Dealer-CreateInstallmentPlan.dc.html": {
+      "h": 1460,
+      "title": "Dealer — Create Installment Plan (Customer, ROI & Bulk Payments)",
+      "w": 1440,
+      "x": 5220,
+      "y": 9420
+    },
+    "Dealer-CustomerOffers.dc.html": {
+      "h": 1260,
+      "title": "Dealer — Send Offers to Customers (Broadcast)",
+      "w": 1440,
+      "x": 0,
+      "y": 11620
+    },
+    "Dealer-Customers.dc.html": {
+      "h": 1020,
+      "title": "Dealer — Customers & Installments",
+      "w": 1440,
+      "x": 3480,
+      "y": 9420
+    },
+    "Dealer-Dashboard.dc.html": {
+      "h": 1040,
+      "title": "Dealer — Dashboard",
+      "w": 1440,
+      "x": 0,
+      "y": 9420
+    },
+    "Dealer-Marketing-Email.dc.html": {
+      "h": 1060,
+      "title": "Dealer — Marketing: Email Templates",
+      "w": 1440,
+      "x": 1740,
+      "y": 11620
+    },
+    "Dealer-Marketing-EmailEditor.dc.html": {
+      "h": 860,
+      "title": "Dealer — Marketing: Edit Email Template With AI",
+      "w": 1440,
+      "x": 3480,
+      "y": 11620
+    },
+    "Dealer-Marketing-ImportContacts.dc.html": {
+      "h": 1200,
+      "title": "Dealer — Marketing: Import Contacts (CSV/Excel)",
+      "w": 1440,
+      "x": 6960,
+      "y": 11620
+    },
+    "Dealer-Marketing-SMS.dc.html": {
+      "h": 1040,
+      "title": "Dealer — Marketing: SMS Templates",
+      "w": 1440,
+      "x": 5220,
+      "y": 11620
+    },
+    "Dealer-Reminders.dc.html": {
+      "h": 1320,
+      "title": "Dealer — Payment Reminders",
+      "w": 1440,
+      "x": 10440,
+      "y": 9420
+    },
+    "Dealer-TransferRequests.dc.html": {
+      "h": 1080,
+      "title": "Dealer — Transfer Requests (Resale Approval)",
+      "w": 1440,
+      "x": 8700,
+      "y": 9420
+    },
+    "Estimator-DesignGallery.dc.html": {
+      "h": 1680,
+      "title": "Build Cost Estimator — Step 1: Plot Size & Design",
+      "w": 1440,
+      "x": 8700,
+      "y": 5760
+    },
+    "Estimator-Results.dc.html": {
+      "h": 1560,
+      "title": "Build Cost Estimator — Your Estimate & Request Quotes CTA",
+      "w": 1440,
+      "x": 13920,
+      "y": 5760
+    },
+    "Estimator-Services.dc.html": {
+      "h": 1260,
+      "title": "Build Cost Estimator — Step 2: Other Services",
+      "w": 1440,
+      "x": 10440,
+      "y": 5760
+    },
+    "Estimator-Signup.dc.html": {
+      "h": 1040,
+      "title": "Build Cost Estimator — Step 3: Sign Up to See Estimate",
+      "w": 1440,
+      "x": 12180,
+      "y": 5760
+    },
+    "ForBuilders.dc.html": {
+      "h": 2820,
+      "title": "Public Portal — For Builders (Nav Page)",
+      "w": 1440,
+      "x": -1681,
+      "y": 5710
+    },
+    "ForDealers.dc.html": {
+      "h": 3080,
+      "title": "Public Portal — For Dealers (Nav Page)",
+      "w": 1440,
+      "x": -3221,
+      "y": 5710
+    },
+    "InvestByROI.dc.html": {
+      "h": 2680,
+      "title": "Public Portal — Invest by ROI (Nav Page)",
+      "w": 1440,
+      "x": -6301,
+      "y": 5710
+    },
+    "Main-Editorial.dc.html": {
+      "h": 3250,
+      "title": "Public Portal",
+      "w": 1440,
+      "x": -9381,
+      "y": 5710
+    },
+    "Properties.dc.html": {
+      "h": 3160,
+      "title": "Public Portal — Properties (Nav Page)",
+      "w": 1440,
+      "x": -7841,
+      "y": 5710
+    },
+    "Provider-Dashboard.dc.html": {
+      "h": 1200,
+      "title": "Service Provider — Incoming Build Requests & Quote Builder",
+      "w": 1440,
+      "x": 0,
+      "y": 13280
+    },
+    "SuperAdmin-AIProviderSettings.dc.html": {
+      "h": 1050,
+      "title": "Super Admin — AI Provider Settings (Gateway, Routing & Keys)",
+      "w": 1440,
+      "x": 3480,
+      "y": 15960
+    },
+    "SuperAdmin-AIScraper.dc.html": {
+      "h": 990,
+      "title": "Super Admin — AI Scraper & Onboarding",
+      "w": 1440,
+      "x": 3480,
+      "y": 14880
+    },
+    "SuperAdmin-Approvals.dc.html": {
+      "h": 1300,
+      "title": "Super Admin — Dealer Approvals & Pricing Review",
+      "w": 1440,
+      "x": 0,
+      "y": 14880
+    },
+    "SuperAdmin-Customers.dc.html": {
+      "h": 570,
+      "title": "Super Admin — Dealer-Uploaded Customer Data",
+      "w": 1440,
+      "x": 6960,
+      "y": 14880
+    },
+    "SuperAdmin-Dashboard.dc.html": {
+      "h": 720,
+      "title": "Super Admin — Platform Dashboard & Request Routing",
+      "w": 1440,
+      "x": 1740,
+      "y": 14880
+    },
+    "SuperAdmin-DealerCredibility.dc.html": {
+      "h": 1360,
+      "title": "Super Admin — Dealer Credibility & Projection Accuracy",
+      "w": 1440,
+      "x": 5220,
+      "y": 14880
+    },
+    "SuperAdmin-DealerFeatureAccess.dc.html": {
+      "h": 960,
+      "title": "Super Admin — Dealer Feature & Tab Access (Set During Approval)",
+      "w": 1440,
+      "x": 0,
+      "y": 15960
+    }
+  },
+  "createdOnFiles": {
+    "at": "2026-09-21T10:00:00Z",
+    "v": 1
+  },
+  "designSystems": [],
+  "launch": {
+    "view": "canvas"
+  },
+  "notes": {
+    "nB": {
+      "kind": "title1",
+      "maxW": 7000,
+      "text": "DEALER SCREENS — Dealer Admin Portal",
+      "w": 240,
+      "x": 0,
+      "y": 9220
+    },
+    "nC": {
+      "kind": "title1",
+      "maxW": 7000,
+      "text": "SERVICE PROVIDER SCREENS — Builder / Architect / Designer Portal",
+      "w": 240,
+      "x": 0,
+      "y": 13080
+    },
+    "nD": {
+      "kind": "title1",
+      "maxW": 7000,
+      "text": "SUPER ADMIN SCREENS — Platform Administration",
+      "w": 240,
+      "x": 0,
+      "y": 14680
+    }
+  },
+  "order": [
+    "Main-Editorial.dc.html",
+    "Properties.dc.html",
+    "InvestByROI.dc.html",
+    "BuildAHome.dc.html",
+    "ForDealers.dc.html",
+    "ForBuilders.dc.html",
+    "Advisor-Wizard.dc.html",
+    "Advisor-LeadCapture.dc.html",
+    "Advisor-Results.dc.html",
+    "BuildAdvisor-Services.dc.html",
+    "BuildAdvisor-Confirmation.dc.html",
+    "Estimator-DesignGallery.dc.html",
+    "Estimator-Services.dc.html",
+    "Estimator-Signup.dc.html",
+    "Estimator-Results.dc.html",
+    "Customer-Login.dc.html",
+    "Customer-ActivateAccount.dc.html",
+    "Customer-Portal.dc.html",
+    "Customer-Offers.dc.html",
+    "Customer-Resell.dc.html",
+    "Customer-BuildProject.dc.html",
+    "Dealer-Dashboard.dc.html",
+    "Dealer-AddProperty.dc.html",
+    "Dealer-Customers.dc.html",
+    "Dealer-CreateInstallmentPlan.dc.html",
+    "Dealer-BuyerRequests.dc.html",
+    "Dealer-TransferRequests.dc.html",
+    "Dealer-Reminders.dc.html",
+    "Dealer-CustomerOffers.dc.html",
+    "Dealer-Marketing-Email.dc.html",
+    "Dealer-Marketing-EmailEditor.dc.html",
+    "Dealer-Marketing-SMS.dc.html",
+    "Dealer-Marketing-ImportContacts.dc.html",
+    "Provider-Dashboard.dc.html",
+    "SuperAdmin-Approvals.dc.html",
+    "SuperAdmin-DealerFeatureAccess.dc.html",
+    "SuperAdmin-Dashboard.dc.html",
+    "SuperAdmin-AIScraper.dc.html",
+    "SuperAdmin-AIProviderSettings.dc.html",
+    "SuperAdmin-DealerCredibility.dc.html",
+    "SuperAdmin-Customers.dc.html"
+  ],
+  "pages": [],
+  "title": "Dealer90.com — Dealer Property Portal"
+}

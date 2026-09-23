@@ -1,0 +1,12 @@
+/* Global reset shared by every screen. Screen visuals live in src/screens/*.css (verbatim board styles). */
+html, body { margin: 0; padding: 0; }
+
+/* Each screen wrapper plays the role the board's <body> had on the canvas. */
+.d90-screen { min-height: 100vh; }
+
+/* Boards are designed at a fixed 1440px width: keep them centred on wider monitors,
+   left-aligned and scrollable on narrower ones (auto margins collapse to 0). */
+.d90-screen > div:first-child { margin-left: auto; margin-right: auto; }
+
+/* Behaviour-only affordance for wired sidebar items / brand lock-ups (no visual change at rest). */
+[data-nav] { cursor: pointer; }

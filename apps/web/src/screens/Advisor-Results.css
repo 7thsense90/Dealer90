@@ -1,0 +1,12 @@
+/* AUTO-GENERATED from design/boards/Advisor-Results.dc.html (scoped verbatim copy of the board styles) */
+.pg-advisor-results{--navy:#10213A; --navy-2:#16294A; --ink:#1C2430; --ink-soft:#5B6472;
+  --paper:#F6F4EF; --paper-2:#FFFFFF; --gold:#B98B33; --gold-light:#E7C77E;
+  --green:#2F6F4E; --green-bg:#E7F1EA; --amber:#B9772E; --amber-bg:#F6EADA;
+  --line:#E4DFD3;}
+.pg-advisor-results{margin:0;background:var(--paper);font-family:'Work Sans',sans-serif;color:var(--ink)}
+.pg-advisor-results h1,.pg-advisor-results h2,.pg-advisor-results h3{font-family:'D90 Fraunces 400-600-700',serif;margin:0}
+.pg-advisor-results .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:13px 24px;border-radius:8px;font-weight:600;font-size:14px;border:1px solid transparent;cursor:pointer}
+.pg-advisor-results .btn-gold{background:var(--gold);color:#fff}
+.pg-advisor-results .btn-outline{background:#fff;border:1px solid var(--line);color:var(--ink);}
+.pg-advisor-results .card{background:var(--paper-2);border:1px solid var(--line);border-radius:14px;}
+.pg-advisor-results .tag{display:inline-flex;padding:5px 12px;border-radius:999px;font-size:12px;font-weight:600;}
