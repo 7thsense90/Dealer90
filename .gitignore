@@ -6,3 +6,4 @@ apps/web/visual/harness/*.html
 *.log
 .env.local
 __pycache__/
+.vercel/
