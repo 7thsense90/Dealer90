@@ -2,14 +2,21 @@
 // Do not hand-edit visuals: change the board on the canvas, re-export, re-run the converter.
 import './Dealer-Dashboard.css';
 import { useGo, A } from '../lib/nav';
+import type { ScreenProps } from '../lib/screen';
+import { useFit } from '../lib/fit';
+import { useDealerLock } from '../lib/dealerAccess';
+import { useAccountBlock } from '../lib/account';
 
 export const title = "Dealer90.com — Dealer Dashboard";
 
-export default function DealerDashboardScreen() {
+export default function DealerDashboardScreen({ slots = {}, content = {}, bind = {} }: ScreenProps = {}) {
   const go = useGo();
-  void go;
+  const fitRef = useFit();
+  const { lockable, lockExtras } = useDealerLock();
+  const { accountName, accountExtras } = useAccountBlock();
+  void go; void slots; void content; void bind;
   return (
-    <div className="d90-screen pg-dealer-dashboard">
+    <div className="d90-screen pg-dealer-dashboard" ref={fitRef}>
       <div style={{"width": "1440px", "height": "1120px", "boxSizing": "border-box", "background": "var(--paper)", "display": "flex"}}>
         {" "}
         {/* SIDEBAR */}
@@ -30,50 +37,52 @@ export default function DealerDashboardScreen() {
             {"Dashboard"}
           </div>
           {" "}
-          <div className="navitem" data-nav="1" onClick={go("/dealer/buyer-requests")}>
+          <div {...lockable("buyer_requests", "/dealer/buyer-requests", false, "navitem")}>
             {"Buyer Requests "}
             <span style={{"background": "var(--gold)", "color": "var(--navy)", "fontSize": "10px", "fontWeight": "700", "borderRadius": "999px", "padding": "2px 7px", "marginLeft": "auto"}}>
               {"4 new"}
             </span>
+            {lockExtras("buyer_requests", false)}
           </div>
           {" "}
-          <div className="navitem" data-nav="1" onClick={go("/dealer/transfer-requests")}>
+          <div {...lockable("transfer_requests", "/dealer/transfer-requests", false, "navitem")}>
             {"Transfer Requests "}
             <span style={{"background": "var(--gold)", "color": "var(--navy)", "fontSize": "10px", "fontWeight": "700", "borderRadius": "999px", "padding": "2px 7px", "marginLeft": "auto"}}>
               {"1 new"}
             </span>
+            {lockExtras("transfer_requests", false)}
           </div>
           {" "}
-          <div className="navitem" data-nav="1" onClick={go("/dealer/properties/new")}>
+          <div {...lockable("properties", "/dealer/properties/new", false, "navitem")}>
             {"Properties"}
+            {lockExtras("properties", false)}
           </div>
           {" "}
-          <div className="navitem" data-nav="1" onClick={go("/dealer/customers")}>
+          <div {...lockable("customers_plans", "/dealer/customers", false, "navitem")}>
             {"Customers"}
+            {lockExtras("customers_plans", false)}
           </div>
           {" "}
-          <div className="navitem" data-nav="1" onClick={go("/dealer/installment-plans/new")}>
+          <div {...lockable("customers_plans", "/dealer/installment-plans/new", false, "navitem")}>
             {"Installment Plans"}
+            {lockExtras("customers_plans", false)}
           </div>
           {" "}
-          <div className="navitem" data-nav="1" onClick={go("/dealer/reminders")}>
+          <div {...lockable("payments_reminders", "/dealer/reminders", false, "navitem")}>
             {"Payments"}
+            {lockExtras("payments_reminders", false)}
           </div>
           {" "}
-          <div className="navitem locked">
+          <div {...lockable("marketing", "/dealer/marketing/email", true, "navitem")}>
             {"Marketing "}
-            <span className="lock-ic">
-              {"🔒"}
-            </span>
             {" "}
-            <div className="tooltip">
-              {"This feature isn't enabled for your account. Please contact Admin to enable this feature."}
-            </div>
             {" "}
+            {lockExtras("marketing", true)}
           </div>
           {" "}
-          <div className="navitem">
+          <div {...lockable("branding", null, false, "navitem")}>
             {"Branding"}
+            {lockExtras("branding", false)}
           </div>
           {" "}
           <div className="navitem">
@@ -85,9 +94,10 @@ export default function DealerDashboardScreen() {
             <div style={{"width": "32px", "height": "32px", "borderRadius": "50%", "background": "var(--gold-light)"}}></div>
             {" "}
             <div style={{"color": "#fff", "fontSize": "13px"}}>
-              {"Ahmed Raza"}
+              {accountName("person", "Ahmed Raza")}
             </div>
             {" "}
+            {accountExtras()}
           </div>
           {" "}
         </div>
@@ -101,14 +111,18 @@ export default function DealerDashboardScreen() {
             <div>
               {" "}
               <h1 style={{"fontSize": "22px", "color": "var(--navy)"}}>
+                {content.welcome !== undefined ? content.welcome : (<>
                 {"Welcome back, Al-Noor Builders"}
+                </>)}
               </h1>
               {" "}
               <div style={{"fontSize": "13px", "color": "var(--ink-soft)", "display": "flex", "alignItems": "center", "gap": "8px"}}>
                 {"Here's how your listings are performing "}
+                {slots.marketingPill !== undefined ? slots.marketingPill : (
                 <span className="tag" style={{"background": "#EFE9DA", "color": "var(--ink-soft)", "fontWeight": "600"}}>
                   {"🔒 Marketing restricted by Admin"}
                 </span>
+                )}
               </div>
               {" "}
             </div>

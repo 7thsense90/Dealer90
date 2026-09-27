@@ -2,14 +2,21 @@
 // Do not hand-edit visuals: change the board on the canvas, re-export, re-run the converter.
 import './Dealer-Reminders.css';
 import { useGo } from '../lib/nav';
+import type { ScreenProps } from '../lib/screen';
+import { useFit } from '../lib/fit';
+import { useDealerLock } from '../lib/dealerAccess';
+import { useAccountBlock } from '../lib/account';
 
 export const title = "Dealer — Payment Reminders";
 
-export default function DealerRemindersScreen() {
+export default function DealerRemindersScreen({ slots = {}, content = {}, bind = {} }: ScreenProps = {}) {
   const go = useGo();
-  void go;
+  const fitRef = useFit();
+  const { lockable, lockExtras } = useDealerLock();
+  const { accountName, accountExtras } = useAccountBlock();
+  void go; void slots; void content; void bind;
   return (
-    <div className="d90-screen pg-dealer-reminders">
+    <div className="d90-screen pg-dealer-reminders" ref={fitRef}>
       <div style={{"width": "1440px", "height": "1320px", "boxSizing": "border-box", "background": "var(--ivory)", "display": "flex"}}>
         {" "}
         {/* SIDEBAR */}
@@ -34,41 +41,47 @@ export default function DealerRemindersScreen() {
               {"📊 Dashboard"}
             </div>
             {" "}
-            <div className="navitem" data-nav="1" onClick={go("/dealer/properties/new")}>
+            <div {...lockable("properties", "/dealer/properties/new", false, "navitem")}>
               {"🏠 My Properties"}
+              {lockExtras("properties", false)}
             </div>
             {" "}
-            <div className="navitem" data-nav="1" onClick={go("/dealer/customers")}>
+            <div {...lockable("customers_plans", "/dealer/customers", false, "navitem")}>
               {"👥 Customers"}
+              {lockExtras("customers_plans", false)}
             </div>
             {" "}
-            <div className="navitem active" data-nav="1" onClick={go("/dealer/reminders")}>
+            <div {...lockable("payments_reminders", "/dealer/reminders", false, "navitem active")}>
               {"🔔 Reminders"}
               <span className="badge-red">
                 {"8"}
               </span>
+              {lockExtras("payments_reminders", false)}
             </div>
             {" "}
             <div className="navitem" data-nav="1" onClick={go("/dealer/offers")}>
               {"📣 Customer Offers"}
             </div>
             {" "}
-            <div className="navitem" data-nav="1" onClick={go("/dealer/buyer-requests")}>
+            <div {...lockable("buyer_requests", "/dealer/buyer-requests", false, "navitem")}>
               {"📥 Buyer Requests"}
               <span className="badge">
                 {"4"}
               </span>
+              {lockExtras("buyer_requests", false)}
             </div>
             {" "}
-            <div className="navitem" data-nav="1" onClick={go("/dealer/transfer-requests")}>
+            <div {...lockable("transfer_requests", "/dealer/transfer-requests", false, "navitem")}>
               {"🔁 Transfer Requests"}
               <span className="badge">
                 {"1"}
               </span>
+              {lockExtras("transfer_requests", false)}
             </div>
             {" "}
-            <div className="navitem" data-nav="1" onClick={go("/dealer/marketing/email")}>
+            <div {...lockable("marketing", "/dealer/marketing/email", false, "navitem")}>
               {"📧 Marketing"}
+              {lockExtras("marketing", false)}
             </div>
             {" "}
           </div>
@@ -80,7 +93,7 @@ export default function DealerRemindersScreen() {
             <div>
               {" "}
               <div style={{"color": "#fff", "fontSize": "13px", "fontWeight": "600"}}>
-                {"Al-Noor Builders"}
+                {accountName("business", "Al-Noor Builders")}
               </div>
               {" "}
               <div style={{"color": "#8A97AD", "fontSize": "11px"}}>
@@ -89,6 +102,7 @@ export default function DealerRemindersScreen() {
               {" "}
             </div>
             {" "}
+            {accountExtras()}
           </div>
           {" "}
         </div>

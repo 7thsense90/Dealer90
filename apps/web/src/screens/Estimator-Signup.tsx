@@ -2,14 +2,17 @@
 // Do not hand-edit visuals: change the board on the canvas, re-export, re-run the converter.
 import './Estimator-Signup.css';
 import { useGo, A } from '../lib/nav';
+import type { ScreenProps } from '../lib/screen';
+import { useFit } from '../lib/fit';
 
 export const title = "Build Cost Estimator — Step 3: Sign Up to See Your Estimate";
 
-export default function EstimatorSignupScreen() {
+export default function EstimatorSignupScreen({ slots = {}, content = {}, bind = {} }: ScreenProps = {}) {
   const go = useGo();
-  void go;
+  const fitRef = useFit();
+  void go; void slots; void content; void bind;
   return (
-    <div className="d90-screen pg-estimator-signup">
+    <div className="d90-screen pg-estimator-signup" ref={fitRef}>
       <div style={{"width": "1440px", "height": "1040px", "boxSizing": "border-box", "background": "rgba(16,33,58,.5)", "display": "flex", "alignItems": "center", "justifyContent": "center"}}>
         {" "}
         <div className="card" style={{"width": "560px", "padding": "0", "overflow": "hidden"}}>

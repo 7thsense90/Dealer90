@@ -1,0 +1,90 @@
+{
+ "items": [
+  {
+   "id": "fx0",
+   "title": "5 Marla Corner Villa",
+   "area": "DHA Phase 6",
+   "city": "Lahore",
+   "price": 28500000,
+   "roiPct": 12.4,
+   "planMonths": 36,
+   "delivery": "ready",
+   "gradient": "linear-gradient(135deg,#2C4463,#10213A)",
+   "dealerName": "Al-Noor Builders",
+   "dealerScore": 8.7,
+   "type": "residential"
+  },
+  {
+   "id": "fx1",
+   "title": "10 Marla Plot + Grey Structure",
+   "area": "Bahria Town",
+   "city": "Karachi",
+   "price": 41000000,
+   "roiPct": 9.1,
+   "planMonths": 48,
+   "delivery": "under_construction",
+   "gradient": "linear-gradient(135deg,#9C5B3C,#6B3F29)",
+   "dealerName": "Sadaqat Estates",
+   "dealerScore": 9.2,
+   "type": "residential"
+  },
+  {
+   "id": "fx2",
+   "title": "1 Kanal Residential Plot",
+   "area": "Gulberg Greens",
+   "city": "Islamabad",
+   "price": 64000000,
+   "roiPct": 15.6,
+   "planMonths": 24,
+   "delivery": "ready",
+   "gradient": "linear-gradient(135deg,#3F5B47,#22331F)",
+   "dealerName": "Capital Frontier",
+   "dealerScore": 8.1,
+   "type": "residential"
+  },
+  {
+   "id": "fx3",
+   "title": "3 Marla Row House",
+   "area": "Johar Town",
+   "city": "Lahore",
+   "price": 16500000,
+   "roiPct": 10.8,
+   "planMonths": 30,
+   "delivery": "ready",
+   "gradient": "linear-gradient(135deg,#5B4A2C,#3A2E17)",
+   "dealerName": "Green Homes Co.",
+   "dealerScore": 8.9,
+   "type": "residential"
+  },
+  {
+   "id": "fx4",
+   "title": "8 Marla Duplex",
+   "area": "DHA Phase 2",
+   "city": "Islamabad",
+   "price": 33000000,
+   "roiPct": 13.2,
+   "planMonths": 42,
+   "delivery": "under_construction",
+   "gradient": "linear-gradient(135deg,#2C4463,#16294A)",
+   "dealerName": "Al-Noor Builders",
+   "dealerScore": 8.7,
+   "type": "residential"
+  },
+  {
+   "id": "fx5",
+   "title": "1 Kanal Farmhouse Plot",
+   "area": "Raiwind Road",
+   "city": "Lahore",
+   "price": 52000000,
+   "roiPct": 8.4,
+   "planMonths": 36,
+   "delivery": "ready",
+   "gradient": "linear-gradient(135deg,#9C5B3C,#4A2C1D)",
+   "dealerName": "Sadaqat Estates",
+   "dealerScore": 9.2,
+   "type": "residential"
+  }
+ ],
+ "total": 312,
+ "dealerCount": 86
+}

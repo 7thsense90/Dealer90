@@ -2,14 +2,19 @@
 // Do not hand-edit visuals: change the board on the canvas, re-export, re-run the converter.
 import './SuperAdmin-DealerFeatureAccess.css';
 import { useGo } from '../lib/nav';
+import type { ScreenProps } from '../lib/screen';
+import { useFit } from '../lib/fit';
+import { useAccountBlock } from '../lib/account';
 
 export const title = "Dealer90.com — Super Admin — Dealer Feature & Tab Access";
 
-export default function SuperAdminDealerFeatureAccessScreen() {
+export default function SuperAdminDealerFeatureAccessScreen({ slots = {}, content = {}, bind = {} }: ScreenProps = {}) {
   const go = useGo();
-  void go;
+  const fitRef = useFit();
+  const { accountName, accountExtras } = useAccountBlock();
+  void go; void slots; void content; void bind;
   return (
-    <div className="d90-screen pg-superadmin-dealerfeatureaccess">
+    <div className="d90-screen pg-superadmin-dealerfeatureaccess" ref={fitRef}>
       <div style={{"width": "1440px", "height": "960px", "boxSizing": "border-box", "background": "var(--paper)", "display": "flex"}}>
         {" "}
         {/* SIDEBAR */}
@@ -73,9 +78,10 @@ export default function SuperAdminDealerFeatureAccessScreen() {
             <div style={{"width": "32px", "height": "32px", "borderRadius": "50%", "background": "var(--gold-light)"}}></div>
             {" "}
             <div style={{"color": "#fff", "fontSize": "13px"}}>
-              {"Super Admin"}
+              {accountName("person", "Super Admin")}
             </div>
             {" "}
+            {accountExtras()}
           </div>
           {" "}
         </div>
@@ -89,7 +95,9 @@ export default function SuperAdminDealerFeatureAccessScreen() {
             <div>
               {" "}
               <div style={{"fontSize": "12px", "color": "var(--ink-soft)"}}>
+                {content.breadcrumb !== undefined ? content.breadcrumb : (<>
                 {"Dealer Approvals / Al-Noor Builders"}
+                </>)}
               </div>
               {" "}
               <h1 style={{"fontSize": "22px", "color": "var(--navy)"}}>
@@ -100,11 +108,11 @@ export default function SuperAdminDealerFeatureAccessScreen() {
             {" "}
             <div style={{"display": "flex", "gap": "10px"}}>
               {" "}
-              <button className="btn btn-outline" onClick={go("/admin/approvals")}>
+              <button className="btn btn-outline" onClick={go("/admin/approvals")} {...bind.cancel}>
                 {"Cancel"}
               </button>
               {" "}
-              <button className="btn btn-gold" onClick={go("/admin/approvals")}>
+              <button className="btn btn-gold" onClick={go("/admin/approvals")} {...bind.save}>
                 {"Save & Approve Dealer →"}
               </button>
               {" "}
@@ -138,6 +146,7 @@ export default function SuperAdminDealerFeatureAccessScreen() {
               {" "}
               {/* MODULE TOGGLES */}
               {" "}
+              {slots.modules !== undefined ? slots.modules : (
               <div className="card" style={{"gridColumn": "span 2"}}>
                 {" "}
                 <div style={{"padding": "18px 20px", "borderBottom": "1px solid var(--line)", "display": "flex", "justifyContent": "space-between", "alignItems": "center"}}>
@@ -323,9 +332,11 @@ export default function SuperAdminDealerFeatureAccessScreen() {
                 </div>
                 {" "}
               </div>
+              )}
               {" "}
               {/* SIDEBAR PREVIEW */}
               {" "}
+              {slots.preview !== undefined ? slots.preview : (
               <div style={{"display": "flex", "flexDirection": "column", "gap": "14px"}}>
                 {" "}
                 <div style={{"fontSize": "12px", "fontWeight": "600", "color": "var(--ink-soft)", "textTransform": "uppercase", "letterSpacing": ".03em"}}>
@@ -391,11 +402,13 @@ export default function SuperAdminDealerFeatureAccessScreen() {
                 </div>
                 {" "}
               </div>
+              )}
               {" "}
             </div>
             {" "}
             {/* COMPARE OTHER DEALERS */}
             {" "}
+            {slots.compare !== undefined ? slots.compare : (
             <div className="card" style={{"padding": "20px 22px", "display": "flex", "flexDirection": "column", "gap": "12px"}}>
               {" "}
               <div style={{"fontWeight": "600", "fontSize": "14px", "color": "var(--navy)"}}>
@@ -439,6 +452,7 @@ export default function SuperAdminDealerFeatureAccessScreen() {
               </div>
               {" "}
             </div>
+            )}
             {" "}
           </div>
           {" "}

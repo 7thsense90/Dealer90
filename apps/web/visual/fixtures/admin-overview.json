@@ -1,0 +1,68 @@
+{
+ "stats": {
+  "pending": 6,
+  "activeDealers": 142,
+  "totalProperties": 3214,
+  "customers": 1986
+ },
+ "registrations": [
+  {
+   "id": "d1",
+   "businessName": "Al-Noor Builders",
+   "ownerName": "Ahmed Raza",
+   "email": "ahmed@alnoor.pk",
+   "phone": null,
+   "city": "Lahore",
+   "submittedAt": "2026-09-18T09:00:00+05:00",
+   "status": "pending_review"
+  },
+  {
+   "id": "d2",
+   "businessName": "Green Valley Realty",
+   "ownerName": "Saima Iqbal",
+   "email": "saima@gvr.pk",
+   "phone": null,
+   "city": "Faisalabad",
+   "submittedAt": "2026-09-17T09:00:00+05:00",
+   "status": "pending_review"
+  },
+  {
+   "id": "d3",
+   "businessName": "Riverside Estates",
+   "ownerName": "Bilal Khan",
+   "email": "bilal@riverside.pk",
+   "phone": null,
+   "city": "Multan",
+   "submittedAt": "2026-09-15T09:00:00+05:00",
+   "status": "documents_missing"
+  },
+  {
+   "id": "d4",
+   "businessName": "Skyline Properties",
+   "ownerName": "Fatima Sheikh",
+   "email": "fatima@skyline.pk",
+   "phone": null,
+   "city": "Karachi",
+   "submittedAt": "2026-09-12T09:00:00+05:00",
+   "status": "approved"
+  }
+ ],
+ "flagged": [
+  {
+   "id": "p1",
+   "title": "Shop 3, Meridian Heights",
+   "price": 11000000,
+   "dealerName": "Riverside Estates",
+   "projectionPct": 38,
+   "areaPct": 14
+  },
+  {
+   "id": "p2",
+   "title": "12 Marla Plot, Sector B",
+   "price": 22000000,
+   "dealerName": "Green Valley Realty",
+   "projectionPct": 29,
+   "areaPct": 15
+  }
+ ]
+}

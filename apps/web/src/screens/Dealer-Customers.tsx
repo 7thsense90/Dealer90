@@ -2,21 +2,24 @@
 // Do not hand-edit visuals: change the board on the canvas, re-export, re-run the converter.
 import './Dealer-Customers.css';
 import { useGo } from '../lib/nav';
+import type { ScreenProps } from '../lib/screen';
+import { useFit } from '../lib/fit';
 
 export const title = "Dealer90.com — Customers & Installments";
 
-export default function DealerCustomersScreen() {
+export default function DealerCustomersScreen({ slots = {}, content = {}, bind = {} }: ScreenProps = {}) {
   const go = useGo();
-  void go;
+  const fitRef = useFit();
+  void go; void slots; void content; void bind;
   return (
-    <div className="d90-screen pg-dealer-customers">
+    <div className="d90-screen pg-dealer-customers" ref={fitRef}>
       <div style={{"width": "1440px", "height": "1020px", "boxSizing": "border-box", "background": "var(--paper)", "display": "flex", "flexDirection": "column"}}>
         {" "}
         <div style={{"height": "76px", "flexShrink": "0", "display": "flex", "alignItems": "center", "justifyContent": "space-between", "padding": "0 40px", "borderBottom": "1px solid var(--line)", "background": "#fff"}}>
           {" "}
           <div>
             {" "}
-            <div style={{"fontSize": "12px", "color": "var(--ink-soft)"}}>
+            <div style={{"fontSize": "12px", "color": "var(--ink-soft)"}} data-nav="1" onClick={go("/dealer")}>
               {"Al-Noor Builders"}
             </div>
             {" "}

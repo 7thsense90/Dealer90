@@ -2,14 +2,19 @@
 // Do not hand-edit visuals: change the board on the canvas, re-export, re-run the converter.
 import './Customer-BuildProject.css';
 import { useGo } from '../lib/nav';
+import type { ScreenProps } from '../lib/screen';
+import { useFit } from '../lib/fit';
+import { useAccountBlock } from '../lib/account';
 
 export const title = "Customer — My Build Project";
 
-export default function CustomerBuildProjectScreen() {
+export default function CustomerBuildProjectScreen({ slots = {}, content = {}, bind = {} }: ScreenProps = {}) {
   const go = useGo();
-  void go;
+  const fitRef = useFit();
+  const { accountName, accountExtras } = useAccountBlock();
+  void go; void slots; void content; void bind;
   return (
-    <div className="d90-screen pg-customer-buildproject">
+    <div className="d90-screen pg-customer-buildproject" ref={fitRef}>
       <div style={{"width": "1440px", "height": "1280px", "boxSizing": "border-box", "background": "var(--ivory)", "display": "flex"}}>
         {" "}
         {/* SIDEBAR */}
@@ -66,7 +71,7 @@ export default function CustomerBuildProjectScreen() {
             <div>
               {" "}
               <div style={{"color": "#fff", "fontSize": "13px", "fontWeight": "600"}}>
-                {"Usman Tariq"}
+                {accountName("person", "Usman Tariq")}
               </div>
               {" "}
               <div style={{"color": "#8A97AD", "fontSize": "11px"}}>
@@ -75,6 +80,7 @@ export default function CustomerBuildProjectScreen() {
               {" "}
             </div>
             {" "}
+            {accountExtras()}
           </div>
           {" "}
         </div>

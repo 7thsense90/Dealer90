@@ -2,14 +2,17 @@
 // Do not hand-edit visuals: change the board on the canvas, re-export, re-run the converter.
 import './Properties.css';
 import { useGo, A } from '../lib/nav';
+import type { ScreenProps } from '../lib/screen';
+import { useFit } from '../lib/fit';
 
 export const title = "Dealer90.com — Browse Properties";
 
-export default function PropertiesScreen() {
+export default function PropertiesScreen({ slots = {}, content = {}, bind = {} }: ScreenProps = {}) {
   const go = useGo();
-  void go;
+  const fitRef = useFit();
+  void go; void slots; void content; void bind;
   return (
-    <div className="d90-screen pg-properties">
+    <div className="d90-screen pg-properties" ref={fitRef}>
       <div style={{"width": "1440px", "background": "var(--paper)", "position": "relative", "fontFamily": "'Work Sans',sans-serif"}}>
         {" "}
         {/* UTILITY BAR */}
@@ -33,7 +36,7 @@ export default function PropertiesScreen() {
               {"English ▾"}
             </span>
             {" "}
-            <span>
+            <span data-nav="1" onClick={go("/login")}>
               {"Dealer Login"}
             </span>
             {" "}
@@ -124,43 +127,43 @@ export default function PropertiesScreen() {
         {" "}
         <div style={{"padding": "22px 64px", "background": "#fff", "borderBottom": "1px solid var(--line)", "display": "flex", "gap": "12px", "alignItems": "center", "flexWrap": "wrap"}}>
           {" "}
-          <div className="chip chip-active">
+          <div className="chip chip-active" {...bind.city_all}>
             {"All Cities"}
           </div>
           {" "}
-          <div className="chip">
+          <div className="chip" {...bind.city_lahore}>
             {"Lahore"}
           </div>
           {" "}
-          <div className="chip">
+          <div className="chip" {...bind.city_karachi}>
             {"Karachi"}
           </div>
           {" "}
-          <div className="chip">
+          <div className="chip" {...bind.city_islamabad}>
             {"Islamabad"}
           </div>
           {" "}
           <div style={{"width": "1px", "height": "22px", "background": "var(--line)", "margin": "0 4px"}}></div>
           {" "}
-          <div className="chip">
+          <div className="chip" {...bind.roi_8_10}>
             {"8–10% ROI"}
           </div>
           {" "}
-          <div className="chip">
+          <div className="chip" {...bind.roi_10_15}>
             {"10–15% ROI"}
           </div>
           {" "}
-          <div className="chip">
+          <div className="chip" {...bind.roi_15}>
             {"15%+ ROI"}
           </div>
           {" "}
           <div style={{"width": "1px", "height": "22px", "background": "var(--line)", "margin": "0 4px"}}></div>
           {" "}
-          <div className="chip">
+          <div className="chip" {...bind.delivery_ready}>
             {"Ready to Move"}
           </div>
           {" "}
-          <div className="chip">
+          <div className="chip" {...bind.delivery_uc}>
             {"Under Construction"}
           </div>
           {" "}
@@ -178,6 +181,7 @@ export default function PropertiesScreen() {
         {" "}
         {/* RESULTS COUNT */}
         {" "}
+        {slots.resultsCount !== undefined ? slots.resultsCount : (
         <div style={{"padding": "24px 64px 0", "fontSize": "13.5px", "color": "var(--ink-soft)"}}>
           {"Showing "}
           <span style={{"color": "var(--ink)", "fontWeight": "600"}}>
@@ -189,9 +193,11 @@ export default function PropertiesScreen() {
           </span>
           {" verified dealers"}
         </div>
+        )}
         {" "}
         {/* LISTING GRID */}
         {" "}
+        {slots.listingGrid !== undefined ? slots.listingGrid : (
         <div style={{"padding": "20px 64px 64px", "display": "grid", "gridTemplateColumns": "repeat(3,1fr)", "gap": "24px"}}>
           {" "}
           {/* CARD 1 */}
@@ -240,7 +246,7 @@ export default function PropertiesScreen() {
                 {" "}
               </div>
               {" "}
-              <A className="btn btn-navy" style={{"width": "100%", "marginTop": "14px"}} to="/customer/offers">
+              <A className="btn btn-navy" style={{"width": "100%", "marginTop": "14px"}} to="/advisor">
                 {"See Offer →"}
               </A>
               {" "}
@@ -294,7 +300,7 @@ export default function PropertiesScreen() {
                 {" "}
               </div>
               {" "}
-              <A className="btn btn-navy" style={{"width": "100%", "marginTop": "14px"}} to="/customer/offers">
+              <A className="btn btn-navy" style={{"width": "100%", "marginTop": "14px"}} to="/advisor">
                 {"See Offer →"}
               </A>
               {" "}
@@ -348,7 +354,7 @@ export default function PropertiesScreen() {
                 {" "}
               </div>
               {" "}
-              <A className="btn btn-navy" style={{"width": "100%", "marginTop": "14px"}} to="/customer/offers">
+              <A className="btn btn-navy" style={{"width": "100%", "marginTop": "14px"}} to="/advisor">
                 {"See Offer →"}
               </A>
               {" "}
@@ -402,7 +408,7 @@ export default function PropertiesScreen() {
                 {" "}
               </div>
               {" "}
-              <A className="btn btn-navy" style={{"width": "100%", "marginTop": "14px"}} to="/customer/offers">
+              <A className="btn btn-navy" style={{"width": "100%", "marginTop": "14px"}} to="/advisor">
                 {"See Offer →"}
               </A>
               {" "}
@@ -456,7 +462,7 @@ export default function PropertiesScreen() {
                 {" "}
               </div>
               {" "}
-              <A className="btn btn-navy" style={{"width": "100%", "marginTop": "14px"}} to="/customer/offers">
+              <A className="btn btn-navy" style={{"width": "100%", "marginTop": "14px"}} to="/advisor">
                 {"See Offer →"}
               </A>
               {" "}
@@ -510,7 +516,7 @@ export default function PropertiesScreen() {
                 {" "}
               </div>
               {" "}
-              <A className="btn btn-navy" style={{"width": "100%", "marginTop": "14px"}} to="/customer/offers">
+              <A className="btn btn-navy" style={{"width": "100%", "marginTop": "14px"}} to="/advisor">
                 {"See Offer →"}
               </A>
               {" "}
@@ -519,12 +525,13 @@ export default function PropertiesScreen() {
           </div>
           {" "}
         </div>
+        )}
         {" "}
         {/* LOAD MORE */}
         {" "}
         <div style={{"display": "flex", "justifyContent": "center", "paddingBottom": "64px"}}>
           {" "}
-          <A className="btn btn-outline" style={{"padding": "13px 32px"}}>
+          <A className="btn btn-outline" style={{"padding": "13px 32px"}} {...bind.load_more}>
             {"Load More Listings"}
           </A>
           {" "}
@@ -613,7 +620,7 @@ export default function PropertiesScreen() {
                 {" "}
               </div>
               {" "}
-              <button className="btn btn-gold" style={{"width": "100%", "marginTop": "16px"}} onClick={go("/customer/offers")}>
+              <button className="btn btn-gold" style={{"width": "100%", "marginTop": "16px"}}>
                 {"Compare & Accept →"}
               </button>
               {" "}

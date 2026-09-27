@@ -2,14 +2,19 @@
 // Do not hand-edit visuals: change the board on the canvas, re-export, re-run the converter.
 import './Provider-Dashboard.css';
 import { useGo } from '../lib/nav';
+import type { ScreenProps } from '../lib/screen';
+import { useFit } from '../lib/fit';
+import { useAccountBlock } from '../lib/account';
 
 export const title = "Service Provider — Incoming Build Requests";
 
-export default function ProviderDashboardScreen() {
+export default function ProviderDashboardScreen({ slots = {}, content = {}, bind = {} }: ScreenProps = {}) {
   const go = useGo();
-  void go;
+  const fitRef = useFit();
+  const { accountName, accountExtras } = useAccountBlock();
+  void go; void slots; void content; void bind;
   return (
-    <div className="d90-screen pg-provider-dashboard">
+    <div className="d90-screen pg-provider-dashboard" ref={fitRef}>
       <div style={{"width": "1440px", "height": "1200px", "boxSizing": "border-box", "background": "var(--ivory)", "display": "flex"}}>
         {" "}
         {/* SIDEBAR */}
@@ -64,7 +69,7 @@ export default function ProviderDashboardScreen() {
               <div>
                 {" "}
                 <div style={{"color": "#fff", "fontSize": "13px", "fontWeight": "600"}}>
-                  {"Al-Rasheed Architects"}
+                  {accountName("person", "Al-Rasheed Architects")}
                 </div>
                 {" "}
                 <div style={{"color": "#8A97AD", "fontSize": "11px"}}>
@@ -75,6 +80,7 @@ export default function ProviderDashboardScreen() {
               {" "}
             </div>
             {" "}
+            {accountExtras()}
           </div>
           {" "}
         </div>

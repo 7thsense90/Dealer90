@@ -2,14 +2,17 @@
 // Do not hand-edit visuals: change the board on the canvas, re-export, re-run the converter.
 import './ForBuilders.css';
 import { useGo, A } from '../lib/nav';
+import type { ScreenProps } from '../lib/screen';
+import { useFit } from '../lib/fit';
 
 export const title = "Dealer90.com — For Builders";
 
-export default function ForBuildersScreen() {
+export default function ForBuildersScreen({ slots = {}, content = {}, bind = {} }: ScreenProps = {}) {
   const go = useGo();
-  void go;
+  const fitRef = useFit();
+  void go; void slots; void content; void bind;
   return (
-    <div className="d90-screen pg-forbuilders">
+    <div className="d90-screen pg-forbuilders" ref={fitRef}>
       <div style={{"width": "1440px", "background": "var(--paper)", "position": "relative", "fontFamily": "'Work Sans',sans-serif"}}>
         {" "}
         {/* UTILITY BAR */}
@@ -33,7 +36,7 @@ export default function ForBuildersScreen() {
               {"English ▾"}
             </span>
             {" "}
-            <span>
+            <span data-nav="1" onClick={go("/login")}>
               {"Dealer Login"}
             </span>
             {" "}
@@ -262,7 +265,7 @@ export default function ForBuildersScreen() {
                 {" "}
               </div>
               {" "}
-              <button className="btn btn-gold" style={{"width": "100%", "marginTop": "16px"}} onClick={go("/provider")}>
+              <button className="btn btn-gold" style={{"width": "100%", "marginTop": "16px"}}>
                 {"Build a Quote →"}
               </button>
               {" "}

@@ -2,14 +2,19 @@
 // Do not hand-edit visuals: change the board on the canvas, re-export, re-run the converter.
 import './SuperAdmin-Approvals.css';
 import { useGo } from '../lib/nav';
+import type { ScreenProps } from '../lib/screen';
+import { useFit } from '../lib/fit';
+import { useAccountBlock } from '../lib/account';
 
 export const title = "Dealer90.com — Super Admin";
 
-export default function SuperAdminApprovalsScreen() {
+export default function SuperAdminApprovalsScreen({ slots = {}, content = {}, bind = {} }: ScreenProps = {}) {
   const go = useGo();
-  void go;
+  const fitRef = useFit();
+  const { accountName, accountExtras } = useAccountBlock();
+  void go; void slots; void content; void bind;
   return (
-    <div className="d90-screen pg-superadmin-approvals">
+    <div className="d90-screen pg-superadmin-approvals" ref={fitRef}>
       <div style={{"width": "1440px", "height": "1300px", "boxSizing": "border-box", "background": "var(--paper)", "display": "flex"}}>
         {" "}
         {/* SIDEBAR */}
@@ -73,9 +78,10 @@ export default function SuperAdminApprovalsScreen() {
             <div style={{"width": "32px", "height": "32px", "borderRadius": "50%", "background": "var(--gold-light)"}}></div>
             {" "}
             <div style={{"color": "#fff", "fontSize": "13px"}}>
-              {"Super Admin"}
+              {accountName("person", "Super Admin")}
             </div>
             {" "}
+            {accountExtras()}
           </div>
           {" "}
         </div>
@@ -117,7 +123,9 @@ export default function SuperAdminApprovalsScreen() {
                 </div>
                 {" "}
                 <div style={{"fontSize": "30px", "fontWeight": "700", "color": "var(--amber)", "fontFamily": "'D90 Fraunces 400-600-700',serif"}}>
+                  {content.statPending !== undefined ? content.statPending : (<>
                   {"6"}
+                  </>)}
                 </div>
                 {" "}
               </div>
@@ -129,7 +137,9 @@ export default function SuperAdminApprovalsScreen() {
                 </div>
                 {" "}
                 <div style={{"fontSize": "30px", "fontWeight": "700", "color": "var(--navy)", "fontFamily": "'D90 Fraunces 400-600-700',serif"}}>
+                  {content.statActive !== undefined ? content.statActive : (<>
                   {"142"}
+                  </>)}
                 </div>
                 {" "}
               </div>
@@ -141,7 +151,9 @@ export default function SuperAdminApprovalsScreen() {
                 </div>
                 {" "}
                 <div style={{"fontSize": "30px", "fontWeight": "700", "color": "var(--navy)", "fontFamily": "'D90 Fraunces 400-600-700',serif"}}>
+                  {content.statProperties !== undefined ? content.statProperties : (<>
                   {"3,214"}
+                  </>)}
                 </div>
                 {" "}
               </div>
@@ -153,7 +165,9 @@ export default function SuperAdminApprovalsScreen() {
                 </div>
                 {" "}
                 <div style={{"fontSize": "30px", "fontWeight": "700", "color": "var(--navy)", "fontFamily": "'D90 Fraunces 400-600-700',serif"}}>
+                  {content.statCustomers !== undefined ? content.statCustomers : (<>
                   {"1,986"}
+                  </>)}
                 </div>
                 {" "}
               </div>
@@ -176,6 +190,7 @@ export default function SuperAdminApprovalsScreen() {
                 {" "}
               </div>
               {" "}
+              {slots.flaggedTable !== undefined ? slots.flaggedTable : (
               <table>
                 <tbody>
                   <tr>
@@ -269,6 +284,7 @@ export default function SuperAdminApprovalsScreen() {
                   </tr>
                 </tbody>
               </table>
+              )}
               {" "}
             </div>
             {" "}
@@ -282,10 +298,11 @@ export default function SuperAdminApprovalsScreen() {
                   {"Pending Dealer Registrations"}
                 </div>
                 {" "}
-                <input placeholder="Search dealers…" style={{"border": "1px solid var(--line)", "borderRadius": "8px", "padding": "8px 12px", "fontSize": "13px", "width": "220px"}} />
+                <input placeholder="Search dealers…" style={{"border": "1px solid var(--line)", "borderRadius": "8px", "padding": "8px 12px", "fontSize": "13px", "width": "220px"}} {...bind.search} />
                 {" "}
               </div>
               {" "}
+              {slots.registrationsTable !== undefined ? slots.registrationsTable : (
               <table>
                 <tbody>
                   <tr>
@@ -439,6 +456,7 @@ export default function SuperAdminApprovalsScreen() {
                   </tr>
                 </tbody>
               </table>
+              )}
               {" "}
             </div>
             {" "}

@@ -2,22 +2,27 @@
 // Do not hand-edit visuals: change the board on the canvas, re-export, re-run the converter.
 import './Dealer-AddProperty.css';
 import { useGo, A } from '../lib/nav';
+import type { ScreenProps } from '../lib/screen';
+import { useFit } from '../lib/fit';
 
 export const title = "Dealer90.com — Add Property";
 
-export default function DealerAddPropertyScreen() {
+export default function DealerAddPropertyScreen({ slots = {}, content = {}, bind = {} }: ScreenProps = {}) {
   const go = useGo();
-  void go;
+  const fitRef = useFit();
+  void go; void slots; void content; void bind;
   return (
-    <div className="d90-screen pg-dealer-addproperty">
+    <div className="d90-screen pg-dealer-addproperty" ref={fitRef}>
       <div style={{"width": "1440px", "height": "1900px", "boxSizing": "border-box", "background": "var(--paper)", "display": "flex", "flexDirection": "column"}}>
         {" "}
         <div style={{"height": "76px", "flexShrink": "0", "display": "flex", "alignItems": "center", "justifyContent": "space-between", "padding": "0 40px", "borderBottom": "1px solid var(--line)", "background": "#fff"}}>
           {" "}
           <div>
             {" "}
-            <div style={{"fontSize": "12px", "color": "var(--ink-soft)"}}>
+            <div style={{"fontSize": "12px", "color": "var(--ink-soft)"}} data-nav="1" onClick={go("/dealer")}>
+              {content.status !== undefined ? content.status : (<>
               {"Properties / Add New"}
+              </>)}
             </div>
             {" "}
             <h1 style={{"fontSize": "20px", "color": "var(--navy)"}}>
@@ -28,11 +33,11 @@ export default function DealerAddPropertyScreen() {
           {" "}
           <div style={{"display": "flex", "gap": "10px"}}>
             {" "}
-            <button className="btn btn-outline">
+            <button className="btn btn-outline" {...bind.saveDraft}>
               {"Save as Draft"}
             </button>
             {" "}
-            <button className="btn btn-gold" onClick={go("/dealer")}>
+            <button className="btn btn-gold" onClick={go("/dealer")} {...bind.publish}>
               {"Publish Property"}
             </button>
             {" "}
@@ -52,7 +57,7 @@ export default function DealerAddPropertyScreen() {
                 {"Property Title"}
               </label>
               {" "}
-              <input className="field" defaultValue="5 Marla Corner Villa — DHA Phase 6" />
+              <input className="field" defaultValue={bind.title?.value === undefined ? "5 Marla Corner Villa — DHA Phase 6" : undefined} {...bind.title} />
               {" "}
             </div>
             {" "}
@@ -64,19 +69,19 @@ export default function DealerAddPropertyScreen() {
               {" "}
               <div style={{"display": "flex", "gap": "10px"}}>
                 {" "}
-                <div className="chip active">
+                <div className="chip active" {...bind.type_residential}>
                   {"Residential"}
                 </div>
                 {" "}
-                <div className="chip">
+                <div className="chip" {...bind.type_commercial}>
                   {"Commercial"}
                 </div>
                 {" "}
-                <div className="chip">
+                <div className="chip" {...bind.type_plot}>
                   {"Plot"}
                 </div>
                 {" "}
-                <div className="chip">
+                <div className="chip" {...bind.type_rental}>
                   {"Rental"}
                 </div>
                 {" "}
@@ -98,14 +103,14 @@ export default function DealerAddPropertyScreen() {
                 {" "}
                 <div style={{"display": "flex", "gap": "10px"}}>
                   {" "}
-                  <div className="chip">
+                  <div className="chip" {...bind.vis_internal}>
                     {"Internal Use Only "}
                     <span style={{"fontWeight": "400"}}>
                       {"— for creating installment plans, not shown on the public portal"}
                     </span>
                   </div>
                   {" "}
-                  <div className="chip active">
+                  <div className="chip active" {...bind.vis_public}>
                     {"Publish Publicly"}
                   </div>
                   {" "}
@@ -121,11 +126,11 @@ export default function DealerAddPropertyScreen() {
                 {" "}
                 <div style={{"display": "flex", "gap": "10px"}}>
                   {" "}
-                  <div className="chip active">
+                  <div className="chip active" {...bind.noc_yes}>
                     {"Yes, display it"}
                   </div>
                   {" "}
-                  <div className="chip">
+                  <div className="chip" {...bind.noc_no}>
                     {"No, keep private"}
                   </div>
                   {" "}
@@ -145,14 +150,14 @@ export default function DealerAddPropertyScreen() {
                 <label>
                   {"City / Area"}
                 </label>
-                <input className="field" defaultValue="DHA Phase 6, Lahore" />
+                <input className="field" defaultValue={bind.location?.value === undefined ? "DHA Phase 6, Lahore" : undefined} {...bind.location} />
               </div>
               {" "}
               <div>
                 <label>
                   {"Size"}
                 </label>
-                <input className="field" defaultValue="5 Marla" />
+                <input className="field" defaultValue={bind.size?.value === undefined ? "5 Marla" : undefined} {...bind.size} />
               </div>
               {" "}
             </div>
@@ -163,7 +168,7 @@ export default function DealerAddPropertyScreen() {
                 {"Description"}
               </label>
               {" "}
-              <textarea className="field" rows={3} defaultValue="Corner villa with 4 bed, modern finishes, near community park. Ready for possession." />
+              <textarea className="field" rows={3} defaultValue={bind.description?.value === undefined ? "Corner villa with 4 bed, modern finishes, near community park. Ready for possession." : undefined} {...bind.description} />
               {" "}
             </div>
             {" "}
@@ -207,7 +212,7 @@ export default function DealerAddPropertyScreen() {
                 {"Growth Corridor / Zone"}
               </label>
               {" "}
-              <select className="field">
+              <select className="field" {...bind.corridor}>
                 <option>
                   {"DHA Phase 9–10 Expansion (Lahore)"}
                 </option>
@@ -237,15 +242,15 @@ export default function DealerAddPropertyScreen() {
                 {" "}
                 <div style={{"display": "flex", "gap": "10px"}}>
                   {" "}
-                  <div className="chip active">
+                  <div className="chip active" {...bind.risk_conservative}>
                     {"Conservative"}
                   </div>
                   {" "}
-                  <div className="chip">
+                  <div className="chip" {...bind.risk_balanced}>
                     {"Balanced"}
                   </div>
                   {" "}
-                  <div className="chip">
+                  <div className="chip" {...bind.risk_aggressive}>
                     {"Aggressive"}
                   </div>
                   {" "}
@@ -261,15 +266,15 @@ export default function DealerAddPropertyScreen() {
                 {" "}
                 <div style={{"display": "flex", "gap": "10px"}}>
                   {" "}
-                  <div className="chip">
+                  <div className="chip" {...bind.yield_low}>
                     {"Low"}
                   </div>
                   {" "}
-                  <div className="chip active">
+                  <div className="chip active" {...bind.yield_medium}>
                     {"Medium"}
                   </div>
                   {" "}
-                  <div className="chip">
+                  <div className="chip" {...bind.yield_high}>
                     {"High"}
                   </div>
                   {" "}
@@ -306,14 +311,14 @@ export default function DealerAddPropertyScreen() {
                 <label>
                   {"Total Price (PKR)"}
                 </label>
-                <input className="field" defaultValue="28,500,000" />
+                <input className="field" defaultValue={bind.price?.value === undefined ? "28,500,000" : undefined} {...bind.price} />
               </div>
               {" "}
               <div>
                 <label>
                   {"Down Payment (PKR)"}
                 </label>
-                <input className="field" defaultValue="5,000,000" />
+                <input className="field" defaultValue={bind.downPayment?.value === undefined ? "5,000,000" : undefined} {...bind.downPayment} />
               </div>
               {" "}
             </div>
@@ -326,7 +331,7 @@ export default function DealerAddPropertyScreen() {
                   {"Projected Value After 1 Year (PKR)"}
                 </label>
                 {" "}
-                <input className="field" defaultValue="31,500,000" style={{"borderColor": "var(--green)"}} />
+                <input className="field" defaultValue={bind.projected1y?.value === undefined ? "31,500,000" : undefined} style={{"borderColor": "var(--green)"}} {...bind.projected1y} />
                 {" "}
               </div>
               {" "}
@@ -336,7 +341,7 @@ export default function DealerAddPropertyScreen() {
                   {"Projected Value After 3 Years (PKR)"}
                 </label>
                 {" "}
-                <input className="field" defaultValue="38,200,000" style={{"borderColor": "var(--green)"}} />
+                <input className="field" defaultValue={bind.projected3y?.value === undefined ? "38,200,000" : undefined} style={{"borderColor": "var(--green)"}} {...bind.projected3y} />
                 {" "}
               </div>
               {" "}
@@ -354,15 +359,15 @@ export default function DealerAddPropertyScreen() {
               {" "}
               <div style={{"display": "flex", "gap": "10px"}}>
                 {" "}
-                <div className="chip active">
+                <div className="chip active" {...bind.basis_comparable}>
                   {"Comparable Sales"}
                 </div>
                 {" "}
-                <div className="chip">
+                <div className="chip" {...bind.basis_trend}>
                   {"Area Market Trend"}
                 </div>
                 {" "}
-                <div className="chip">
+                <div className="chip" {...bind.basis_personal}>
                   {"Personal Estimate"}
                 </div>
                 {" "}
@@ -370,9 +375,9 @@ export default function DealerAddPropertyScreen() {
               {" "}
             </div>
             {" "}
-            <div className="card" style={{"padding": "16px 18px", "background": "#fff", "border": "1.5px solid var(--line)", "display": "flex", "gap": "12px", "alignItems": "flex-start"}}>
+            <div className="card" style={{"padding": "16px 18px", "background": "#fff", "border": "1.5px solid var(--line)", "display": "flex", "gap": "12px", "alignItems": "flex-start"}} {...bind.confirm}>
               {" "}
-              <div style={{"width": "20px", "height": "20px", "borderRadius": "5px", "border": "1.5px solid var(--navy)", "background": "var(--navy)", "flexShrink": "0", "marginTop": "1px", "display": "flex", "alignItems": "center", "justifyContent": "center", "color": "#fff", "fontSize": "12px", "fontWeight": "700"}}>
+              <div style={{"width": "20px", "height": "20px", "borderRadius": "5px", "border": "1.5px solid var(--navy)", "background": "var(--navy)", "flexShrink": "0", "marginTop": "1px", "display": "flex", "alignItems": "center", "justifyContent": "center", "color": "#fff", "fontSize": "12px", "fontWeight": "700"}} {...bind.confirmBox}>
                 {"✓"}
               </div>
               {" "}
@@ -398,7 +403,7 @@ export default function DealerAddPropertyScreen() {
                 <label>
                   {"Duration (months)"}
                 </label>
-                <input className="field" defaultValue="12" />
+                <input className="field" defaultValue={bind.planMonths?.value === undefined ? "12" : undefined} {...bind.planMonths} />
               </div>
               {" "}
               <div>
@@ -406,7 +411,7 @@ export default function DealerAddPropertyScreen() {
                   {"Frequency"}
                 </label>
                 {" "}
-                <select className="field">
+                <select className="field" {...bind.frequency}>
                   <option>
                     {"Monthly"}
                   </option>
@@ -421,7 +426,7 @@ export default function DealerAddPropertyScreen() {
                 <label>
                   {"Monthly Installment (auto)"}
                 </label>
-                <input className="field" defaultValue="1,958,333" disabled style={{"background": "#F3F1EA", "color": "var(--ink-soft)"}} />
+                <input className="field" defaultValue={bind.installment?.value === undefined ? "1,958,333" : undefined} disabled style={{"background": "#F3F1EA", "color": "var(--ink-soft)"}} {...bind.installment} />
               </div>
               {" "}
             </div>
@@ -430,6 +435,7 @@ export default function DealerAddPropertyScreen() {
           {" "}
           {/* LIVE PREVIEW */}
           {" "}
+          {slots.preview !== undefined ? slots.preview : (
           <div style={{"display": "flex", "flexDirection": "column", "gap": "20px"}}>
             {" "}
             <div className="card" style={{"padding": "16px"}}>
@@ -551,6 +557,7 @@ export default function DealerAddPropertyScreen() {
             </div>
             {" "}
           </div>
+          )}
           {" "}
         </div>
         {" "}

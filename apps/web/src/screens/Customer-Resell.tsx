@@ -2,14 +2,19 @@
 // Do not hand-edit visuals: change the board on the canvas, re-export, re-run the converter.
 import './Customer-Resell.css';
 import { useGo, A } from '../lib/nav';
+import type { ScreenProps } from '../lib/screen';
+import { useFit } from '../lib/fit';
+import { useAccountBlock } from '../lib/account';
 
 export const title = "Dealer90.com — Sell This Property";
 
-export default function CustomerResellScreen() {
+export default function CustomerResellScreen({ slots = {}, content = {}, bind = {} }: ScreenProps = {}) {
   const go = useGo();
-  void go;
+  const fitRef = useFit();
+  const { accountName, accountExtras } = useAccountBlock();
+  void go; void slots; void content; void bind;
   return (
-    <div className="d90-screen pg-customer-resell">
+    <div className="d90-screen pg-customer-resell" ref={fitRef}>
       <div style={{"width": "1440px", "height": "1280px", "boxSizing": "border-box", "background": "var(--paper)", "display": "flex"}}>
         {" "}
         {/* SIDEBAR */}
@@ -53,9 +58,10 @@ export default function CustomerResellScreen() {
             <div style={{"width": "32px", "height": "32px", "borderRadius": "50%", "background": "var(--gold-light)"}}></div>
             {" "}
             <div style={{"color": "#fff", "fontSize": "13px"}}>
-              {"Usman Tariq"}
+              {accountName("person", "Usman Tariq")}
             </div>
             {" "}
+            {accountExtras()}
           </div>
           {" "}
         </div>
@@ -201,7 +207,7 @@ export default function CustomerResellScreen() {
                 {"Cancel"}
               </button>
               {" "}
-              <button className="btn btn-gold" onClick={go("/customer")}>
+              <button className="btn btn-gold">
                 {"Submit for Dealer Approval →"}
               </button>
               {" "}

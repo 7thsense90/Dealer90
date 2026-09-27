@@ -2,14 +2,17 @@
 // Do not hand-edit visuals: change the board on the canvas, re-export, re-run the converter.
 import './Estimator-Services.css';
 import { useGo, A } from '../lib/nav';
+import type { ScreenProps } from '../lib/screen';
+import { useFit } from '../lib/fit';
 
 export const title = "Build Cost Estimator — Step 2: Other Services";
 
-export default function EstimatorServicesScreen() {
+export default function EstimatorServicesScreen({ slots = {}, content = {}, bind = {} }: ScreenProps = {}) {
   const go = useGo();
-  void go;
+  const fitRef = useFit();
+  void go; void slots; void content; void bind;
   return (
-    <div className="d90-screen pg-estimator-services">
+    <div className="d90-screen pg-estimator-services" ref={fitRef}>
       <div style={{"width": "1440px", "height": "1260px", "boxSizing": "border-box", "background": "var(--ivory)", "display": "flex", "flexDirection": "column"}}>
         {" "}
         {/* NAV */}

@@ -14,6 +14,10 @@
     ],
     "links": [
       {
+        "label": "Dealer Login",
+        "route": "/login"
+      },
+      {
         "label": "Properties Invest by ROI",
         "route": "/properties"
       },
@@ -63,11 +67,11 @@
       },
       {
         "label": "See My Offers",
-        "route": "/customer/offers"
+        "route": null
       },
       {
         "label": "Compare & Accept",
-        "route": "/customer/offers"
+        "route": null
       },
       {
         "label": "Register as a Dealer",
@@ -114,6 +118,10 @@
     ],
     "links": [
       {
+        "label": "Dealer Login",
+        "route": "/login"
+      },
+      {
         "label": "Properties",
         "route": "/properties"
       },
@@ -147,27 +155,27 @@
       },
       {
         "label": "See Offer",
-        "route": "/customer/offers"
+        "route": "/advisor"
       },
       {
         "label": "See Offer",
-        "route": "/customer/offers"
+        "route": "/advisor"
       },
       {
         "label": "See Offer",
-        "route": "/customer/offers"
+        "route": "/advisor"
       },
       {
         "label": "See Offer",
-        "route": "/customer/offers"
+        "route": "/advisor"
       },
       {
         "label": "See Offer",
-        "route": "/customer/offers"
+        "route": "/advisor"
       },
       {
         "label": "See Offer",
-        "route": "/customer/offers"
+        "route": "/advisor"
       },
       {
         "label": "Load More Listings",
@@ -175,7 +183,7 @@
       },
       {
         "label": "Compare & Accept",
-        "route": "/customer/offers"
+        "route": null
       },
       {
         "label": "Get Matched",
@@ -217,6 +225,10 @@
       700
     ],
     "links": [
+      {
+        "label": "Dealer Login",
+        "route": "/login"
+      },
       {
         "label": "Properties",
         "route": "/properties"
@@ -297,6 +309,10 @@
       700
     ],
     "links": [
+      {
+        "label": "Dealer Login",
+        "route": "/login"
+      },
       {
         "label": "Properties",
         "route": "/properties"
@@ -386,6 +402,10 @@
     ],
     "links": [
       {
+        "label": "Dealer Login",
+        "route": "/login"
+      },
+      {
         "label": "Properties",
         "route": "/properties"
       },
@@ -427,19 +447,19 @@
       },
       {
         "label": "Edit with AI",
-        "route": "/dealer/marketing/email/editor"
+        "route": null
       },
       {
         "label": "Edit with AI",
-        "route": "/dealer/marketing/email/editor"
+        "route": null
       },
       {
         "label": "Edit with AI",
-        "route": "/dealer/marketing/email/editor"
+        "route": null
       },
       {
         "label": "Send Campaign",
-        "route": "/dealer/marketing/email"
+        "route": null
       },
       {
         "label": "Open SMS Templates",
@@ -451,7 +471,7 @@
       },
       {
         "label": "Send to 86 Matched Buyers",
-        "route": "/dealer/offers"
+        "route": null
       },
       {
         "label": "Open Send Offers",
@@ -463,7 +483,7 @@
       },
       {
         "label": "Confirm & Import",
-        "route": "/dealer/marketing/import"
+        "route": null
       },
       {
         "label": "Register as a Dealer",
@@ -510,6 +530,10 @@
     ],
     "links": [
       {
+        "label": "Dealer Login",
+        "route": "/login"
+      },
+      {
         "label": "Properties",
         "route": "/properties"
       },
@@ -547,7 +571,7 @@
       },
       {
         "label": "Build a Quote",
-        "route": "/provider"
+        "route": null
       },
       {
         "label": "Register Your Practice",
@@ -834,7 +858,7 @@
       },
       {
         "label": "Verify & Activate Account",
-        "route": "/customer"
+        "route": null
       }
     ]
   },
@@ -920,7 +944,7 @@
       },
       {
         "label": "Accept Offer",
-        "route": "/customer"
+        "route": null
       },
       {
         "label": "View Full Details",
@@ -928,7 +952,7 @@
       },
       {
         "label": "Accept Offer",
-        "route": "/customer"
+        "route": null
       }
     ]
   },
@@ -975,7 +999,7 @@
       },
       {
         "label": "Submit for Dealer Approval",
-        "route": "/customer"
+        "route": null
       }
     ]
   },
@@ -1079,6 +1103,10 @@
         "route": "/dealer/reminders"
       },
       {
+        "label": "Marketing",
+        "route": "/dealer/marketing/email"
+      },
+      {
         "label": "Branding",
         "route": null
       },
@@ -1177,7 +1205,7 @@
       },
       {
         "label": "Activate Plan",
-        "route": "/dealer/customers"
+        "route": null
       },
       {
         "label": "+ Add Bulk Payment",

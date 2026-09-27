@@ -2,14 +2,17 @@
 // Do not hand-edit visuals: change the board on the canvas, re-export, re-run the converter.
 import './ForDealers.css';
 import { useGo, A } from '../lib/nav';
+import type { ScreenProps } from '../lib/screen';
+import { useFit } from '../lib/fit';
 
 export const title = "Dealer90.com — For Dealers";
 
-export default function ForDealersScreen() {
+export default function ForDealersScreen({ slots = {}, content = {}, bind = {} }: ScreenProps = {}) {
   const go = useGo();
-  void go;
+  const fitRef = useFit();
+  void go; void slots; void content; void bind;
   return (
-    <div className="d90-screen pg-fordealers">
+    <div className="d90-screen pg-fordealers" ref={fitRef}>
       <div style={{"width": "1440px", "background": "var(--paper)", "position": "relative", "fontFamily": "'Work Sans',sans-serif"}}>
         {" "}
         {/* UTILITY BAR */}
@@ -33,7 +36,7 @@ export default function ForDealersScreen() {
               {"English ▾"}
             </span>
             {" "}
-            <span>
+            <span data-nav="1" onClick={go("/login")}>
               {"Dealer Login"}
             </span>
             {" "}
@@ -260,7 +263,7 @@ export default function ForDealersScreen() {
                   </div>
                 </div>
                 {" "}
-                <A style={{"fontSize": "12px", "fontWeight": "600", "color": "var(--navy)"}} to="/dealer/marketing/email/editor">
+                <A style={{"fontSize": "12px", "fontWeight": "600", "color": "var(--navy)"}}>
                   {"Edit with AI →"}
                 </A>
                 {" "}
@@ -277,7 +280,7 @@ export default function ForDealersScreen() {
                   </div>
                 </div>
                 {" "}
-                <A style={{"fontSize": "12px", "fontWeight": "600", "color": "var(--navy)"}} to="/dealer/marketing/email/editor">
+                <A style={{"fontSize": "12px", "fontWeight": "600", "color": "var(--navy)"}}>
                   {"Edit with AI →"}
                 </A>
                 {" "}
@@ -294,7 +297,7 @@ export default function ForDealersScreen() {
                   </div>
                 </div>
                 {" "}
-                <A style={{"fontSize": "12px", "fontWeight": "600", "color": "var(--navy)"}} to="/dealer/marketing/email/editor">
+                <A style={{"fontSize": "12px", "fontWeight": "600", "color": "var(--navy)"}}>
                   {"Edit with AI →"}
                 </A>
                 {" "}
@@ -326,7 +329,7 @@ export default function ForDealersScreen() {
                 {"Your next installment of PKR 1,958,333 is due Oct 5. Reply PAY for the link, or call us on 0311-XXXXXXX. — Dealer90.com"}
               </div>
               {" "}
-              <button className="btn btn-gold" style={{"width": "100%", "marginTop": "18px"}} onClick={go("/dealer/marketing/email")}>
+              <button className="btn btn-gold" style={{"width": "100%", "marginTop": "18px"}}>
                 {"Send Campaign →"}
               </button>
               {" "}
@@ -454,7 +457,7 @@ export default function ForDealersScreen() {
                 {" "}
               </div>
               {" "}
-              <button className="btn btn-navy" style={{"width": "100%", "marginTop": "16px"}} onClick={go("/dealer/offers")}>
+              <button className="btn btn-navy" style={{"width": "100%", "marginTop": "16px"}}>
                 {"Send to 86 Matched Buyers →"}
               </button>
               {" "}
@@ -553,7 +556,7 @@ export default function ForDealersScreen() {
                 {" "}
               </div>
               {" "}
-              <button className="btn btn-gold" style={{"width": "100%", "marginTop": "16px"}} onClick={go("/dealer/marketing/import")}>
+              <button className="btn btn-gold" style={{"width": "100%", "marginTop": "16px"}}>
                 {"Confirm & Import →"}
               </button>
               {" "}

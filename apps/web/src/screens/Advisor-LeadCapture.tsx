@@ -2,14 +2,17 @@
 // Do not hand-edit visuals: change the board on the canvas, re-export, re-run the converter.
 import './Advisor-LeadCapture.css';
 import { useGo, A } from '../lib/nav';
+import type { ScreenProps } from '../lib/screen';
+import { useFit } from '../lib/fit';
 
 export const title = "Dealer90.com — Where Should We Send Your Offers?";
 
-export default function AdvisorLeadCaptureScreen() {
+export default function AdvisorLeadCaptureScreen({ slots = {}, content = {}, bind = {} }: ScreenProps = {}) {
   const go = useGo();
-  void go;
+  const fitRef = useFit();
+  void go; void slots; void content; void bind;
   return (
-    <div className="d90-screen pg-advisor-leadcapture">
+    <div className="d90-screen pg-advisor-leadcapture" ref={fitRef}>
       <div style={{"width": "1440px", "height": "1080px", "boxSizing": "border-box", "background": "var(--paper)", "display": "flex", "flexDirection": "column"}}>
         {" "}
         {/* NAV */}

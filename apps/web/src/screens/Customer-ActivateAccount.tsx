@@ -2,19 +2,22 @@
 // Do not hand-edit visuals: change the board on the canvas, re-export, re-run the converter.
 import './Customer-ActivateAccount.css';
 import { useGo, A } from '../lib/nav';
+import type { ScreenProps } from '../lib/screen';
+import { useFit } from '../lib/fit';
 
 export const title = "Dealer90.com — Activate Your Account";
 
-export default function CustomerActivateAccountScreen() {
+export default function CustomerActivateAccountScreen({ slots = {}, content = {}, bind = {} }: ScreenProps = {}) {
   const go = useGo();
-  void go;
+  const fitRef = useFit();
+  void go; void slots; void content; void bind;
   return (
-    <div className="d90-screen pg-customer-activateaccount">
+    <div className="d90-screen pg-customer-activateaccount" ref={fitRef}>
       <div style={{"width": "1200px", "height": "1080px", "boxSizing": "border-box", "background": "var(--paper)", "display": "flex", "flexDirection": "column"}}>
         {" "}
         <div style={{"height": "84px", "background": "var(--navy)", "display": "flex", "alignItems": "center", "padding": "0 56px", "flexShrink": "0"}}>
           {" "}
-          <div style={{"display": "flex", "alignItems": "center", "gap": "12px"}} data-nav="1" onClick={go("/customer")}>
+          <div style={{"display": "flex", "alignItems": "center", "gap": "12px"}} data-nav="1" onClick={go("/")}>
             {" "}
             <div style={{"width": "65px", "height": "38px", "borderRadius": "9px", "background": "var(--gold)", "display": "flex", "alignItems": "center", "justifyContent": "center", "fontFamily": "'D90 Fraunces 400-600-700',serif", "fontWeight": "700", "color": "var(--navy)", "fontSize": "15px", "letterSpacing": "-.02em"}}>
               {"D90"}
@@ -105,7 +108,7 @@ export default function CustomerActivateAccountScreen() {
               {" "}
             </div>
             {" "}
-            <button className="btn btn-gold" style={{"width": "100%", "padding": "15px"}} onClick={go("/customer")}>
+            <button className="btn btn-gold" style={{"width": "100%", "padding": "15px"}}>
               {"Verify & Activate Account"}
             </button>
             {" "}

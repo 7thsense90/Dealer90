@@ -2,14 +2,19 @@
 // Do not hand-edit visuals: change the board on the canvas, re-export, re-run the converter.
 import './SuperAdmin-AIProviderSettings.css';
 import { useGo } from '../lib/nav';
+import type { ScreenProps } from '../lib/screen';
+import { useFit } from '../lib/fit';
+import { useAccountBlock } from '../lib/account';
 
 export const title = "Dealer90.com — Super Admin — AI Provider Settings";
 
-export default function SuperAdminAIProviderSettingsScreen() {
+export default function SuperAdminAIProviderSettingsScreen({ slots = {}, content = {}, bind = {} }: ScreenProps = {}) {
   const go = useGo();
-  void go;
+  const fitRef = useFit();
+  const { accountName, accountExtras } = useAccountBlock();
+  void go; void slots; void content; void bind;
   return (
-    <div className="d90-screen pg-superadmin-aiprovidersettings">
+    <div className="d90-screen pg-superadmin-aiprovidersettings" ref={fitRef}>
       <div style={{"width": "1440px", "height": "1050px", "boxSizing": "border-box", "background": "var(--paper)", "display": "flex"}}>
         {" "}
         {/* SIDEBAR */}
@@ -73,9 +78,10 @@ export default function SuperAdminAIProviderSettingsScreen() {
             <div style={{"width": "32px", "height": "32px", "borderRadius": "50%", "background": "var(--gold-light)"}}></div>
             {" "}
             <div style={{"color": "#fff", "fontSize": "13px"}}>
-              {"Super Admin"}
+              {accountName("person", "Super Admin")}
             </div>
             {" "}
+            {accountExtras()}
           </div>
           {" "}
         </div>

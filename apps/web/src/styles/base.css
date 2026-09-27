@@ -4,9 +4,18 @@ html, body { margin: 0; padding: 0; }
 /* Each screen wrapper plays the role the board's <body> had on the canvas. */
 .d90-screen { min-height: 100vh; }
 
-/* Boards are designed at a fixed 1440px width: keep them centred on wider monitors,
-   left-aligned and scrollable on narrower ones (auto margins collapse to 0). */
-.d90-screen > div:first-child { margin-left: auto; margin-right: auto; }
+/* Width fitting is done by useFit() (src/lib/fit.ts): boards stretch on wide windows and scale down
+   on narrow ones. Never let a board overflow the window sideways. */
+html, body { overflow-x: hidden; }
 
 /* Behaviour-only affordance for wired sidebar items / brand lock-ups (no visual change at rest). */
 [data-nav] { cursor: pointer; }
+
+/* Locked dealer tab — the exact treatment designed on the Dealer Dashboard board, made available to
+   every dealer screen (some dealer boards use a sidebar variant that never showed a locked tab).
+   :where() keeps these below each board's own rules, so boards that define them win. */
+:where(.d90-screen) .navitem.locked{position:relative;color:#5C6C85;cursor:not-allowed;}
+:where(.d90-screen) .navitem.locked .lock-ic{margin-left:auto;font-size:11.5px;}
+:where(.d90-screen) .navitem.locked .tooltip{position:absolute;left:calc(100% + 10px);top:50%;transform:translateY(-50%);background:var(--ink,#1C2430);color:#fff;font-size:11.5px;font-weight:500;line-height:1.4;padding:9px 13px;border-radius:8px;width:200px;white-space:normal;opacity:0;pointer-events:none;transition:opacity .15s ease;box-shadow:0 8px 20px rgba(0,0,0,.25);z-index:80;}
+:where(.d90-screen) .navitem.locked .tooltip::before{content:"";position:absolute;right:100%;top:50%;transform:translateY(-50%);border:6px solid transparent;border-right-color:var(--ink,#1C2430);}
+:where(.d90-screen) .navitem.locked:hover .tooltip{opacity:1;}

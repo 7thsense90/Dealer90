@@ -2,14 +2,17 @@
 // Do not hand-edit visuals: change the board on the canvas, re-export, re-run the converter.
 import './BuildAdvisor-Confirmation.css';
 import { useGo } from '../lib/nav';
+import type { ScreenProps } from '../lib/screen';
+import { useFit } from '../lib/fit';
 
 export const title = "Build Advisor — Request Sent to Service Providers";
 
-export default function BuildAdvisorConfirmationScreen() {
+export default function BuildAdvisorConfirmationScreen({ slots = {}, content = {}, bind = {} }: ScreenProps = {}) {
   const go = useGo();
-  void go;
+  const fitRef = useFit();
+  void go; void slots; void content; void bind;
   return (
-    <div className="d90-screen pg-buildadvisor-confirmation">
+    <div className="d90-screen pg-buildadvisor-confirmation" ref={fitRef}>
       <div style={{"width": "1440px", "height": "1380px", "boxSizing": "border-box", "background": "var(--ivory)", "display": "flex", "flexDirection": "column"}}>
         {" "}
         {/* NAV */}

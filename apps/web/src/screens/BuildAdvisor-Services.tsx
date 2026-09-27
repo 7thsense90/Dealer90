@@ -2,14 +2,17 @@
 // Do not hand-edit visuals: change the board on the canvas, re-export, re-run the converter.
 import './BuildAdvisor-Services.css';
 import { useGo } from '../lib/nav';
+import type { ScreenProps } from '../lib/screen';
+import { useFit } from '../lib/fit';
 
 export const title = "Build Advisor — Step 3: Services You Need";
 
-export default function BuildAdvisorServicesScreen() {
+export default function BuildAdvisorServicesScreen({ slots = {}, content = {}, bind = {} }: ScreenProps = {}) {
   const go = useGo();
-  void go;
+  const fitRef = useFit();
+  void go; void slots; void content; void bind;
   return (
-    <div className="d90-screen pg-buildadvisor-services">
+    <div className="d90-screen pg-buildadvisor-services" ref={fitRef}>
       <div style={{"width": "1440px", "height": "1480px", "boxSizing": "border-box", "background": "var(--ivory)", "display": "flex", "flexDirection": "column"}}>
         {" "}
         {/* NAV */}

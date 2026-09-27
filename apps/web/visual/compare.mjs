@@ -16,13 +16,43 @@ fs.mkdirSync(path.join(outDir, 'diff'), { recursive: true });
 const canvas = JSON.parse(fs.readFileSync(new URL('../../../design/boards/canvas.json', import.meta.url)));
 const browser = await chromium.launch({ executablePath: process.env.CHROMIUM_PATH || undefined });
 const contexts = {};
-async function ctxFor(width) {
-  contexts[width] ??= await browser.newContext({ viewport: { width, height: 900 }, deviceScaleFactor: 1 });
-  return contexts[width];
+// Portal screens need a signed-in user; each board is compared as the demo account it depicts.
+const PASSWORD = 'Dealer90!demo';
+function accountFor(m) {
+  if (m.group === 'admin') return 'admin@dealer90.pk';
+  if (m.group === 'provider') return 'studio@alfateh.pk';
+  if (m.group === 'dealer') return m.route.startsWith('/dealer/marketing') ? 'fatima@skyline.pk' : 'ahmed@alnoor.pk'; // Al-Noor is the dealer the boards depict, but its Marketing tab is locked
+  if (m.group === 'customer' && m.route.startsWith('/customer')) return 'usman@example.pk';
+  return null;
+}
+// Listing data exactly as drawn on the board (live data is covered by the API and E2E tests).
+const FIXTURES = {
+  '/api/public/properties': 'public-properties.json',
+  '/api/admin/overview': 'admin-overview.json',
+  '/api/admin/dealers': 'admin-dealers.json',
+};
+async function ctxFor(width, account) {
+  const key = `${width}:${account}`;
+  if (!contexts[key]) {
+    const ctx = await browser.newContext({ viewport: { width, height: 900 }, deviceScaleFactor: 1 });
+    // Render forms with the board's example values and sidebar locks exactly as drawn
+    // (real lock behaviour and empty forms are covered by the E2E test).
+    await ctx.addInitScript(() => { window.__D90_DESIGN_FILL__ = true; window.__D90_DESIGN_MODE__ = true; });
+    for (const [path, file] of Object.entries(FIXTURES)) {
+      const body = fs.readFileSync(new URL(`./fixtures/${file}`, import.meta.url));
+      await ctx.route((u) => u.pathname === path, (route) => route.fulfill({ contentType: 'application/json', body }));
+    }
+    if (account) {
+      const r = await ctx.request.post(`${appBase}/api/auth/login`, { data: { identifier: account, password: PASSWORD } });
+      if (!r.ok()) throw new Error(`login failed for ${account}: ${r.status()}`);
+    }
+    contexts[key] = ctx;
+  }
+  return contexts[key];
 }
 
-async function shot(url, file, waitSel, width = 1440) {
-  const page = await (await ctxFor(width)).newPage();
+async function shot(url, file, waitSel, width = 1440, account = null) {
+  const page = await (await ctxFor(width, account)).newPage();
   const errors = [];
   page.on('pageerror', (e) => errors.push(String(e)));
   page.on('console', (m) => { if (m.type() === 'error') errors.push(m.text()); });
@@ -42,7 +72,7 @@ for (const m of manifest) {
   const d = path.join(outDir, 'design', `${m.id}.png`);
   // Compare at the board's own canvas width (most are 1440; login/activation boards are 1200).
   const width = canvas.boards[`${m.id}.dc.html`]?.w ?? 1440;
-  const appErrors = await shot(appBase + m.route, a, `.pg-${m.id.toLowerCase()}`, width);
+  const appErrors = await shot(appBase + m.route, a, `.pg-${m.id.toLowerCase()}`, width, accountFor(m));
   await shot(`${harnessBase}/${m.id}.html`, d, undefined, width);
   const A = PNG.sync.read(fs.readFileSync(a));
   const D = PNG.sync.read(fs.readFileSync(d));

@@ -2,14 +2,17 @@
 // Do not hand-edit visuals: change the board on the canvas, re-export, re-run the converter.
 import './Main-Editorial.css';
 import { useGo, A } from '../lib/nav';
+import type { ScreenProps } from '../lib/screen';
+import { useFit } from '../lib/fit';
 
 export const title = "Dealer90.com — Homepage (Editorial Marketplace Redesign)";
 
-export default function MainEditorialScreen() {
+export default function MainEditorialScreen({ slots = {}, content = {}, bind = {} }: ScreenProps = {}) {
   const go = useGo();
-  void go;
+  const fitRef = useFit();
+  void go; void slots; void content; void bind;
   return (
-    <div className="d90-screen pg-main-editorial">
+    <div className="d90-screen pg-main-editorial" ref={fitRef}>
       <div style={{"width": "1440px", "background": "var(--paper)", "position": "relative", "fontFamily": "'Work Sans',sans-serif"}}>
         {" "}
         {/* UTILITY BAR */}
@@ -33,7 +36,7 @@ export default function MainEditorialScreen() {
               {"English ▾"}
             </span>
             {" "}
-            <span>
+            <span data-nav="1" onClick={go("/login")}>
               {"Dealer Login"}
             </span>
             {" "}
@@ -620,7 +623,7 @@ export default function MainEditorialScreen() {
                 {"Once you're matched or estimate a build, the request routes to dealers and providers with a credibility score you can actually check — you compare structured offers, not sales pitches."}
               </p>
               {" "}
-              <A style={{"fontSize": "13px", "fontWeight": "600", "color": "var(--navy)", "marginTop": "18px", "display": "inline-block"}} to="/customer/offers">
+              <A style={{"fontSize": "13px", "fontWeight": "600", "color": "var(--navy)", "marginTop": "18px", "display": "inline-block"}}>
                 {"See My Offers →"}
               </A>
               {" "}
@@ -673,7 +676,7 @@ export default function MainEditorialScreen() {
                 {" "}
               </div>
               {" "}
-              <button className="btn btn-gold" style={{"width": "100%", "marginTop": "18px"}} onClick={go("/customer/offers")}>
+              <button className="btn btn-gold" style={{"width": "100%", "marginTop": "18px"}}>
                 {"Compare & Accept →"}
               </button>
               {" "}

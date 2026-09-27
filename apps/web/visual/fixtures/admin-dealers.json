@@ -1,0 +1,60 @@
+{
+ "dealers": [
+  {
+   "id": "d1",
+   "businessName": "Al-Noor Builders",
+   "status": "pending_review",
+   "features": {
+    "buyer_requests": true,
+    "transfer_requests": true,
+    "properties": true,
+    "customers_plans": true,
+    "payments_reminders": true,
+    "marketing": false,
+    "branding": true
+   }
+  },
+  {
+   "id": "d2",
+   "businessName": "Green Valley Realty",
+   "status": "pending_review",
+   "features": {
+    "buyer_requests": true,
+    "transfer_requests": true,
+    "properties": true,
+    "customers_plans": true,
+    "payments_reminders": true,
+    "marketing": true,
+    "branding": true
+   }
+  },
+  {
+   "id": "d3",
+   "businessName": "Riverside Estates",
+   "status": "documents_missing",
+   "features": {
+    "buyer_requests": true,
+    "transfer_requests": true,
+    "properties": true,
+    "customers_plans": true,
+    "payments_reminders": true,
+    "marketing": false,
+    "branding": false
+   }
+  },
+  {
+   "id": "d4",
+   "businessName": "Skyline Properties",
+   "status": "approved",
+   "features": {
+    "buyer_requests": true,
+    "transfer_requests": true,
+    "properties": true,
+    "customers_plans": true,
+    "payments_reminders": true,
+    "marketing": true,
+    "branding": true
+   }
+  }
+ ]
+}
